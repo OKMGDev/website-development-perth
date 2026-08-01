@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { breadcrumbList } from '../../lib/seo';
+
+const work = await getCollection('work');
+---
+
+<BaseLayout
+  title="Our Work | Website Projects in Perth"
+  description="Browse anonymised project case studies — problem, solution and stack. Client metrics published only when verified."
+  jsonLd={breadcrumbList([
+    { name: 'Home', path: '/' },
+    { name: 'Work', path: '/work/' },
+  ])}
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Work' }]} />
+      <h1>Work</h1>
+      <p class="lead">
+        Project shells that show how we think. Names and numeric results stay unpublished until clients approve them.
+      </p>
+    </div>
+  </section>
+  <section class="section" style="padding-top: 0">
+    <div class="container tile-grid">
+      {work.map((item) => (
+        <a class="tile" href={`/work/${item.id}/`}>
+          <h2>{item.data.title}</h2>
+          <p>{item.data.excerpt}</p>
+          <span>View case study →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>

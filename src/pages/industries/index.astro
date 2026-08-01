@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { breadcrumbList } from '../../lib/seo';
+
+const industries = (await getCollection('industries')).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+---
+
+<BaseLayout
+  title="Industries We Build Websites For | Perth"
+  description="Website development for tradies, real estate, healthcare, hospitality, retail, professional services, fitness and education in Perth."
+  jsonLd={breadcrumbList([
+    { name: 'Home', path: '/' },
+    { name: 'Industries', path: '/industries/' },
+  ])}
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Industries' }]} />
+      <h1>Industries</h1>
+      <p class="lead">Self-identify by sector — each page covers workflows, objections and services that actually fit.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top: 0">
+    <div class="container tile-grid">
+      {industries.map((item) => (
+        <a class="tile" href={`/industries/${item.id}/`}>
+          <h2>{item.data.title}</h2>
+          <p>{item.data.excerpt}</p>
+          <span>Explore →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>

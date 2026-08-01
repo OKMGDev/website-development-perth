@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="Thank you"
+  description="Your enquiry has been received."
+  noindex={true}
+>
+  <section class="page-hero">
+    <div class="container prose">
+      <h1>Thanks — we have your enquiry</h1>
+      <p class="lead">{site.responseTime} If it is urgent, call <a href={site.phoneHref}>{site.phoneDisplay}</a>.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/work/">Browse our work</a>
+        <a class="btn btn--ghost" href="/blog/">Read the blog</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

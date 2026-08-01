@@ -1,0 +1,202 @@
+---
+import { navPrimary, site } from '../data/site';
+---
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="/" aria-label={`${site.name} home`}>
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__text">
+        <strong>Website Development</strong>
+        <em>Perth</em>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary" data-nav>
+      <ul>
+        {navPrimary.map((item) => (
+          <li>
+            <a href={item.href}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+      <div class="nav__actions">
+        <a class="btn btn--ghost" href={site.phoneHref} data-track="cta">{site.phoneDisplay}</a>
+        <a class="btn btn--primary" href="/contact/" data-track="cta">Get a Quote</a>
+      </div>
+    </nav>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-menu-toggle>
+      <span class="sr-only">Open menu</span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+    <nav aria-label="Mobile">
+      <ul>
+        {navPrimary.map((item) => (
+          <li>
+            <a href={item.href}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+      <a class="btn btn--primary" href="/contact/" data-track="cta">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector('[data-menu-toggle]');
+  const panel = document.querySelector('[data-mobile-nav]');
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    if (panel instanceof HTMLElement) {
+      panel.hidden = open;
+    }
+  });
+</script>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    backdrop-filter: blur(12px);
+    background: rgba(250, 248, 244, 0.88);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .header__inner {
+    min-height: var(--header-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+  }
+
+  .logo__mark {
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 30% 30%, #fff 0 18%, transparent 19%),
+      conic-gradient(from 210deg, var(--sea), var(--sand), var(--sea-deep));
+  }
+
+  .logo__text {
+    display: grid;
+    line-height: 1.05;
+  }
+
+  .logo__text strong {
+    font-family: var(--font-display);
+    font-size: 0.98rem;
+    font-weight: 600;
+  }
+
+  .logo__text em {
+    font-style: normal;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--sea);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .nav {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav a {
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 550;
+  }
+
+  .nav__actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .menu-toggle {
+    width: 2.6rem;
+    height: 2.6rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: transparent;
+    display: grid;
+    place-content: center;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .menu-toggle span:not(.sr-only) {
+    display: block;
+    width: 1.1rem;
+    height: 2px;
+    background: var(--ink);
+  }
+
+  .mobile-nav {
+    border-top: 1px solid var(--line);
+    background: var(--paper);
+    padding: 1rem 1rem 1.5rem;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+  }
+
+  .mobile-nav a {
+    display: block;
+    padding: 0.7rem 0;
+    text-decoration: none;
+    font-weight: 550;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  @media (min-width: 980px) {
+    .nav {
+      display: flex;
+    }
+
+    .menu-toggle,
+    .mobile-nav {
+      display: none !important;
+    }
+  }
+</style>

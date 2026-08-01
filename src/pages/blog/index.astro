@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { breadcrumbList } from '../../lib/seo';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.published.valueOf() - a.data.published.valueOf()
+);
+---
+
+<BaseLayout
+  title="Blog & Resources | Website Development Perth"
+  description="Pricing guides, platform comparisons and practical website advice for Perth businesses."
+  jsonLd={breadcrumbList([
+    { name: 'Home', path: '/' },
+    { name: 'Blog', path: '/blog/' },
+  ])}
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Blog' }]} />
+      <h1>Blog & resources</h1>
+      <p class="lead">Informational guides that funnel to the right service — cost, platforms, process and industry advice.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top: 0">
+    <div class="container tile-grid">
+      {posts.map((item) => (
+        <a class="tile" href={`/blog/${item.id}/`}>
+          <p class="section__eyebrow">{item.data.category}</p>
+          <h2>{item.data.title}</h2>
+          <p>{item.data.excerpt}</p>
+          <span>Read article →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>

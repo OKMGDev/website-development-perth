@@ -1,5 +1,5 @@
 {
-  "name": "capricious-chaos",
+  "name": "website-development-perth",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -12,6 +12,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/vercel": "^11.0.4",
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@fontsource-variable/fraunces": "^5.3.0",
     "astro": "^7.1.6"
   }
 }

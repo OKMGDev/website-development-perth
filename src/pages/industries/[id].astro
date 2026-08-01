@@ -1,0 +1,79 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { breadcrumbList, faqSchema, serviceSchema } from '../../lib/seo';
+
+export async function getStaticPaths() {
+  const industries = await getCollection('industries');
+  return industries.map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const services = await getCollection('services');
+const relatedServices = services.filter((s) => entry.data.relatedServices.includes(s.id));
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Industries', path: '/industries/' },
+  { name: entry.data.title, path: `/industries/${entry.id}/` },
+];
+const jsonLd = [
+  breadcrumbList(crumbs),
+  serviceSchema({
+    name: `Website development for ${entry.data.title}`,
+    description: entry.data.excerpt,
+    path: `/industries/${entry.id}/`,
+  }),
+  faqSchema(entry.data.faqs),
+].filter(Boolean);
+---
+
+<BaseLayout title={entry.data.seo.title} description={entry.data.seo.description} jsonLd={jsonLd}>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Industries', href: '/industries/' },
+          { label: entry.data.title },
+        ]}
+      />
+      <h1>{entry.data.title}</h1>
+      <p class="lead">{entry.data.excerpt}</p>
+      <a class="btn btn--primary" href="/contact/" data-track="cta">Get a Quote</a>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0">
+    <div class="container prose">
+      <Content />
+      <h2>Common pain points</h2>
+      <ul>{entry.data.painPoints.map((item) => <li>{item}</li>)}</ul>
+      <h2>Website workflows that matter</h2>
+      <ul>{entry.data.workflows.map((item) => <li>{item}</li>)}</ul>
+      <h2>Buying objections we hear</h2>
+      <ul>{entry.data.objections.map((item) => <li>{item}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">Services that fit this sector</h2>
+      <div class="tile-grid">
+        {relatedServices.map((item) => (
+          <a class="tile" href={`/services/${item.id}/`}>
+            <h3>{item.data.title}</h3>
+            <p>{item.data.excerpt}</p>
+            <span>View service →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FaqAccordion faqs={entry.data.faqs} />
+  <CtaBand />
+</BaseLayout>

@@ -1,5 +1,19 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
+import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: 'https://websitedevelopmentperth.com.au',
+  trailingSlash: 'always',
+  adapter: vercel(),
+  integrations: [
+    sitemap({
+      filter: (page) => !page.includes('/thank-you/'),
+    }),
+  ],
+  image: {
+    domains: [],
+  },
+});

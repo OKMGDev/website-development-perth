@@ -1,0 +1,82 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { articleSchema, breadcrumbList } from '../../lib/seo';
+
+export async function getStaticPaths() {
+  const work = await getCollection('work');
+  return work.map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const services = await getCollection('services');
+const related = services.filter((s) => entry.data.services.includes(s.id));
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Work', path: '/work/' },
+  { name: entry.data.title, path: `/work/${entry.id}/` },
+];
+---
+
+<BaseLayout
+  title={entry.data.seo.title}
+  description={entry.data.seo.description}
+  jsonLd={[
+    breadcrumbList(crumbs),
+    articleSchema({
+      title: entry.data.title,
+      description: entry.data.excerpt,
+      path: `/work/${entry.id}/`,
+      datePublished: '2026-07-01',
+    }),
+  ]}
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs
+        items={[{ label: 'Home', href: '/' }, { label: 'Work', href: '/work/' }, { label: entry.data.title }]}
+      />
+      <h1>{entry.data.title}</h1>
+      <p class="lead">{entry.data.excerpt}</p>
+      <p><strong>Client:</strong> {entry.data.client}</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0">
+    <div class="container prose">
+      <h2>Problem</h2>
+      <p>{entry.data.problem}</p>
+      <h2>Solution</h2>
+      <p>{entry.data.solution}</p>
+      <h2>Stack</h2>
+      <ul>{entry.data.stack.map((item) => <li>{item}</li>)}</ul>
+      <h2>Results</h2>
+      <p>{entry.data.results || 'Verified results will appear here when the client approves publication. No invented metrics.'}</p>
+      <Content />
+    </div>
+  </section>
+
+  {
+    related.length > 0 && (
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title">Related services</h2>
+          <div class="tile-grid">
+            {related.map((item) => (
+              <a class="tile" href={`/services/${item.id}/`}>
+                <h3>{item.data.title}</h3>
+                <p>{item.data.excerpt}</p>
+                <span>View →</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <CtaBand />
+</BaseLayout>

@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { breadcrumbList, faqSchema } from '../lib/seo';
+
+const faqs = [
+  {
+    question: 'How much does a website cost in Perth?',
+    answer:
+      'It depends on scope, content readiness and integrations. See our pricing guide for ballpark thinking, then request a quote for a tailored figure.',
+  },
+  {
+    question: 'Which platform should I choose?',
+    answer:
+      'WordPress, Webflow, Shopify and custom stacks each fit different jobs. Our comparison articles and a short discovery call usually settle it quickly.',
+  },
+  {
+    question: 'Do you create location pages for every suburb?',
+    answer:
+      'Only when a suburb page can offer genuine local value. Thin postcode swaps stay off the sitemap.',
+  },
+  {
+    question: 'How fast do you reply to enquiries?',
+    answer: 'We typically reply within one business day.',
+  },
+  {
+    question: 'Can you take over an existing site?',
+    answer:
+      'Yes — redesign, migration or maintenance. We start with an audit so you know what to keep, fix or replace.',
+  },
+];
+---
+
+<BaseLayout
+  title="FAQ | Website Development Perth"
+  description="Answers about website cost, platforms, timelines, suburbs and working with Website Development Perth."
+  jsonLd={[
+    breadcrumbList([
+      { name: 'Home', path: '/' },
+      { name: 'FAQ', path: '/faq/' },
+    ]),
+    faqSchema(faqs),
+  ].filter(Boolean)}
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'FAQ' }]} />
+      <h1>FAQ</h1>
+      <p class="lead">
+        Quick answers — deeper detail lives on our <a href="/blog/">blog</a>, <a href="/process/">process</a> and service pages.
+      </p>
+    </div>
+  </section>
+  <FaqAccordion faqs={faqs} title="Common questions" />
+  <div class="container" style="margin-bottom: 2rem">
+    <p>
+      Related reading: <a href="/blog/website-cost-perth/">website cost in Perth</a>,
+      <a href="/blog/shopify-vs-woocommerce/">Shopify vs WooCommerce</a>,
+      <a href="/contact/">contact & quotes</a>.
+    </p>
+  </div>
+  <CtaBand />
+</BaseLayout>

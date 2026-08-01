@@ -1,0 +1,89 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FaqAccordion from '../../components/FaqAccordion.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { breadcrumbList, faqSchema, serviceSchema } from '../../lib/seo';
+
+export async function getStaticPaths() {
+  const locations = await getCollection('locations');
+  return locations
+    .filter((entry) => entry.data.publish)
+    .map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const allLocations = await getCollection('locations');
+const nearby = allLocations.filter(
+  (l) => l.data.publish && entry.data.nearbyAreas.includes(l.id) && l.id !== entry.id
+);
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Locations', path: '/locations/' },
+  { name: entry.data.title, path: `/locations/${entry.id}/` },
+];
+const jsonLd = [
+  breadcrumbList(crumbs),
+  serviceSchema({
+    name: `Website development in ${entry.data.title}`,
+    description: entry.data.excerpt,
+    path: `/locations/${entry.id}/`,
+    areaServed: entry.data.areaServed,
+  }),
+  faqSchema(entry.data.faqs),
+].filter(Boolean);
+---
+
+<BaseLayout title={entry.data.seo.title} description={entry.data.seo.description} jsonLd={jsonLd}>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Locations', href: '/locations/' },
+          { label: entry.data.title },
+        ]}
+      />
+      <h1>Website development in {entry.data.title}</h1>
+      <p class="lead">{entry.data.excerpt}</p>
+      <a class="btn btn--primary" href="/contact/" data-track="cta">Get a Quote</a>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0">
+    <div class="container prose">
+      <Content />
+      <h2>Local context</h2>
+      <p>{entry.data.localContext}</p>
+      <p>
+        We service {entry.data.title} as part of our Perth coverage. We do not claim a local office or showroom in{' '}
+        {entry.data.title} unless one exists.
+      </p>
+    </div>
+  </section>
+
+  {
+    nearby.length > 0 && (
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title">Nearby areas</h2>
+          <div class="tile-grid">
+            {nearby.map((item) => (
+              <a class="tile" href={`/locations/${item.id}/`}>
+                <h3>{item.data.title}</h3>
+                <p>{item.data.excerpt}</p>
+                <span>View →</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <FaqAccordion faqs={entry.data.faqs} />
+  <CtaBand />
+</BaseLayout>

@@ -1,17 +1,296 @@
 ---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EnquiryForm from '../components/EnquiryForm.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { site } from '../data/site';
+import { organizationSchema, websiteSchema, faqSchema } from '../lib/seo';
 
+const services = (await getCollection('services')).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+const industries = (await getCollection('industries')).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+const work = await getCollection('work');
+
+const homeFaqs = [
+  {
+    question: 'Do you only build websites for Perth businesses?',
+    answer:
+      'Perth is our focus and service area. We work with local SMEs that need a clear website, redesign or platform build — remote collaboration is fine within WA.',
+  },
+  {
+    question: 'How soon can we start?',
+    answer:
+      'Most projects start within two to four weeks of an agreed scope, depending on current workload and how ready your content is.',
+  },
+  {
+    question: 'Can you redesign our existing site?',
+    answer:
+      'Yes. Redesign and migration are scoped as distinct work so we protect what already works while improving clarity and conversion.',
+  },
+];
+
+const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filter(Boolean);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Website Development Perth | Sites That Win Work"
+  description="Perth website design and development for SMEs — clear process, conversion-focused builds, and a quote path you can trust."
+  jsonLd={jsonLd}
+>
+  <section class="hero">
+    <div class="hero__media" aria-hidden="true"></div>
+    <div class="container hero__grid">
+      <div class="hero__copy reveal">
+        <p class="section__eyebrow">Perth · Web design & development</p>
+        <h1>
+          <span class="hero__brand">Website Development</span>
+          <span class="hero__place">Perth</span>
+        </h1>
+        <p class="hero__lead">
+          We design and build websites that help Perth businesses explain their offer, prove their work and win more of the right enquiries.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="/contact/" data-track="cta">Get a Quote</a>
+          <a class="btn btn--ghost" href={site.phoneHref} data-track="cta">{site.phoneDisplay}</a>
+        </div>
+        <ul class="trust-list">
+          <li>Servicing Perth and surrounds</li>
+          <li>{site.responseTime}</li>
+          <li>No fabricated reviews or awards</li>
+        </ul>
+      </div>
+      <div class="hero__form reveal" style="animation-delay: 0.12s">
+        <EnquiryForm compact />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container reveal-on-scroll">
+      <p class="section__eyebrow">Our services</p>
+      <h2 class="section__title">Websites built for how Perth businesses sell.</h2>
+      <p class="section__lead">
+        From custom design to Shopify, WordPress and ongoing care — pick the path that matches your intent.
+      </p>
+      <div class="tile-grid">
+        {services.slice(0, 6).map((item) => (
+          <a class="tile" href={`/services/${item.id}/`}>
+            <h3>{item.data.title}</h3>
+            <p>{item.data.excerpt}</p>
+            <span>View service →</span>
+          </a>
+        ))}
+      </div>
+      <p style="margin-top: 1.5rem">
+        <a href="/services/">Browse all services</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section process-strip">
+    <div class="container reveal-on-scroll">
+      <p class="section__eyebrow">How it works</p>
+      <h2 class="section__title">Simple process. Clear ownership.</h2>
+      <p class="section__lead">
+        Three stages so you always know what is happening and what we need from you.
+      </p>
+      <div class="steps">
+        <div>
+          <h3>1. Scope the job</h3>
+          <p>Goals, audience, platform and success measures — before pixels.</p>
+        </div>
+        <div>
+          <h3>2. Design & build</h3>
+          <p>Structure, design system and implementation with review checkpoints.</p>
+        </div>
+        <div>
+          <h3>3. Launch & support</h3>
+          <p>QA, go-live and a practical path for updates after launch.</p>
+        </div>
+      </div>
+      <p style="margin-top: 1.5rem"><a href="/process/">See the full process</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container reveal-on-scroll">
+      <p class="section__eyebrow">Industries</p>
+      <h2 class="section__title">Built for how your sector sells online.</h2>
+      <p class="section__lead">
+        Tradies, clinics, retailers and professional firms do not need the same website shape.
+      </p>
+      <div class="tile-grid">
+        {industries.map((item) => (
+          <a class="tile" href={`/industries/${item.id}/`}>
+            <h3>{item.data.title}</h3>
+            <p>{item.data.excerpt}</p>
+            <span>Explore →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container reveal-on-scroll">
+      <p class="section__eyebrow">Selected work</p>
+      <h2 class="section__title">Project shells with honest detail.</h2>
+      <p class="section__lead">
+        Case studies below use anonymised examples until client-approved metrics and names are available.
+      </p>
+      <div class="tile-grid">
+        {work.map((item) => (
+          <a class="tile" href={`/work/${item.id}/`}>
+            <h3>{item.data.title}</h3>
+            <p>{item.data.excerpt}</p>
+            <span>View project →</span>
+          </a>
+        ))}
+      </div>
+      <p style="margin-top: 1.5rem"><a href="/work/">View all work</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container reveal-on-scroll why">
+      <p class="section__eyebrow">Why us</p>
+      <h2 class="section__title">Practical delivery. No theatre.</h2>
+      <div class="why__grid">
+        <div>
+          <h3>Intent-led pages</h3>
+          <p>Services, industries and locations are structured so search intent matches a real page job.</p>
+        </div>
+        <div>
+          <h3>Conversion without gimmicks</h3>
+          <p>One primary action, visible contact paths and forms that respect consent.</p>
+        </div>
+        <div>
+          <h3>Truthful proof</h3>
+          <p>We only publish testimonials, logos and stats you can verify. Placeholders stay labelled until then.</p>
+        </div>
+      </div>
+      <p style="margin-top: 1.5rem"><a href="/why-us/">Why businesses choose us</a></p>
+    </div>
+  </section>
+
+  <FaqAccordion faqs={homeFaqs} title="Good to know" />
+  <CtaBand />
+</BaseLayout>
+
+<style>
+  .hero {
+    position: relative;
+    padding: calc(var(--header-h) + 1.5rem) 0 3rem;
+    overflow: hidden;
+  }
+
+  .hero__media {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(105deg, rgba(250, 248, 244, 0.96) 0%, rgba(250, 248, 244, 0.82) 42%, rgba(21, 32, 43, 0.35) 100%),
+      radial-gradient(circle at 70% 40%, rgba(11, 110, 99, 0.35), transparent 45%),
+      linear-gradient(160deg, #1a3c48, #0b6e63 45%, #d4c4a8);
+    z-index: 0;
+  }
+
+  .hero__media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+
+  .hero__grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 2rem;
+  }
+
+  .hero__brand {
+    display: block;
+    color: var(--ink);
+  }
+
+  .hero__place {
+    display: block;
+    color: var(--sea-deep);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 7vw, 4.4rem);
+    max-width: 10ch;
+    margin-bottom: 0.7rem;
+  }
+
+  .hero__lead {
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    max-width: 38ch;
+    margin-bottom: 1.25rem;
+  }
+
+  .trust-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+    display: grid;
+    gap: 0.35rem;
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+  }
+
+  .trust-list li::before {
+    content: '✓ ';
+    color: var(--sea);
+    font-weight: 700;
+  }
+
+  .process-strip {
+    background: rgba(255, 255, 255, 0.45);
+    border-block: 1px solid var(--line);
+  }
+
+  .steps {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .steps h3 {
+    font-size: 1.2rem;
+  }
+
+  .steps p {
+    color: var(--ink-soft);
+  }
+
+  .why__grid {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 1.75rem;
+  }
+
+  .why__grid p {
+    color: var(--ink-soft);
+  }
+
+  @media (min-width: 900px) {
+    .hero__grid {
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: start;
+      gap: 3rem;
+    }
+
+    .steps,
+    .why__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

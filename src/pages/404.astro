@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page not found"
+  description="The page you requested could not be found."
+  noindex={true}
+>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Page not found</h1>
+      <p class="lead">That URL is not on this site. Try one of these paths instead.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/">Home</a>
+        <a class="btn btn--ghost" href="/services/">Services</a>
+        <a class="btn btn--ghost" href="/contact/">Contact</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

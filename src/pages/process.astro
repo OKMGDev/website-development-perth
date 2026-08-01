@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { breadcrumbList } from '../lib/seo';
+---
+
+<BaseLayout
+  title="Our Process | Website Development Perth"
+  description="A clear website delivery process for Perth businesses — scope, design, build, launch and support without surprise theatre."
+  jsonLd={breadcrumbList([
+    { name: 'Home', path: '/' },
+    { name: 'Process', path: '/process/' },
+  ])}
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Our Process' }]} />
+      <h1>Our process</h1>
+      <p class="lead">Reduce risk with a delivery path you can follow — and checkpoints that keep decisions moving.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top: 0">
+    <div class="container prose">
+      <h2>1. Discovery & scope</h2>
+      <p>Goals, audience, competitors, platform constraints and success measures. You leave with a written scope, not a vibe.</p>
+      <h2>2. Structure & design</h2>
+      <p>Information architecture, key templates and a visual system that supports conversion — brand-first without clutter.</p>
+      <h2>3. Build</h2>
+      <p>Implementation on the agreed stack with content modelling, forms, SEO foundations and responsive QA.</p>
+      <h2>4. Launch</h2>
+      <p>Redirects (if needed), analytics events, final content check and go-live support.</p>
+      <h2>5. Support</h2>
+      <p>Optional maintenance for updates, monitoring and small improvements after launch.</p>
+      <p>Want the timeline view? Read <a href="/blog/website-project-timeline/">how long a website project takes</a>.</p>
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>

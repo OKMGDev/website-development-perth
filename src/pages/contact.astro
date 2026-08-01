@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import EnquiryForm from '../components/EnquiryForm.astro';
+import { breadcrumbList } from '../lib/seo';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="Contact & Get a Quote | Website Development Perth"
+  description="Request a website quote, send a quick enquiry or book a consultation. Perth-wide servicing with a clear response-time expectation."
+  jsonLd={breadcrumbList([
+    { name: 'Home', path: '/' },
+    { name: 'Contact', path: '/contact/' },
+  ])}
+>
+  <section class="page-hero">
+    <div class="container contact-grid">
+      <div>
+        <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
+        <h1>Contact</h1>
+        <p class="lead">
+          Quote requests, quick questions and consultations all start here. Choose the enquiry type in the form — no separate “get a quote” maze.
+        </p>
+        <ul class="contact-list">
+          <li><strong>Phone:</strong> <a href={site.phoneHref}>{site.phoneDisplay}</a></li>
+          <li><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><strong>Area:</strong> {site.serviceArea}</li>
+          <li><strong>Response:</strong> {site.responseTime}</li>
+        </ul>
+      </div>
+      <EnquiryForm />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  @media (min-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+  }
+</style>

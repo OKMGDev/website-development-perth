@@ -1,0 +1,136 @@
+---
+import { getCollection } from 'astro:content';
+import { footerNav, site } from '../data/site';
+
+const services = (await getCollection('services')).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+const locations = (await getCollection('locations'))
+  .filter((l) => l.data.publish)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <p class="footer__brand">{site.name}</p>
+      <p class="footer__blurb">{site.tagline} {site.serviceArea}.</p>
+      <p>
+        <a href={site.phoneHref}>{site.phoneDisplay}</a><br />
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </p>
+      <p class="muted">{site.address}<br />ABN {site.abn} (placeholder)</p>
+    </div>
+
+    <div>
+      <h2>Services</h2>
+      <ul>
+        {services.slice(0, 7).map((item) => (
+          <li><a href={`/services/${item.id}/`}>{item.data.title}</a></li>
+        ))}
+        <li><a href="/services/">All services →</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Company</h2>
+      <ul>
+        {footerNav.company.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h2>Service areas</h2>
+      <ul>
+        {locations.map((item) => (
+          <li><a href={`/locations/${item.id}/`}>{item.data.title}</a></li>
+        ))}
+        <li><a href="/locations/">View all areas →</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© {new Date().getFullYear()} {site.name}</p>
+    <p class="muted">{site.responseTime}</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    margin-top: 4rem;
+    padding: 3.5rem 0 2rem;
+    background: var(--ink);
+    color: #e8ecef;
+  }
+
+  .footer a {
+    color: #e8ecef;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .footer__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .footer__brand {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer__blurb {
+    color: rgba(232, 236, 239, 0.78);
+    max-width: 28ch;
+  }
+
+  .footer h2 {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(232, 236, 239, 0.6);
+    margin-bottom: 0.85rem;
+  }
+
+  .footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer li {
+    margin-bottom: 0.45rem;
+    font-size: 0.92rem;
+  }
+
+  .muted {
+    color: rgba(232, 236, 239, 0.62);
+    font-size: 0.88rem;
+  }
+
+  .footer__bottom {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+  }
+
+  @media (min-width: 900px) {
+    .footer__grid {
+      grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    }
+  }
+</style>

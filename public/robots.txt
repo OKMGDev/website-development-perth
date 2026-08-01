@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /thank-you/
+
+Sitemap: https://websitedevelopmentperth.com.au/sitemap-index.xml

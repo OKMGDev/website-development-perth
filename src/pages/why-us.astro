@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { breadcrumbList } from '../lib/seo';
+---
+
+<BaseLayout
+  title="Why Us | Website Development Perth"
+  description="Differentiation without fluff — intent-led architecture, truthful proof and conversion paths that respect your visitors."
+  jsonLd={breadcrumbList([
+    { name: 'Home', path: '/' },
+    { name: 'Why Us', path: '/why-us/' },
+  ])}
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Why Us' }]} />
+      <h1>Why work with us</h1>
+      <p class="lead">Trust signals that hold up under scrutiny — and a build approach tuned for Perth service businesses.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top: 0">
+    <div class="container prose">
+      <h2>One page, one job</h2>
+      <p>We avoid cannibalising ourselves with thin variants. Services, industries and locations each own a distinct intent.</p>
+      <h2>Conversion without dark patterns</h2>
+      <p>No fake urgency, no pre-ticked consent, no vague form destinations. You get a clear quote path and a real response-time expectation.</p>
+      <h2>Platform honesty</h2>
+      <p>Shopify is not WooCommerce. Migration is not redesign. We keep those conversations — and pages — distinct.</p>
+      <h2>Proof you can trust</h2>
+      <p>If a logo, award or metric is not verified, it does not appear as fact. Placeholders stay labelled until clients approve publication.</p>
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>

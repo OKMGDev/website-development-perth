@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { breadcrumbList } from '../../lib/seo';
+
+const services = (await getCollection('services')).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Services', path: '/services/' },
+];
+---
+
+<BaseLayout
+  title="Website Development Services in Perth"
+  description="Browse website design, WordPress, Webflow, Shopify, redesign, SEO and maintenance services for Perth businesses."
+  jsonLd={breadcrumbList(crumbs)}
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services' }]} />
+      <h1>Website development services</h1>
+      <p class="lead">
+        Pick a service to see how we approach the work — platforms are separated where search intent and delivery are genuinely different.
+      </p>
+    </div>
+  </section>
+  <section class="section" style="padding-top: 0">
+    <div class="container tile-grid">
+      {services.map((item) => (
+        <a class="tile" href={`/services/${item.id}/`}>
+          <h2>{item.data.title}</h2>
+          <p>{item.data.excerpt}</p>
+          <span>Learn more →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+  <CtaBand title="Not sure which service fits?" text="Tell us what you are trying to achieve and we will recommend a sensible path." />
+</BaseLayout>

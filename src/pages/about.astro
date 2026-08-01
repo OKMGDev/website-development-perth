@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { breadcrumbList } from '../lib/seo';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="About Us | Website Development Perth"
+  description="Meet the Perth web development team approach — practical delivery, truthful proof and websites built for real enquiries."
+  jsonLd={breadcrumbList([
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about/' },
+  ])}
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
+      <h1>About {site.name}</h1>
+      <p class="lead">
+        We help Perth SMEs get websites that do a job: explain the offer, prove the work and make the next step obvious.
+      </p>
+    </div>
+  </section>
+  <section class="section" style="padding-top: 0">
+    <div class="container prose">
+      <h2>What we believe</h2>
+      <p>
+        Search-led websites should still feel human. Every page should help a visitor complete a task — not exist only to capture a keyword variant.
+      </p>
+      <h2>How we work</h2>
+      <p>
+        We scope clearly, design around conversion paths, and build on the platform that fits your team. Content edits live in Git via Markdown collections so the agency can maintain quality without a fragile plugin CMS.
+      </p>
+      <h2>Proof policy</h2>
+      <p>
+        We do not invent testimonials, awards or metrics. Until client-approved proof is available, placeholders stay labelled. Real business details (phone, email, service area) remain visible in the footer and on contact.
+      </p>
+      <p>
+        Team bios and photography will be added when branding assets are supplied.
+      </p>
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>

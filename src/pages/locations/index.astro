@@ -1,0 +1,80 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { breadcrumbList } from '../../lib/seo';
+
+const published = (await getCollection('locations'))
+  .filter((l) => l.data.publish)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const hubOnly = [
+  'Perth CBD',
+  'Armadale',
+  'Cannington',
+  'Scarborough',
+  'Cottesloe',
+  'Morley',
+  'Canning Vale',
+  'Baldivis',
+  'Butler',
+  'Wanneroo',
+  'Ellenbrook',
+  'Malaga',
+];
+---
+
+<BaseLayout
+  title="Website Development Locations Across Perth"
+  description="Genuine Perth service areas for website design and development — suburb pages only where local context is meaningful."
+  jsonLd={breadcrumbList([
+    { name: 'Home', path: '/' },
+    { name: 'Locations', path: '/locations/' },
+  ])}
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Locations' }]} />
+      <h1>Locations across Perth</h1>
+      <p class="lead">
+        We service Perth-wide. Dedicated suburb pages exist only where we can offer genuine local context — not postcode-swapped doorway pages.
+        Perth CBD is covered through our city-wide service rather than a thin standalone page.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0">
+    <div class="container">
+      <h2 class="section__title">Suburb guides</h2>
+      <div class="tile-grid">
+        {published.map((item) => (
+          <a class="tile" href={`/locations/${item.id}/`}>
+            <h3>{item.data.title}</h3>
+            <p>{item.data.excerpt}</p>
+            <span>View area →</span>
+          </a>
+        ))}
+      </div>
+
+      <h2 class="section__title" style="margin-top: 3rem">Also servicing</h2>
+      <p class="section__lead">These areas are covered under our Perth service. Dedicated pages may be added when local differentiation is ready.</p>
+      <ul class="hub-list">
+        {hubOnly.map((name) => <li>{name}</li>)}
+      </ul>
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>
+
+<style>
+  .hub-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+    color: var(--ink-soft);
+  }
+</style>
