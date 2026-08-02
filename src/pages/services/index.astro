@@ -4,10 +4,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import { breadcrumbList } from '../../lib/seo';
+import { getServiceIcon } from '../../lib/icons';
+import { serviceGroups } from '../../data/serviceGroups';
 
-const services = (await getCollection('services')).sort((a, b) =>
-  a.data.title.localeCompare(b.data.title)
-);
+const allServices = await getCollection('services');
+const byId = Object.fromEntries(allServices.map((s) => [s.id, s]));
+
+const groups = serviceGroups
+  .map((group) => ({
+    ...group,
+    services: group.serviceIds.map((id) => byId[id]).filter(Boolean),
+  }))
+  .filter((group) => group.services.length > 0);
 
 const crumbs = [
   { name: 'Home', path: '/' },
@@ -17,7 +25,7 @@ const crumbs = [
 
 <BaseLayout
   title="Website Development Services in Perth"
-  description="Browse website design, WordPress, Webflow, Shopify, redesign, SEO and maintenance services for Perth businesses."
+  description="Website development services in Perth — new builds, ecommerce, redesigns, SEO and maintenance, grouped by the job you need done."
   jsonLd={breadcrumbList(crumbs)}
 >
   <section class="page-hero">
@@ -25,20 +33,90 @@ const crumbs = [
       <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services' }]} />
       <h1>Website development services</h1>
       <p class="lead">
-        Pick a service to see how we approach the work — platforms are separated where search intent and delivery are genuinely different.
+        Under website development, pick the job first — build new, sell online, improve what you have, or keep the site running.
+        Each page stays distinct so the platform and outcome match real search intent.
       </p>
+      <nav class="group-jump" aria-label="Service groups">
+        {groups.map((group) => (
+          <a href={`#${group.id}`}>{group.title}</a>
+        ))}
+      </nav>
     </div>
   </section>
-  <section class="section" style="padding-top: 0">
-    <div class="container tile-grid">
-      {services.map((item) => (
-        <a class="tile" href={`/services/${item.id}/`}>
-          <h2>{item.data.title}</h2>
-          <p>{item.data.excerpt}</p>
-          <span>Learn more →</span>
-        </a>
-      ))}
-    </div>
-  </section>
-  <CtaBand title="Not sure which service fits?" text="Tell us what you are trying to achieve and we will recommend a sensible path." />
+
+  {
+    groups.map((group) => (
+      <section class="section service-group" id={group.id} style="padding-top: 0">
+        <div class="container">
+          <div class="service-group__head">
+            <h2>{group.title}</h2>
+            <p>{group.description}</p>
+          </div>
+          <div class="tile-grid">
+            {group.services.map((item) => {
+              const Icon = getServiceIcon(item.id);
+              return (
+                <a class="tile" href={`/services/${item.id}/`}>
+                  <Icon class="icon" size={24} stroke-width={1.75} />
+                  <h3>{item.data.title}</h3>
+                  <p>{item.data.excerpt}</p>
+                  <span>Learn more →</span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <CtaBand
+    title="Not sure which service fits?"
+    text="Tell us what you are trying to achieve and we will recommend a sensible path."
+  />
 </BaseLayout>
+
+<style>
+  .group-jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1.1rem;
+    margin-top: 1.75rem;
+  }
+
+  .group-jump a {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--accent);
+  }
+
+  .group-jump a:hover {
+    color: var(--ink);
+  }
+
+  .service-group + .service-group {
+    padding-top: 0.5rem;
+  }
+
+  .service-group__head {
+    max-width: 40rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-group__head h2 {
+    font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+    margin-bottom: 0.45rem;
+  }
+
+  .service-group__head p {
+    color: var(--ink-muted);
+    margin: 0;
+  }
+
+  .service-group .tile-grid {
+    margin-top: 0;
+  }
+</style>

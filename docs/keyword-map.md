@@ -5,7 +5,7 @@ One primary intent per URL. Secondary terms support copy; they do not get their 
 | URL | Page type | Primary intent / keyword | Funnel | Primary CTA | Cannibalisation notes |
 |---|---|---|---|---|---|
 | `/` | Home | website development Perth | TOFU/MOFU | Get a Quote | Owns broad Perth-wide category |
-| `/services/` | Hub | website development services Perth | TOFU | Contact | Distributes to service pages |
+| `/services/` | Hub | website development services Perth | TOFU | Contact | Groups: build / sell online / improve / run & grow; flat URLs |
 | `/services/custom-website-design/` | Service | custom website design Perth | BOFU | Get a Quote | Distinct from redesign |
 | `/services/wordpress-development/` | Service | WordPress developer Perth | BOFU | Get a Quote | vs Webflow blog comparison |
 | `/services/webflow-development/` | Service | Webflow website Perth | BOFU | Get a Quote | vs WordPress blog comparison |

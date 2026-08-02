@@ -1,4 +1,6 @@
 ---
+import { ChevronDown } from '@lucide/astro';
+
 interface Faq {
   question: string;
   answer: string;
@@ -20,7 +22,10 @@ const { faqs, title = 'Common questions' } = Astro.props;
         <div class="faq__list">
           {faqs.map((faq) => (
             <details class="faq__item">
-              <summary>{faq.question}</summary>
+              <summary>
+                <span>{faq.question}</span>
+                <ChevronDown class="faq__chevron" size={20} stroke-width={1.75} />
+              </summary>
               <p>{faq.answer}</p>
             </details>
           ))}
@@ -38,7 +43,7 @@ const { faqs, title = 'Common questions' } = Astro.props;
 
   .faq__item {
     border-top: 1px solid var(--line);
-    padding: 1rem 0;
+    padding: 1.1rem 0;
   }
 
   .faq__item:last-child {
@@ -47,10 +52,12 @@ const { faqs, title = 'Common questions' } = Astro.props;
 
   summary {
     cursor: pointer;
-    font-weight: 650;
+    font-family: var(--font-display);
+    font-weight: 700;
     list-style: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 1rem;
   }
 
@@ -58,18 +65,17 @@ const { faqs, title = 'Common questions' } = Astro.props;
     display: none;
   }
 
-  summary::after {
-    content: '+';
-    color: var(--sea);
-    font-weight: 700;
+  .faq__chevron {
+    color: var(--accent);
+    transition: transform 0.2s ease;
   }
 
-  details[open] summary::after {
-    content: '–';
+  details[open] .faq__chevron {
+    transform: rotate(180deg);
   }
 
   .faq__item p {
     margin-top: 0.75rem;
-    color: var(--ink-soft);
+    color: var(--ink-muted);
   }
 </style>

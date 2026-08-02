@@ -60,7 +60,7 @@ const jsonLd = [
   <section class="section" style="padding-top: 0">
     <div class="container prose">
       <Content />
-      <h2>Benefits</h2>
+      <h2>What you get</h2>
       <ul>
         {entry.data.benefits.map((item) => <li>{item}</li>)}
       </ul>
@@ -68,6 +68,9 @@ const jsonLd = [
       <ol>
         {entry.data.process.map((item) => <li>{item}</li>)}
       </ol>
+      <p>
+        <a href="/contact/">Get a quote</a> for {entry.data.title.toLowerCase()} in Perth — tell us your goals and current setup.
+      </p>
     </div>
   </section>
 
@@ -109,6 +112,6 @@ const jsonLd = [
     )
   }
 
-  <FaqAccordion faqs={entry.data.faqs} />
+  <FaqAccordion faqs={entry.data.faqs} title={`Questions about ${entry.data.title}`} />
   <CtaBand />
 </BaseLayout>

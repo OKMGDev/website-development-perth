@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Perth skyline over the Swan River">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0.15" y2="1">
+      <stop offset="0%" stop-color="#9ec4d8"/>
+      <stop offset="38%" stop-color="#e7c9a8"/>
+      <stop offset="100%" stop-color="#f6e7d8"/>
+    </linearGradient>
+    <linearGradient id="river" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6f9eaf"/>
+      <stop offset="55%" stop-color="#4f7f91"/>
+      <stop offset="100%" stop-color="#335f70"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1220" cy="190" r="120" fill="#f2b86a"/>
+  <circle cx="1220" cy="190" r="190" fill="#f2b86a" opacity="0.22"/>
+  <path d="M0 620 C220 560 420 540 640 580 C860 620 1040 700 1280 680 C1440 666 1540 640 1600 620 L1600 1000 L0 1000 Z" fill="url(#river)"/>
+  <path d="M0 655 C260 615 480 605 700 645 C940 691 1120 765 1380 745 C1500 735 1560 715 1600 705" fill="none" stroke="#eef6f8" stroke-opacity="0.4" stroke-width="2"/>
+  <g fill="#24313b">
+    <rect x="780" y="390" width="38" height="220"/>
+    <rect x="828" y="330" width="52" height="280"/>
+    <rect x="890" y="360" width="44" height="250"/>
+    <rect x="944" y="300" width="60" height="310"/>
+    <rect x="1014" y="350" width="40" height="260"/>
+    <rect x="1064" y="280" width="72" height="330"/>
+    <rect x="1146" y="340" width="48" height="270"/>
+    <rect x="1204" y="310" width="56" height="300"/>
+    <rect x="1270" y="370" width="42" height="240"/>
+    <rect x="1322" y="345" width="50" height="265"/>
+    <polygon points="944,300 974,250 1004,300"/>
+    <polygon points="1064,280 1100,220 1136,280"/>
+  </g>
+  <g fill="#31424e">
+    <rect x="700" y="470" width="28" height="140"/>
+    <rect x="736" y="500" width="22" height="110"/>
+    <rect x="1368" y="430" width="30" height="180"/>
+    <rect x="1408" y="460" width="24" height="150"/>
+  </g>
+  <g fill="#f4d9a8" opacity="0.35">
+    <rect x="838" y="360" width="8" height="12"/>
+    <rect x="858" y="390" width="8" height="12"/>
+    <rect x="958" y="340" width="8" height="12"/>
+    <rect x="978" y="370" width="8" height="12"/>
+    <rect x="1084" y="320" width="8" height="12"/>
+    <rect x="1104" y="350" width="8" height="12"/>
+    <rect x="1220" y="340" width="8" height="12"/>
+  </g>
+</svg>

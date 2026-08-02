@@ -71,19 +71,28 @@ This is not a copy of the reference site's branding, copy or claims. Only the la
 
 Platform-specific service pages are included as their own pages, since each platform carries genuine, distinct search intent (e.g. "Shopify developer Perth", "Webflow website Perth") rather than being variants of one generic page.
 
+URLs stay flat under `/services/[slug]/`. The services hub groups them by job for navigation:
+
+**Build a new site**
 1. Custom Website Design — /services/custom-website-design/
 2. WordPress Website Development — /services/wordpress-development/
 3. Webflow Website Development — /services/webflow-development/
-4. Shopify Website Development — /services/shopify-development/
-5. WooCommerce Website Development — /services/woocommerce-development/
-6. Drupal Website Development — /services/drupal-development/
-7. Web Application Development — /services/web-application-development/
+4. Drupal Website Development — /services/drupal-development/
+5. Web Application Development — /services/web-application-development/
+
+**Sell online**
+6. Shopify Website Development — /services/shopify-development/
+7. WooCommerce Website Development — /services/woocommerce-development/
+
+**Improve what you have**
 8. Website Redesign — /services/website-redesign/
 9. Landing Page Design — /services/landing-page-design/
-10. Website Maintenance & Support — /services/website-maintenance/
-11. SEO & Website Optimisation — /services/seo-services/
-12. UX/UI Design — /services/ux-ui-design/
-13. Website Migration — /services/website-migration/
+10. UX/UI Design — /services/ux-ui-design/
+11. Website Migration — /services/website-migration/
+
+**Run & grow**
+12. SEO & Website Optimisation — /services/seo-services/
+13. Website Maintenance & Support — /services/website-maintenance/
 
 **Note on overlap:** Shopify and WooCommerce are both e-commerce platforms, and Webflow/WordPress/Drupal are all CMS choices. Keep e-commerce and CMS positioning distinct in the copy so a visitor comparing "Shopify vs WooCommerce" doesn't land on two pages that read the same. Handle that decision directly in a blog article (e.g. "Shopify vs WooCommerce" and "Webflow vs WordPress"), which links back to the relevant service pages.
 

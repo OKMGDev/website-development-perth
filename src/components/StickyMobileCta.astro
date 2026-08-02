@@ -1,12 +1,15 @@
 ---
+import { MessageSquareText, Phone } from '@lucide/astro';
 import { site } from '../data/site';
 ---
 
 <div class="sticky-cta" role="navigation" aria-label="Quick contact">
   <a class="sticky-cta__call" href={site.phoneHref} data-track="cta">
+    <Phone size={16} stroke-width={1.75} />
     <span>Call</span>
   </a>
   <a class="sticky-cta__quote" href="/contact/" data-track="cta">
+    <MessageSquareText size={16} stroke-width={1.75} />
     <span>Get a Quote</span>
   </a>
 </div>
@@ -23,22 +26,25 @@ import { site } from '../data/site';
   }
 
   .sticky-cta a {
-    display: grid;
-    place-items: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
     text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 0.04em;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-size: 0.82rem;
+    font-size: 0.75rem;
   }
 
   .sticky-cta__call {
-    background: var(--paper);
+    background: var(--bg-elevated);
     color: var(--ink);
   }
 
   .sticky-cta__quote {
-    background: var(--sea);
+    background: var(--accent);
     color: #fff;
   }
 

@@ -1,4 +1,5 @@
 ---
+import { ArrowRight, Phone } from '@lucide/astro';
 import { site } from '../data/site';
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
 }
 
 const {
-  title = 'Ready to talk about your website?',
+  title = 'Let’s build something that wins work',
   text = 'Tell us what you need. We’ll reply with clear next steps — no pressure, no jargon.',
 } = Astro.props;
 ---
@@ -15,13 +16,20 @@ const {
 <section class="cta-band section">
   <div class="container cta-band__inner reveal-on-scroll">
     <div>
+      <p class="section__eyebrow">Got 10 minutes?</p>
       <h2>{title}</h2>
       <p>{text}</p>
       <p class="cta-band__note">{site.responseTime}</p>
     </div>
     <div class="btn-row">
-      <a class="btn btn--primary" href="/contact/" data-track="cta">Get a Quote</a>
-      <a class="btn btn--ghost" href={site.phoneHref} data-track="cta">{site.phoneDisplay}</a>
+      <a class="btn btn--primary" href="/contact/" data-track="cta">
+        Get a Quote
+        <ArrowRight size={16} stroke-width={1.75} />
+      </a>
+      <a class="btn btn--ghost" href={site.phoneHref} data-track="cta">
+        <Phone size={16} stroke-width={1.75} />
+        {site.phoneDisplay}
+      </a>
     </div>
   </div>
 </section>
@@ -30,30 +38,34 @@ const {
   .cta-band__inner {
     display: grid;
     gap: 1.5rem;
-    padding: 2rem;
+    padding: clamp(1.75rem, 4vw, 3rem);
+    background: var(--bg-card);
     border: 1px solid var(--line);
-    background: linear-gradient(135deg, rgba(11, 110, 99, 0.08), rgba(212, 196, 168, 0.25));
+    border-top: 3px solid var(--accent);
   }
 
   .cta-band h2 {
-    font-size: clamp(1.7rem, 3vw, 2.3rem);
-    max-width: 16ch;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    max-width: 14ch;
   }
 
   .cta-band p {
-    color: var(--ink-soft);
+    color: var(--ink-muted);
     max-width: 42ch;
   }
 
   .cta-band__note {
-    font-size: 0.9rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
   }
 
   @media (min-width: 800px) {
     .cta-band__inner {
       grid-template-columns: 1.4fr 1fr;
       align-items: center;
-      padding: 2.5rem 3rem;
     }
   }
 </style>

@@ -158,25 +158,29 @@ const services = [
 
 <style>
   .enquiry {
-    background: var(--paper);
+    background: var(--bg-elevated);
     border: 1px solid var(--line);
-    padding: 1.4rem;
-    box-shadow: var(--shadow);
+    border-top: 2px solid var(--accent);
+    padding: 1.5rem;
   }
 
   .enquiry--compact {
-    padding: 1.15rem;
+    padding: 1.25rem;
   }
 
   .enquiry__intro h2 {
     font-size: 1.35rem;
+    text-transform: uppercase;
     margin-bottom: 0.25rem;
   }
 
   .enquiry__intro p {
-    color: var(--ink-soft);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    color: var(--ink-faint);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.1rem;
   }
 
   .enquiry__step {
@@ -185,23 +189,42 @@ const services = [
     animation: rise 0.35s ease;
   }
 
+  .enquiry__step[hidden] {
+    display: none !important;
+  }
+
   label {
     display: grid;
     gap: 0.35rem;
-    font-size: 0.88rem;
-    font-weight: 600;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
   }
 
   input,
   select,
   textarea {
     width: 100%;
-    min-height: 2.6rem;
+    min-height: 2.7rem;
     border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 0.55rem 0.7rem;
+    border-radius: 0;
+    padding: 0.55rem 0.75rem;
     font: inherit;
-    background: #fff;
+    font-size: 1rem;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink);
+    background: var(--bg-elevated);
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 1px solid var(--accent);
+    border-color: var(--accent);
   }
 
   textarea {
@@ -213,8 +236,12 @@ const services = [
     display: flex;
     align-items: flex-start;
     gap: 0.6rem;
-    font-weight: 500;
-    color: var(--ink-soft);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink-muted);
   }
 
   .enquiry__consent input {
@@ -230,7 +257,7 @@ const services = [
   }
 
   .enquiry__error {
-    color: #8b1e1e;
+    color: #b42318;
     font-size: 0.9rem;
   }
 </style>

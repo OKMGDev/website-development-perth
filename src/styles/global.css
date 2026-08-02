@@ -1,24 +1,27 @@
-@import '@fontsource-variable/fraunces/wght.css';
-@import '@fontsource-variable/dm-sans/wght.css';
+@import '@fontsource-variable/bricolage-grotesque/wght.css';
+@import '@fontsource-variable/outfit/wght.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
 
 :root {
-  --ink: #15202b;
-  --ink-soft: #3a4654;
-  --surface: #f2efe8;
-  --surface-2: #e5e1d7;
-  --paper: #faf8f4;
-  --sea: #0b6e63;
-  --sea-deep: #08554d;
-  --sea-mist: #d5ebe7;
-  --sand: #d4c4a8;
-  --line: rgba(21, 32, 43, 0.12);
-  --shadow: 0 18px 40px rgba(21, 32, 43, 0.08);
-  --radius: 4px;
-  --font-display: 'Fraunces Variable', Georgia, serif;
-  --font-body: 'DM Sans Variable', system-ui, sans-serif;
-  --space-section: clamp(4rem, 8vw, 7rem);
-  --max: 72rem;
-  --header-h: 4.25rem;
+  --bg: #f7f5f2;
+  --bg-elevated: #ffffff;
+  --bg-card: #ffffff;
+  --ink: #111111;
+  --ink-muted: #4a4a4a;
+  --ink-faint: #6b6b6b;
+  --ink-soft: #4a4a4a;
+  --accent: #e10f0d;
+  --accent-soft: rgba(225, 15, 13, 0.1);
+  --line: rgba(17, 17, 17, 0.12);
+  --mist: rgba(17, 17, 17, 0.04);
+  --radius: 0;
+  --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', sans-serif;
+  --font-body: 'Outfit Variable', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --space-section: clamp(4.5rem, 10vw, 8rem);
+  --max: 74rem;
+  --header-h: 4.5rem;
   --sticky-h: 3.75rem;
 }
 
@@ -37,10 +40,10 @@ body {
   font-family: var(--font-body);
   font-optical-sizing: auto;
   color: var(--ink);
-  background:
-    radial-gradient(ellipse 80% 50% at 10% -10%, var(--sea-mist), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(212, 196, 168, 0.45), transparent 50%),
-    linear-gradient(180deg, var(--paper) 0%, var(--surface) 45%, var(--surface-2) 100%);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 100% 0%, rgba(225, 15, 13, 0.06), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(17, 17, 17, 0.03), transparent 45%);
   background-attachment: fixed;
   line-height: 1.6;
   min-height: 100vh;
@@ -53,6 +56,28 @@ svg {
   max-width: 100%;
 }
 
+.lucide {
+  flex-shrink: 0;
+  max-width: none;
+}
+
+.icon {
+  color: var(--accent);
+}
+
+.icon--muted {
+  color: var(--ink-muted);
+}
+
+.icon--light {
+  color: #fff;
+}
+
+.btn .lucide {
+  width: 1rem;
+  height: 1rem;
+}
+
 a {
   color: inherit;
   text-decoration-thickness: 1px;
@@ -60,7 +85,23 @@ a {
 }
 
 a:hover {
-  color: var(--sea-deep);
+  color: var(--accent);
+}
+
+a.btn:hover {
+  color: inherit;
+}
+
+a.btn--primary,
+a.btn--primary:hover,
+a.btn--primary:focus {
+  color: #ffffff;
+}
+
+a.btn--ghost,
+a.btn--ghost:hover,
+a.btn--ghost:focus {
+  color: var(--ink);
 }
 
 h1,
@@ -68,9 +109,10 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display);
-  font-weight: 560;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
   margin: 0 0 0.6em;
 }
 
@@ -93,61 +135,60 @@ p:last-child {
 
 .section__eyebrow {
   display: block;
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 650;
-  letter-spacing: 0.08em;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--sea);
-  margin-bottom: 0.75rem;
+  color: var(--ink-faint);
+  margin-bottom: 1rem;
 }
 
 .section__title {
-  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
-  max-width: 18ch;
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  max-width: 16ch;
 }
 
 .section__lead {
-  color: var(--ink-soft);
+  color: var(--ink-muted);
   max-width: 48ch;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  min-height: 2.85rem;
-  padding: 0.7rem 1.25rem;
+  gap: 0.55rem;
+  min-height: 2.9rem;
+  padding: 0.7rem 1.35rem;
   border-radius: var(--radius);
   border: 1px solid transparent;
-  font-family: var(--font-body);
-  font-size: 0.92rem;
-  font-weight: 650;
-  letter-spacing: 0.02em;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .btn:hover {
   transform: translateY(-1px);
-  color: inherit;
 }
 
 .btn--primary {
-  background: var(--sea);
-  color: #fff;
+  background: var(--accent);
+  color: #ffffff;
 }
 
 .btn--primary:hover {
-  background: var(--sea-deep);
-  color: #fff;
+  background: #c40c0a;
 }
 
 .btn--ghost {
-  background: transparent;
+  background: var(--bg-elevated);
   border-color: var(--line);
   color: var(--ink);
 }
@@ -164,51 +205,87 @@ p:last-child {
 
 .tile-grid {
   display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1rem;
+  grid-template-columns: 1fr;
   margin-top: 2rem;
 }
 
 .tile {
   display: block;
-  padding: 1.35rem 0;
-  border-top: 1px solid var(--line);
+  padding: 1.6rem 1.4rem;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
 
 .tile:hover {
-  color: var(--sea-deep);
+  background: #fff;
+  border-color: rgba(10, 18, 24, 0.22);
+  color: var(--ink);
+  transform: translateY(-2px);
 }
 
+.tile .icon {
+  margin-bottom: 0.85rem;
+}
+
+.tile h2,
 .tile h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.55rem;
+}
+
+.tile:not(:has(.lucide)) h2::before,
+.tile:not(:has(.lucide)) h3::before {
+  content: '/';
+  color: var(--accent);
+  margin-right: 0.45rem;
 }
 
 .tile p {
-  color: var(--ink-soft);
-  font-size: 0.95rem;
+  color: var(--ink-muted);
+  font-size: 0.98rem;
 }
 
 .tile span {
   display: inline-block;
-  margin-top: 0.85rem;
-  font-size: 0.85rem;
-  font-weight: 650;
-  color: var(--sea);
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
 .prose {
-  max-width: 65ch;
+  max-width: 68ch;
+  color: var(--ink-muted);
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.prose p {
+  margin-bottom: 1.1em;
+}
+
+.prose li {
+  margin-bottom: 0.45em;
 }
 
 .prose h2 {
+  color: var(--ink);
   font-size: 1.65rem;
-  margin-top: 2rem;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
 }
 
 .prose h3 {
+  color: var(--ink);
   font-size: 1.25rem;
   margin-top: 1.5rem;
 }
@@ -218,15 +295,23 @@ p:last-child {
 }
 
 .prose a {
-  color: var(--sea-deep);
+  color: var(--ink);
+  text-decoration-color: var(--accent);
+}
+
+.prose a:hover {
+  color: var(--accent);
 }
 
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  font-size: 0.85rem;
-  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
   margin-bottom: 1.5rem;
   list-style: none;
   padding: 0;
@@ -235,7 +320,7 @@ p:last-child {
 .breadcrumb li:not(:last-child)::after {
   content: '/';
   margin-left: 0.4rem;
-  opacity: 0.5;
+  color: var(--accent);
 }
 
 .breadcrumb a {
@@ -243,32 +328,32 @@ p:last-child {
 }
 
 .breadcrumb a:hover {
-  text-decoration: underline;
+  color: var(--ink);
 }
 
 .page-hero {
-  padding: calc(var(--header-h) + 2.5rem) 0 3rem;
+  padding: calc(var(--header-h) + 3rem) 0 3.5rem;
 }
 
 .page-hero h1 {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  max-width: 16ch;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  max-width: 14ch;
 }
 
 .page-hero .lead {
-  color: var(--ink-soft);
-  font-size: 1.1rem;
+  color: var(--ink-muted);
+  font-size: 1.12rem;
   max-width: 48ch;
 }
 
 .reveal {
-  animation: rise 0.7s ease both;
+  animation: rise 0.75s ease both;
 }
 
 @keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(18px);
   }
   to {
     opacity: 1;
@@ -291,8 +376,18 @@ body.has-sticky-cta {
   padding-bottom: var(--sticky-h);
 }
 
+@media (min-width: 700px) {
+  .tile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (min-width: 900px) {
   body.has-sticky-cta {
     padding-bottom: 0;
+  }
+
+  .tile-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

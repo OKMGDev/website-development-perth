@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import { breadcrumbList } from '../../lib/seo';
+import { getIndustryIcon } from '../../lib/icons';
 
 const industries = (await getCollection('industries')).sort((a, b) =>
   a.data.title.localeCompare(b.data.title)
@@ -27,13 +28,17 @@ const industries = (await getCollection('industries')).sort((a, b) =>
   </section>
   <section class="section" style="padding-top: 0">
     <div class="container tile-grid">
-      {industries.map((item) => (
-        <a class="tile" href={`/industries/${item.id}/`}>
-          <h2>{item.data.title}</h2>
-          <p>{item.data.excerpt}</p>
-          <span>Explore →</span>
-        </a>
-      ))}
+      {industries.map((item) => {
+        const Icon = getIndustryIcon(item.id);
+        return (
+          <a class="tile" href={`/industries/${item.id}/`}>
+            <Icon class="icon" size={24} stroke-width={1.75} />
+            <h2>{item.data.title}</h2>
+            <p>{item.data.excerpt}</p>
+            <span>Explore →</span>
+          </a>
+        );
+      })}
     </div>
   </section>
   <CtaBand />
