@@ -231,7 +231,8 @@ p:last-child {
 }
 
 .tile h2,
-.tile h3 {
+.tile h3,
+.tile h4 {
   font-size: 1.15rem;
   text-transform: uppercase;
   letter-spacing: -0.01em;

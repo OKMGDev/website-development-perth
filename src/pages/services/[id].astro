@@ -5,6 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import FaqAccordion from '../../components/FaqAccordion.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import { breadcrumbList, faqSchema, serviceSchema } from '../../lib/seo';
+import { serviceLocationPath } from '../../lib/serviceLocations';
 
 export async function getStaticPaths() {
   const services = await getCollection('services');
@@ -20,6 +21,9 @@ const industries = await getCollection('industries');
 const relatedIndustries = industries.filter((i) => entry.data.relatedIndustries.includes(i.id));
 const services = await getCollection('services');
 const relatedServices = services.filter((s) => entry.data.relatedServices.includes(s.id));
+const locations = (await getCollection('locations'))
+  .filter((l) => l.data.publish)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
 const crumbs = [
   { name: 'Home', path: '/' },
@@ -112,6 +116,52 @@ const jsonLd = [
     )
   }
 
+  {
+    locations.length > 0 && (
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title">{entry.data.title} by location</h2>
+          <p class="section__lead">
+            Local pages for each published Perth service area — same service, suburb-specific context.
+          </p>
+          <div class="tile-grid">
+            {locations.map((item) => (
+              <a class="tile" href={serviceLocationPath(entry.id, item.id)}>
+                <h3>{item.data.title}</h3>
+                <p>
+                  {entry.data.title} in {item.data.title}
+                </p>
+                <span>View →</span>
+              </a>
+            ))}
+          </div>
+          <p class="section-link">
+            <a href="/locations/">Browse all locations</a>
+          </p>
+        </div>
+      </section>
+    )
+  }
+
   <FaqAccordion faqs={entry.data.faqs} title={`Questions about ${entry.data.title}`} />
   <CtaBand />
 </BaseLayout>
+
+<style>
+  .section-link {
+    margin-top: 1.5rem;
+  }
+
+  .section-link a {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .section-link a:hover {
+    color: var(--ink);
+  }
+</style>

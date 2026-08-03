@@ -20,7 +20,8 @@ One primary intent per URL. Secondary terms support copy; they do not get their 
 | `/services/ux-ui-design/` | Service | UX UI design Perth | BOFU | Get a Quote | Design-led |
 | `/services/website-migration/` | Service | website migration Perth | BOFU | Get a Quote | Platform/host move, not redesign |
 | `/industries/*` | Industry | website for [sector] Perth | MOFU | Get a Quote | Sector workflows, not service clones |
-| `/locations/*` | Location | website development [suburb] | MOFU | Get a Quote | Only published with local context |
+| `/locations/*` | Location | website development [suburb] | MOFU | Get a Quote | Only published with local context; links to all service×suburb pages |
+| `/services/[service]/[suburb]/` | Service×location | [service] [suburb] | BOFU | Get a Quote | Composed from service + localContext; not thin postcode swaps |
 | `/blog/website-cost-perth/` | Article | website cost Perth | TOFU | Contact | Pricing lives here, not a /pricing page |
 | `/blog/shopify-vs-woocommerce/` | Article | Shopify vs WooCommerce | TOFU | Related services | Decision content |
 | `/blog/webflow-vs-wordpress/` | Article | Webflow vs WordPress | TOFU | Related services | Decision content |

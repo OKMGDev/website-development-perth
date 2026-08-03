@@ -1,0 +1,199 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import FaqAccordion from '../../../components/FaqAccordion.astro';
+import CtaBand from '../../../components/CtaBand.astro';
+import { breadcrumbList, faqSchema, serviceSchema } from '../../../lib/seo';
+import {
+  serviceLocationDescription,
+  serviceLocationFaqs,
+  serviceLocationPath,
+  serviceLocationTitle,
+} from '../../../lib/serviceLocations';
+import { getServiceIcon } from '../../../lib/icons';
+
+export async function getStaticPaths() {
+  const services = await getCollection('services');
+  const locations = (await getCollection('locations')).filter((l) => l.data.publish);
+
+  return services.flatMap((service) =>
+    locations.map((location) => ({
+      params: { id: service.id, location: location.id },
+      props: { service, location },
+    }))
+  );
+}
+
+const { service, location } = Astro.props;
+const allLocations = (await getCollection('locations'))
+  .filter((l) => l.data.publish)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+const allServices = (await getCollection('services')).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+
+const otherLocations = allLocations.filter((l) => l.id !== location.id);
+const otherServices = allServices.filter((s) => s.id !== service.id).slice(0, 6);
+
+const pageTitle = serviceLocationTitle(service, location);
+const pageDescription = serviceLocationDescription(service, location);
+const path = serviceLocationPath(service.id, location.id);
+const faqs = serviceLocationFaqs(service, location);
+const ServiceIcon = getServiceIcon(service.id);
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Services', path: '/services/' },
+  { name: service.data.title, path: `/services/${service.id}/` },
+  { name: location.data.title, path },
+];
+
+const jsonLd = [
+  breadcrumbList(crumbs),
+  serviceSchema({
+    name: pageTitle,
+    description: pageDescription,
+    path,
+    areaServed: location.data.areaServed,
+  }),
+  faqSchema(faqs),
+].filter(Boolean);
+
+const seoTitle = `${service.data.title} in ${location.data.title} | Perth`;
+---
+
+<BaseLayout title={seoTitle} description={pageDescription} jsonLd={jsonLd}>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Services', href: '/services/' },
+          { label: service.data.title, href: `/services/${service.id}/` },
+          { label: location.data.title },
+        ]}
+      />
+      <p class="page-hero__icon"><ServiceIcon class="icon" size={28} stroke-width={1.75} /></p>
+      <h1>{pageTitle}</h1>
+      <p class="lead">{pageDescription}</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/contact/" data-track="cta">Get a Quote</a>
+        <a class="btn btn--ghost" href={`/services/${service.id}/`}>Full {service.data.title} overview</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0">
+    <div class="container prose">
+      <h2>{service.data.title} for {location.data.title} businesses</h2>
+      <p>
+        We deliver {service.data.title.toLowerCase()} for businesses in {location.data.title} and surrounding Perth
+        suburbs. {service.data.excerpt}
+      </p>
+      <p>{location.data.localContext}</p>
+      <p>
+        Coverage is Perth-wide. We meet online or on-site by appointment and do not claim a local office or showroom in{' '}
+        {location.data.title} unless one exists. For suburb-level context across all services, see our{' '}
+        <a href={`/locations/${location.id}/`}>{location.data.title} location page</a>.
+      </p>
+
+      <h2>What you get</h2>
+      <ul>
+        {service.data.benefits.map((item) => <li>{item}</li>)}
+      </ul>
+
+      <h2>How we deliver in {location.data.title}</h2>
+      <ol>
+        {service.data.process.map((item) => <li>{item}</li>)}
+      </ol>
+      <p>
+        Projects for {location.data.title} follow the same clear process as the rest of Perth — scope first, then design
+        and build, then launch with a practical path for updates. Tell us your suburb, offer and current site (if any)
+        when you <a href="/contact/">request a quote</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">{service.data.title} by suburb</h2>
+      <p class="section__lead">Same service, local landing pages across our published Perth service areas.</p>
+      <div class="tile-grid">
+        {
+          allLocations.map((item) => (
+            <a
+              class:list={['tile', item.id === location.id && 'tile--current']}
+              href={serviceLocationPath(service.id, item.id)}
+              aria-current={item.id === location.id ? 'page' : undefined}
+            >
+              <h3>{item.data.title}</h3>
+              <p>{service.data.title} in {item.data.title}</p>
+              <span>{item.id === location.id ? 'You are here' : 'View →'}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  {
+    otherServices.length > 0 && (
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title">Other services in {location.data.title}</h2>
+          <div class="tile-grid">
+            {otherServices.map((item) => {
+              const Icon = getServiceIcon(item.id);
+              return (
+                <a class="tile" href={serviceLocationPath(item.id, location.id)}>
+                  <Icon class="icon" size={22} stroke-width={1.75} />
+                  <h3>{item.data.title}</h3>
+                  <p>{item.data.excerpt}</p>
+                  <span>View →</span>
+                </a>
+              );
+            })}
+          </div>
+          <p class="section-link">
+            <a href={`/locations/${location.id}/`}>All website development in {location.data.title}</a>
+          </p>
+        </div>
+      </section>
+    )
+  }
+
+  <FaqAccordion faqs={faqs} title={`Questions about ${service.data.title} in ${location.data.title}`} />
+  <CtaBand
+    title={`${service.data.title} in ${location.data.title}?`}
+    text="Tell us what you need. We’ll reply with clear next steps for your Perth project."
+  />
+</BaseLayout>
+
+<style>
+  .page-hero__icon {
+    margin: 0 0 0.75rem;
+  }
+
+  .tile--current {
+    border-color: var(--accent);
+    box-shadow: inset 0 0 0 1px var(--accent);
+  }
+
+  .section-link {
+    margin-top: 1.5rem;
+  }
+
+  .section-link a {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .section-link a:hover {
+    color: var(--ink);
+  }
+</style>
