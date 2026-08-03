@@ -129,7 +129,12 @@ function mapItem(item) {
 
 function splitCsvTags(raw) {
   if (!raw) return [];
-  return raw
+  if (Array.isArray(raw)) {
+    return raw
+      .flatMap((part) => splitCsvTags(part))
+      .filter((p) => p && p !== 'all-work');
+  }
+  return String(raw)
     .replace(/\|/g, ';')
     .split(';')
     .map((p) => p.trim().toLowerCase())
@@ -263,34 +268,40 @@ function parseCsvLine(line) {
   return out;
 }
 
-const items = await fetchAllLiveItems();
-const websiteProjects = enrichFromCsv(items.map(mapItem).filter(Boolean)).sort(
-  (a, b) => a.order - b.order || a.title.localeCompare(b.title)
-);
+try {
+  const items = await fetchAllLiveItems();
+  const websiteProjects = enrichFromCsv(items.map(mapItem).filter(Boolean)).sort(
+    (a, b) => a.order - b.order || a.title.localeCompare(b.title)
+  );
 
-const categories = [...new Set(websiteProjects.flatMap((i) => i.categories || []))].sort();
-const services = [...WEBSITE_RELATED_SERVICES].filter((s) =>
-  websiteProjects.some((i) => (i.servicesOffered || []).includes(s))
-);
+  const categories = [...new Set(websiteProjects.flatMap((i) => i.categories || []))].sort();
+  const services = [...WEBSITE_RELATED_SERVICES].filter((s) =>
+    websiteProjects.some((i) => (i.servicesOffered || []).includes(s))
+  );
 
-const outPath = join(root, 'src/data/portfolio.json');
-mkdirSync(dirname(outPath), { recursive: true });
-writeFileSync(
-  outPath,
-  JSON.stringify(
-    {
-      syncedAt: new Date().toISOString(),
-      source: 'okmg-webflow-works',
-      sourceCsv: 'OKMG. - Works - 68f9e3f8013dbcd952d085d9.csv',
-      filter: 'website-related-only',
-      count: websiteProjects.length,
-      facets: { categories, services },
-      items: websiteProjects,
-    },
-    null,
-    2
-  ) + '\n'
-);
+  const outPath = join(root, 'src/data/portfolio.json');
+  mkdirSync(dirname(outPath), { recursive: true });
+  writeFileSync(
+    outPath,
+    JSON.stringify(
+      {
+        syncedAt: new Date().toISOString(),
+        source: 'okmg-webflow-works',
+        sourceCsv: 'OKMG. - Works - 68f9e3f8013dbcd952d085d9.csv',
+        filter: 'website-related-only',
+        count: websiteProjects.length,
+        facets: { categories, services },
+        items: websiteProjects,
+      },
+      null,
+      2
+    ) + '\n'
+  );
 
-console.log(`Synced ${websiteProjects.length} website-related projects → src/data/portfolio.json`);
-console.log(`Facets: ${categories.length} industries, ${services.length} services (${services.join(', ')})`);
+  console.log(`Synced ${websiteProjects.length} website-related projects → src/data/portfolio.json`);
+  console.log(`Facets: ${categories.length} industries, ${services.length} services (${services.join(', ')})`);
+} catch (error) {
+  console.warn('Webflow sync failed — keeping existing src/data/portfolio.json');
+  console.warn(error instanceof Error ? error.message : error);
+  process.exit(0);
+}
