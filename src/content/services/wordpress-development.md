@@ -42,7 +42,7 @@ relatedServices:
   - website-maintenance
   - seo-services
 seo:
-  title: "WordPress Website Development in Perth | Clear Process & Delivery"
+  title: "WordPress Website Development in Perth"
   description: "WordPress development in Perth for editors, SEO and long-term maintainability — lean plugins, clear content models, practical handover."
 ---
 

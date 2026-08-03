@@ -42,7 +42,7 @@ relatedServices:
   - web-application-development
   - website-redesign
 seo:
-  title: "UX/UI Design in Perth | Clear Process & Delivery"
+  title: "UX/UI Design in Perth"
   description: "UX/UI design in Perth for websites and products — flows, Figma UI and implementation notes developers can build from."
 ---
 

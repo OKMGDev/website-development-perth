@@ -71,21 +71,20 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
     <div class="hero__media" aria-hidden="true">
       <video
         class="hero__video"
-        autoplay
         muted
         loop
         playsinline
-        preload="metadata"
+        preload="none"
         poster="/hero-perth.svg"
-      >
-        <source src="/hero-bg.mp4" type="video/mp4" />
-      </video>
+        data-hero-video
+        data-src="/hero-bg.mp4"
+      ></video>
     </div>
     <div class="container">
       <div class="hero__inner reveal">
         <h1>
-          <span>Website</span>
-          <span>Development</span>
+          <span>Website</span>{' '}
+          <span>Development</span>{' '}
           <em>Perth</em>
         </h1>
         <p class="hero__lead">
@@ -271,6 +270,29 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
   <FaqAccordion faqs={homeFaqs} title="Questions" />
   <CtaBand />
 </BaseLayout>
+
+<script>
+  // Hold the hero video back until after load so it never competes with LCP,
+  // and skip it entirely on small screens or reduced-motion preferences.
+  const video = document.querySelector('[data-hero-video]');
+  if (video instanceof HTMLVideoElement) {
+    const src = video.dataset.src;
+    const wantsVideo =
+      Boolean(src) &&
+      window.matchMedia('(min-width: 768px)').matches &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (wantsVideo) {
+      const start = () => {
+        video.src = src as string;
+        video.load();
+        void video.play().catch(() => {});
+      };
+      if (document.readyState === 'complete') start();
+      else window.addEventListener('load', start, { once: true });
+    }
+  }
+</script>
 
 <style>
   .hero {

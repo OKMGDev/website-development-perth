@@ -42,7 +42,7 @@ relatedServices:
   - custom-website-design
   - landing-page-design
 seo:
-  title: "SEO & Website Optimisation in Perth | Clear Process & Delivery"
+  title: "SEO & Website Optimisation in Perth"
   description: "SEO and website optimisation in Perth — technical health, intent-led pages and reporting tied to real enquiries."
 ---
 

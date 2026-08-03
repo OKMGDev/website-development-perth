@@ -2,7 +2,7 @@ export const site = {
   name: 'Website Development Perth',
   shortName: '<WDP>',
   tagline: 'Websites that win work for Perth businesses.',
-  url: 'https://websitedevelopmentperth.com.au',
+  url: 'https://www.websitedevelopmentperth.com.au',
   phoneDisplay: '1300 93 6564',
   phoneHref: 'tel:1300936564',
   email: 'hello@websitedevelopmentperth.com.au',

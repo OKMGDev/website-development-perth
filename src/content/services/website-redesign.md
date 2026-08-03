@@ -42,7 +42,7 @@ relatedServices:
   - seo-services
   - ux-ui-design
 seo:
-  title: "Website Redesign in Perth | Clear Process & Delivery"
+  title: "Website Redesign in Perth"
   description: "Website redesign in Perth that fixes confusion and conversion — clearer structure, stronger CTAs, SEO-aware cutover."
 ---
 

@@ -42,7 +42,7 @@ relatedServices:
   - website-migration
   - website-maintenance
 seo:
-  title: "Drupal Website Development in Perth | Clear Process & Delivery"
+  title: "Drupal Website Development in Perth"
   description: "Drupal development in Perth for complex content, multi-role publishing and governance — not a default for simple brochure sites."
 ---
 

@@ -42,7 +42,7 @@ relatedServices:
   - ux-ui-design
   - website-maintenance
 seo:
-  title: "Web Application Development in Perth | Clear Process & Delivery"
+  title: "Web Application Development in Perth"
   description: "Web application development in Perth for portals, booking workflows and tools — scoped before build, owned by you at handover."
 ---
 

@@ -32,7 +32,12 @@ const canonicalURL = (() => {
   return new URL(canonical ?? Astro.url.pathname, site.url);
 })();
 const ogURL = new URL(ogImage, site.url);
-const fullTitle = title.includes(site.name) ? title : `${title} | ${site.name}`;
+// Keep SERP titles under the ~60 char truncation point: only append the brand
+// suffix when it still fits.
+const TITLE_MAX = 60;
+const brandedTitle = `${title} | ${site.name}`;
+const fullTitle =
+  title.includes(site.name) || brandedTitle.length > TITLE_MAX ? title : brandedTitle;
 const jsonLdBlocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 ---
 

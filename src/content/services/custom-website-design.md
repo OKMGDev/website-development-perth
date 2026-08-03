@@ -42,7 +42,7 @@ relatedServices:
   - ux-ui-design
   - seo-services
 seo:
-  title: "Custom Website Design in Perth | Clear Process & Delivery"
+  title: "Custom Website Design in Perth"
   description: "Custom website design in Perth — built around your offers, proof and enquiry paths, not a theme with a logo bolted on."
 ---
 

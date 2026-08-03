@@ -42,7 +42,7 @@ relatedServices:
   - seo-services
   - website-migration
 seo:
-  title: "Website Maintenance & Support in Perth | Clear Process & Delivery"
+  title: "Website Maintenance & Support in Perth"
   description: "Website maintenance in Perth — updates, backups, monitoring and small fixes, with larger work quoted separately."
 ---
 

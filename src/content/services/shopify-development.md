@@ -42,7 +42,7 @@ relatedServices:
   - seo-services
   - website-migration
 seo:
-  title: "Shopify Website Development in Perth | Clear Process & Delivery"
+  title: "Shopify Website Development in Perth"
   description: "Shopify development for Perth retailers — product templates, checkout clarity and ops fit for Australian selling."
 ---
 

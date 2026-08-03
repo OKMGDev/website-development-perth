@@ -42,7 +42,7 @@ relatedServices:
   - custom-website-design
   - webflow-development
 seo:
-  title: "Landing Page Design in Perth | Clear Process & Delivery"
+  title: "Landing Page Design in Perth"
   description: "Landing page design for Perth campaigns — one offer, one CTA, real proof and tracking that matches your ads."
 ---
 

@@ -86,7 +86,13 @@ const facets = getPortfolioFacets();
             data-services={(item.servicesOffered || []).join(',')}
           >
             {item.homepageImage || item.heroImage ? (
-              <img src={item.homepageImage || item.heroImage} alt="" loading="lazy" width="640" height="400" />
+              <img
+                src={item.homepageImage || item.heroImage}
+                alt={`${item.title} website project`}
+                loading="lazy"
+                width="640"
+                height="400"
+              />
             ) : null}
             <div>
               {(item.categories || []).length > 0 && (

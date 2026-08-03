@@ -42,7 +42,7 @@ relatedServices:
   - wordpress-development
   - shopify-development
 seo:
-  title: "Website Migration in Perth | Clear Process & Delivery"
+  title: "Website Migration in Perth"
   description: "Website migration in Perth with URL maps, redirects and staged cutover — platform moves without a hope-and-pray launch."
 ---
 

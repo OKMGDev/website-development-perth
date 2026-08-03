@@ -42,7 +42,7 @@ relatedServices:
   - wordpress-development
   - website-maintenance
 seo:
-  title: "WooCommerce Website Development in Perth | Clear Process & Delivery"
+  title: "WooCommerce Website Development in Perth"
   description: "WooCommerce development in Perth when WordPress commerce is the right fit — flexible products, careful hosting and maintenance."
 ---
 
