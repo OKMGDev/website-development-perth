@@ -64,11 +64,20 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
 >
   <section class="hero">
     <div class="hero__media" aria-hidden="true">
-      <img src="/hero-perth.svg" alt="" width="1600" height="1000" />
+      <video
+        class="hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="/hero-perth.svg"
+      >
+        <source src="/hero-bg.mp4" type="video/mp4" />
+      </video>
     </div>
     <div class="container">
       <div class="hero__inner reveal">
-        <p class="hero__brand">website<span>/</span>perth</p>
         <h1>
           <span>Website</span>
           <span>Development</span>
@@ -110,8 +119,8 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
       <div>
         <GlanceReply class="icon" size={22} stroke-width={1.75} />
         <div>
-          <strong>Fast reply</strong>
-          <span>{site.responseTime}</span>
+          <strong>Direct contact</strong>
+          <span>Call or request a quote</span>
         </div>
       </div>
     </div>
@@ -281,10 +290,16 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
     overflow: hidden;
   }
 
-  .hero__media img {
+  .hero__media img,
+  .hero__video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .hero__video {
+    display: block;
+    background: #0c1218;
   }
 
   .hero__media::after {
@@ -298,19 +313,6 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
 
   .hero__inner {
     max-width: min(52rem, 100%);
-  }
-
-  .hero__brand {
-    font-family: var(--font-display);
-    font-size: clamp(1.15rem, 2.5vw, 1.5rem);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    text-transform: lowercase;
-    margin: 0 0 1.1rem;
-  }
-
-  .hero__brand span {
-    color: #ff6b69;
   }
 
   .hero h1 {

@@ -94,7 +94,9 @@ a.btn:hover {
 
 a.btn--primary,
 a.btn--primary:hover,
-a.btn--primary:focus {
+a.btn--primary:focus,
+a.btn--primary:visited,
+button.btn--primary {
   color: #ffffff;
 }
 

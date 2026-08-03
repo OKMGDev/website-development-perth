@@ -6,7 +6,7 @@ import { navPrimary, site } from '../data/site';
 <header class="header">
   <div class="container header__inner">
     <a class="logo" href="/" aria-label={`${site.name} home`}>
-      <span class="logo__text">website<span class="logo__slash">/</span>perth</span>
+      <span class="logo__text"><span class="logo__mark">&lt;</span>WDP<span class="logo__mark">&gt;</span></span>
     </a>
 
     <nav class="nav" aria-label="Primary" data-nav>
@@ -89,12 +89,11 @@ import { navPrimary, site } from '../data/site';
     font-size: 1.25rem;
     font-weight: 800;
     letter-spacing: -0.03em;
-    text-transform: lowercase;
+    color: var(--ink);
   }
 
-  .logo__slash {
-    color: var(--accent);
-    padding: 0 0.05em;
+  .logo__mark {
+    color: #e10f0d;
   }
 
   .nav {
@@ -111,7 +110,7 @@ import { navPrimary, site } from '../data/site';
     padding: 0;
   }
 
-  .nav a {
+  .nav ul a {
     text-decoration: none;
     font-family: var(--font-mono);
     font-size: 0.72rem;
@@ -120,13 +119,27 @@ import { navPrimary, site } from '../data/site';
     color: var(--ink-muted);
   }
 
-  .nav a:hover {
+  .nav ul a:hover {
     color: var(--ink);
+  }
+
+  .nav a.btn--primary,
+  .nav a.btn--primary:hover,
+  .nav a.btn--primary:focus {
+    color: #ffffff;
   }
 
   .nav__actions {
     display: flex;
     gap: 0.5rem;
+  }
+
+  .mobile-nav a.btn--primary,
+  .mobile-nav a.btn--primary:hover,
+  .mobile-nav a.btn--primary:focus {
+    color: #ffffff;
+    border-bottom: 0;
+    text-align: center;
   }
 
   .menu-toggle {

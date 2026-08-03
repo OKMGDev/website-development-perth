@@ -23,6 +23,14 @@ export function organizationSchema(): Record<string, unknown> {
     url: site.url,
     email: site.email,
     telephone: site.phoneHref.replace('tel:', ''),
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '608–610 Stirling Hwy',
+      addressLocality: 'Mosman Park',
+      addressRegion: 'WA',
+      postalCode: '6012',
+      addressCountry: 'AU',
+    },
     areaServed: {
       '@type': 'AdministrativeArea',
       name: 'Perth, Western Australia',

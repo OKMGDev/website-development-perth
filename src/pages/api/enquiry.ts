@@ -51,29 +51,62 @@ export const POST: APIRoute = async ({ request }) => {
   }
 
   const resendKey = import.meta.env.RESEND_API_KEY;
-  const notifyTo = import.meta.env.ENQUIRY_TO_EMAIL || 'hello@websitedevelopmentperth.com.au';
+  const notifyTo = import.meta.env.ENQUIRY_TO_EMAIL || 'dev@okmg.com';
+  const notifyCc = import.meta.env.ENQUIRY_CC_EMAIL || 'andy@okmg.com';
   const notifyFrom = import.meta.env.ENQUIRY_FROM_EMAIL || 'onboarding@resend.dev';
 
-  if (resendKey) {
-    try {
-      await fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${resendKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          from: notifyFrom,
-          to: [notifyTo],
-          subject: `New ${body.enquiryType} enquiry from ${body.name}`,
-          text: JSON.stringify(payload, null, 2),
-        }),
+  if (!resendKey) {
+    console.error('Enquiry received but RESEND_API_KEY is not configured:', payload);
+    return new Response(JSON.stringify({ error: 'Form delivery is not configured' }), {
+      status: 503,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${resendKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: notifyFrom,
+        to: [notifyTo],
+        cc: [notifyCc],
+        reply_to: body.email,
+        subject: `New ${body.enquiryType} enquiry from ${body.name}`,
+        text: [
+          `Name: ${body.name}`,
+          `Email: ${body.email}`,
+          `Phone: ${body.phone}`,
+          `Type: ${body.enquiryType}`,
+          `Service: ${body.serviceInterest}`,
+          `Industry: ${body.industry || 'Not provided'}`,
+          `Message: ${body.message}`,
+          `Landing page: ${body.landingPage || ''}`,
+          `Referrer: ${body.referrer || ''}`,
+          `Device: ${body.device || ''}`,
+          `UTM: ${body.utm || ''}`,
+          `Received: ${payload.receivedAt}`,
+        ].join('\n'),
+      }),
+    });
+
+    if (!res.ok) {
+      const detail = await res.text();
+      console.error('Resend email failed', res.status, detail);
+      return new Response(JSON.stringify({ error: 'Could not send enquiry' }), {
+        status: 502,
+        headers: { 'Content-Type': 'application/json' },
       });
-    } catch (error) {
-      console.error('Resend email failed', error);
     }
-  } else {
-    console.log('Enquiry received (no RESEND_API_KEY configured):', payload);
+  } catch (error) {
+    console.error('Resend request failed', error);
+    return new Response(JSON.stringify({ error: 'Could not send enquiry' }), {
+      status: 502,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
   return new Response(JSON.stringify({ ok: true }), {

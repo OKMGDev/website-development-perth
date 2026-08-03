@@ -7,7 +7,7 @@ Astro + Vercel marketing site for [websitedevelopmentperth.com.au](https://websi
 - Astro (static-first, islands for the enquiry form)
 - Content collections (Markdown in Git)
 - Vercel adapter for the `/api/enquiry/` serverless route
-- GA4 + optional Resend email / CRM webhook
+- GA4 + Resend email delivery / optional CRM webhook
 
 ## Develop
 

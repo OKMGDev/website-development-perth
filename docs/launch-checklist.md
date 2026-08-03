@@ -5,7 +5,7 @@
 - [ ] Replace placeholder ABN, phone confirmation and any temporary contact details in `src/data/site.ts`
 - [ ] Add real testimonials, case metrics and logos only when verified
 - [ ] Review privacy policy with business owner
-- [ ] Set env vars on Vercel: `RESEND_API_KEY`, `ENQUIRY_TO_EMAIL`, `ENQUIRY_FROM_EMAIL`, optional `CRM_WEBHOOK_URL`, `PUBLIC_GA4_ID`
+- [ ] Set env vars on Vercel: `RESEND_API_KEY`, `ENQUIRY_TO_EMAIL` (`dev@okmg.com`), `ENQUIRY_CC_EMAIL` (`andy@okmg.com`), `ENQUIRY_FROM_EMAIL`, optional `CRM_WEBHOOK_URL`, `PUBLIC_GA4_ID`
 - [ ] Confirm form submission reaches email/CRM from a Vercel preview
 - [ ] Spot-check title/meta uniqueness on hubs + 3 services + 2 locations + 1 blog post
 

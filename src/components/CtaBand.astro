@@ -19,7 +19,6 @@ const {
       <p class="section__eyebrow">Got 10 minutes?</p>
       <h2>{title}</h2>
       <p>{text}</p>
-      <p class="cta-band__note">{site.responseTime}</p>
     </div>
     <div class="btn-row">
       <a class="btn btn--primary" href="/contact/" data-track="cta">
@@ -52,14 +51,6 @@ const {
   .cta-band p {
     color: var(--ink-muted);
     max-width: 42ch;
-  }
-
-  .cta-band__note {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
   }
 
   @media (min-width: 800px) {

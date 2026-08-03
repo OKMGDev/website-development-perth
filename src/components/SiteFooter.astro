@@ -2,20 +2,19 @@
 import { getCollection } from 'astro:content';
 import { Mail, MapPin, Phone } from '@lucide/astro';
 import { footerNav, site } from '../data/site';
-import { featuredServiceIds } from '../data/serviceGroups';
+import { serviceGroups } from '../data/serviceGroups';
 
 const allServices = await getCollection('services');
 const byId = Object.fromEntries(allServices.map((s) => [s.id, s]));
-const services = featuredServiceIds.map((id) => byId[id]).filter(Boolean);
-const locations = (await getCollection('locations'))
-  .filter((l) => l.data.publish)
-  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+const services = serviceGroups
+  .flatMap((group) => group.serviceIds.map((id) => byId[id]))
+  .filter(Boolean);
 ---
 
 <footer class="footer">
   <div class="container footer__grid">
     <div>
-      <p class="footer__brand">website<span>/</span>perth</p>
+      <p class="footer__brand"><span>&lt;</span>WDP<span>&gt;</span></p>
       <p class="footer__blurb">{site.tagline} {site.serviceArea}.</p>
       <p class="footer__contact">
         <a href={site.phoneHref}>
@@ -31,16 +30,15 @@ const locations = (await getCollection('locations'))
           {site.address}
         </span>
       </p>
-      <p class="muted">ABN {site.abn} (placeholder)</p>
+      <p class="muted">ABN {site.abn}</p>
     </div>
 
-    <div>
+    <div class="footer__services">
       <h2>Services</h2>
       <ul>
         {services.map((item) => (
           <li><a href={`/services/${item.id}/`}>{item.data.title}</a></li>
         ))}
-        <li><a href="/services/">All services →</a></li>
       </ul>
     </div>
 
@@ -52,20 +50,12 @@ const locations = (await getCollection('locations'))
         ))}
       </ul>
     </div>
-
-    <div>
-      <h2>Service areas</h2>
-      <ul>
-        {locations.map((item) => (
-          <li><a href={`/locations/${item.id}/`}>{item.data.title}</a></li>
-        ))}
-        <li><a href="/locations/">View all areas →</a></li>
-      </ul>
-    </div>
   </div>
   <div class="container footer__bottom">
     <p>© {new Date().getFullYear()} {site.name}</p>
-    <p class="muted">{site.responseTime}</p>
+    <p class="footer__operator">
+      Website Development Perth is operated by <a href="https://okmg.com/" rel="noopener noreferrer" target="_blank">OKMG</a>, a Perth digital agency.
+    </p>
   </div>
 </footer>
 
@@ -102,7 +92,7 @@ const locations = (await getCollection('locations'))
   }
 
   .footer__brand span {
-    color: var(--accent);
+    color: #e10f0d;
   }
 
   .footer__blurb {
@@ -148,9 +138,30 @@ const locations = (await getCollection('locations'))
     font-size: 0.92rem;
   }
 
+  .footer__services ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.25rem;
+    row-gap: 0.35rem;
+  }
+
+  .footer__services li {
+    margin-bottom: 0;
+  }
+
   .muted {
     color: rgba(255, 255, 255, 0.4);
     font-size: 0.88rem;
+  }
+
+  .footer__operator {
+    margin: 0;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .footer__operator a {
+    color: rgba(255, 255, 255, 0.68);
   }
 
   .footer__bottom {
@@ -160,13 +171,14 @@ const locations = (await getCollection('locations'))
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: baseline;
     gap: 0.75rem;
     font-size: 0.88rem;
   }
 
   @media (min-width: 900px) {
     .footer__grid {
-      grid-template-columns: 1.3fr 1fr 1fr 1fr;
+      grid-template-columns: 1.2fr 1.6fr 1fr;
     }
   }
 </style>

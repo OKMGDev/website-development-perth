@@ -21,6 +21,9 @@ import { site } from '../data/site';
       <p class="lead">
         We help Perth SMEs get websites that do a job: explain the offer, prove the work and make the next step obvious.
       </p>
+      <p class="about-operator">
+        Website Development Perth is operated by <a href="https://okmg.com/" rel="noopener noreferrer" target="_blank">OKMG</a>, a Perth digital agency.
+      </p>
     </div>
   </section>
   <section class="section" style="padding-top: 0">
@@ -44,3 +47,16 @@ import { site } from '../data/site';
   </section>
   <CtaBand />
 </BaseLayout>
+
+<style>
+  .about-operator {
+    margin-top: 1.25rem;
+    max-width: 42ch;
+    color: var(--ink-muted);
+  }
+
+  .about-operator a {
+    color: var(--ink);
+    text-decoration-color: var(--accent);
+  }
+</style>
