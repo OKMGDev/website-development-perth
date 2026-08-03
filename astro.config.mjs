@@ -10,10 +10,12 @@ export default defineConfig({
   adapter: vercel(),
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/thank-you/'),
+      filter: (page) =>
+        !page.includes('/thank-you/') &&
+        !/\/work\/.+/.test(new URL(page).pathname),
     }),
   ],
   image: {
-    domains: [],
+    domains: ['cdn.prod.website-files.com'],
   },
 });

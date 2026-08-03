@@ -14,6 +14,7 @@ import {
   whyIcons,
 } from '../lib/icons';
 import { featuredServiceIds } from '../data/serviceGroups';
+import { getFeaturedPortfolio, scrubAgencyMentions } from '../lib/portfolio';
 
 const allServices = await getCollection('services');
 const byId = Object.fromEntries(allServices.map((s) => [s.id, s]));
@@ -23,8 +24,12 @@ const industries = (await getCollection('industries')).sort((a, b) =>
   a.data.title.localeCompare(b.data.title)
 );
 
-const work = await getCollection('work');
-const [featuredWork, ...otherWork] = work;
+const featuredWork = getFeaturedPortfolio(3).map((item) => ({
+  ...item,
+  title: scrubAgencyMentions(item.title),
+  excerpt: scrubAgencyMentions(item.excerpt),
+}));
+const [primaryWork, ...otherWork] = featuredWork;
 
 const GlanceLocation = glanceIcons.location;
 const GlanceProcess = glanceIcons.process;
@@ -210,22 +215,22 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
       <div class="section__head">
         <p class="section__eyebrow">Work</p>
         <h2 class="section__title">Recent projects</h2>
-        <p class="section__lead">Problem, approach and stack — names and metrics published when approved.</p>
+        <p class="section__lead">Recent website builds and digital platforms for Perth businesses.</p>
       </div>
       {
-        featuredWork && (
+        primaryWork && (
           <div class="work-grid">
-            <a class="work-feature" href={`/work/${featuredWork.id}/`}>
+            <a class="work-feature" href={`/work/${primaryWork.id}/`}>
               <span>Featured</span>
-              <h3>{featuredWork.data.title}</h3>
-              <p>{featuredWork.data.excerpt}</p>
+              <h3>{primaryWork.title}</h3>
+              <p>{primaryWork.excerpt}</p>
               <em>View project →</em>
             </a>
             <div class="work-stack">
               {otherWork.map((item) => (
                 <a href={`/work/${item.id}/`}>
-                  <h3>{item.data.title}</h3>
-                  <p>{item.data.excerpt}</p>
+                  <h3>{item.title}</h3>
+                  <p>{item.excerpt}</p>
                 </a>
               ))}
             </div>

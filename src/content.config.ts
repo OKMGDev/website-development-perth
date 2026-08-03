@@ -57,22 +57,6 @@ const locations = defineCollection({
   }),
 });
 
-const work = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/work' }),
-  schema: z.object({
-    title: z.string(),
-    client: z.string(),
-    excerpt: z.string(),
-    problem: z.string(),
-    solution: z.string(),
-    stack: z.array(z.string()),
-    results: z.string().optional(),
-    industries: z.array(z.string()).default([]),
-    services: z.array(z.string()).default([]),
-    seo: seoSchema,
-  }),
-});
-
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: z.object({
@@ -88,4 +72,4 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { services, industries, locations, work, blog };
+export const collections = { services, industries, locations, blog };

@@ -1,82 +1,155 @@
 ---
-import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CtaBand from '../../components/CtaBand.astro';
-import { articleSchema, breadcrumbList } from '../../lib/seo';
+import { breadcrumbList } from '../../lib/seo';
+import { getPortfolioItems, scrubAgencyMentions } from '../../lib/portfolio';
 
-export async function getStaticPaths() {
-  const work = await getCollection('work');
-  return work.map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+export function getStaticPaths() {
+  return getPortfolioItems().map((item) => ({
+    params: { id: item.id },
+    props: { item },
+  }));
 }
 
-const { entry } = Astro.props;
-const { Content } = await render(entry);
-const services = await getCollection('services');
-const related = services.filter((s) => entry.data.services.includes(s.id));
+const { item } = Astro.props;
+const title = scrubAgencyMentions(item.title);
+const excerpt = scrubAgencyMentions(item.excerpt);
+const summary = scrubAgencyMentions(item.summary);
+const bodyHtml = scrubAgencyMentions(item.bodyHtml || '');
 const crumbs = [
   { name: 'Home', path: '/' },
   { name: 'Work', path: '/work/' },
-  { name: entry.data.title, path: `/work/${entry.id}/` },
+  { name: title, path: `/work/${item.id}/` },
 ];
 ---
 
 <BaseLayout
-  title={entry.data.seo.title}
-  description={entry.data.seo.description}
-  jsonLd={[
-    breadcrumbList(crumbs),
-    articleSchema({
-      title: entry.data.title,
-      description: entry.data.excerpt,
-      path: `/work/${entry.id}/`,
-      datePublished: '2026-07-01',
-    }),
-  ]}
+  title={`${title} | Work`}
+  description={scrubAgencyMentions(item.seo.description)}
+  canonical={item.okmgUrl}
+  ogImage={item.heroImage || undefined}
+  noindex={true}
+  jsonLd={breadcrumbList(crumbs)}
 >
   <section class="page-hero">
     <div class="container">
       <Breadcrumbs
-        items={[{ label: 'Home', href: '/' }, { label: 'Work', href: '/work/' }, { label: entry.data.title }]}
+        items={[{ label: 'Home', href: '/' }, { label: 'Work', href: '/work/' }, { label: title }]}
       />
-      <h1>{entry.data.title}</h1>
-      <p class="lead">{entry.data.excerpt}</p>
-      <p><strong>Client:</strong> {entry.data.client}</p>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top: 0">
-    <div class="container prose">
-      <h2>Problem</h2>
-      <p>{entry.data.problem}</p>
-      <h2>Solution</h2>
-      <p>{entry.data.solution}</p>
-      <h2>Stack</h2>
-      <ul>{entry.data.stack.map((item) => <li>{item}</li>)}</ul>
-      <h2>Results</h2>
-      <p>{entry.data.results || 'Verified results will appear here when the client approves publication. No invented metrics.'}</p>
-      <Content />
+      <h1>{title}</h1>
+      <p class="lead">{excerpt}</p>
+      {
+        item.projectUrl && (
+          <div class="btn-row">
+            <a class="btn btn--primary" href={item.projectUrl} rel="noopener noreferrer" target="_blank">
+              Visit live site
+            </a>
+          </div>
+        )
+      }
     </div>
   </section>
 
   {
-    related.length > 0 && (
-      <section class="section">
+    item.heroImage && (
+      <section class="work-hero-media">
         <div class="container">
-          <h2 class="section__title">Related services</h2>
-          <div class="tile-grid">
-            {related.map((item) => (
-              <a class="tile" href={`/services/${item.id}/`}>
-                <h3>{item.data.title}</h3>
-                <p>{item.data.excerpt}</p>
-                <span>View →</span>
-              </a>
-            ))}
-          </div>
+          <img src={item.heroImage} alt="" width="1400" height="800" />
         </div>
       </section>
     )
   }
 
+  {
+    item.stats.length > 0 && (
+      <section class="section" style="padding-top: 0">
+        <div class="container stats">
+          {item.stats.map((stat) => (
+            <div>
+              <strong>{scrubAgencyMentions(stat.value)}</strong>
+              <span>{scrubAgencyMentions(stat.title)}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section" style="padding-top: 0">
+    <div class="container prose">
+      {bodyHtml ? <div set:html={bodyHtml} /> : <p>{summary}</p>}
+      {
+        item.contentGroups.map((group) => (
+          <div class="content-group">
+            {group.html && <div set:html={scrubAgencyMentions(group.html)} />}
+            {group.images.length > 0 && (
+              <div class="content-group__images">
+                {group.images.map((src) => (
+                  <img src={src} alt="" loading="lazy" width="900" height="600" />
+                ))}
+              </div>
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
   <CtaBand />
 </BaseLayout>
+
+<style>
+  .work-hero-media {
+    padding-bottom: 2rem;
+  }
+
+  .work-hero-media img {
+    width: 100%;
+    max-height: 34rem;
+    object-fit: cover;
+    display: block;
+    border: 1px solid var(--line);
+  }
+
+  .stats {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+  .stats div {
+    border-top: 3px solid var(--accent);
+    padding-top: 0.85rem;
+  }
+
+  .stats strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+
+  .stats span {
+    color: var(--ink-muted);
+    font-size: 0.92rem;
+  }
+
+  .content-group {
+    margin-top: 2rem;
+  }
+
+  .content-group__images {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .content-group__images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--line);
+  }
+</style>

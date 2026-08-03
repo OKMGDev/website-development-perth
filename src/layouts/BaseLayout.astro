@@ -25,7 +25,12 @@ const {
   bodyClass = 'has-sticky-cta',
 } = Astro.props;
 
-const canonicalURL = new URL(canonical ?? Astro.url.pathname, site.url);
+const canonicalURL = (() => {
+  if (canonical?.startsWith('http://') || canonical?.startsWith('https://')) {
+    return new URL(canonical);
+  }
+  return new URL(canonical ?? Astro.url.pathname, site.url);
+})();
 const ogURL = new URL(ogImage, site.url);
 const fullTitle = title.includes(site.name) ? title : `${title} | ${site.name}`;
 const jsonLdBlocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];

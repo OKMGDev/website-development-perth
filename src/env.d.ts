@@ -7,6 +7,8 @@ interface ImportMetaEnv {
   readonly ENQUIRY_CC_EMAIL?: string;
   readonly ENQUIRY_FROM_EMAIL?: string;
   readonly CRM_WEBHOOK_URL?: string;
+  readonly WEBFLOW_API_KEY?: string;
+  readonly WEBFLOW_WORK_COLLECTION_ID?: string;
 }
 
 interface ImportMeta {

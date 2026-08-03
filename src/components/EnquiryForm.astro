@@ -22,10 +22,10 @@ const services = [
 <form class:list={['enquiry', { 'enquiry--compact': compact }]} data-enquiry-form>
   <div class="enquiry__intro">
     <h2>{compact ? 'Get a quote' : 'Tell us about your project'}</h2>
-    <p data-step-label>Step 1 of 2</p>
+    <p>We’ll reply with clear next steps.</p>
   </div>
 
-  <div class="enquiry__step" data-step="1">
+  <div class="enquiry__fields">
     <label>
       Full name
       <input name="name" required autocomplete="name" />
@@ -39,27 +39,11 @@ const services = [
       <input name="phone" type="tel" required autocomplete="tel" />
     </label>
     <label>
-      How can we help?
-      <select name="enquiryType" required>
-        <option value="quote">Request a quote</option>
-        <option value="quick">Quick enquiry</option>
-        <option value="consultation">Book a consultation</option>
-      </select>
-    </label>
-    <button type="button" class="btn btn--primary" data-next>Continue</button>
-  </div>
-
-  <div class="enquiry__step" data-step="2" hidden>
-    <label>
       Service interest
       <select name="serviceInterest" required>
         <option value="" selected disabled>Select a service</option>
         {services.map((service) => <option value={service}>{service}</option>)}
       </select>
-    </label>
-    <label>
-      Industry (optional)
-      <input name="industry" placeholder="e.g. tradie, healthcare" />
     </label>
     <label>
       Message
@@ -70,7 +54,6 @@ const services = [
       <span>I agree to be contacted about this enquiry. See our <a href="/privacy/">privacy policy</a>.</span>
     </label>
     <div class="enquiry__actions">
-      <button type="button" class="btn btn--ghost" data-back>Back</button>
       <button type="submit" class="btn btn--primary" data-submit>Send enquiry</button>
     </div>
     <p class="enquiry__error" data-error hidden role="alert"></p>
@@ -80,9 +63,6 @@ const services = [
 <script>
   const form = document.querySelector('[data-enquiry-form]');
   if (form instanceof HTMLFormElement) {
-    const step1 = form.querySelector('[data-step="1"]');
-    const step2 = form.querySelector('[data-step="2"]');
-    const label = form.querySelector('[data-step-label]');
     const errorEl = form.querySelector('[data-error]');
     const submitBtn = form.querySelector('[data-submit]');
     let started = false;
@@ -101,25 +81,6 @@ const services = [
 
     window.addEventListener('pagehide', () => {
       if (started && !submitted) track('form_abandon');
-    });
-
-    form.querySelector('[data-next]')?.addEventListener('click', () => {
-      const required = step1?.querySelectorAll('input, select') ?? [];
-      for (const field of required) {
-        if (field instanceof HTMLInputElement || field instanceof HTMLSelectElement) {
-          if (!field.reportValidity()) return;
-        }
-      }
-      if (step1 instanceof HTMLElement) step1.hidden = true;
-      if (step2 instanceof HTMLElement) step2.hidden = false;
-      if (label) label.textContent = 'Step 2 of 2';
-      track('form_step', { step: 2 });
-    });
-
-    form.querySelector('[data-back]')?.addEventListener('click', () => {
-      if (step2 instanceof HTMLElement) step2.hidden = true;
-      if (step1 instanceof HTMLElement) step1.hidden = false;
-      if (label) label.textContent = 'Step 1 of 2';
     });
 
     form.addEventListener('submit', async (event) => {
@@ -142,12 +103,18 @@ const services = [
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
         });
-        if (!res.ok) throw new Error('fail');
+        const result = (await res.json().catch(() => ({}))) as { error?: string; detail?: string };
+        if (!res.ok) {
+          throw new Error(result.error || result.detail || 'fail');
+        }
         submitted = true;
-        track('form_submit', { form_type: String(payload.enquiryType || '') });
+        track('form_submit', { form_type: String(payload.serviceInterest || '') });
         window.location.href = '/thank-you/';
-      } catch {
-        errorEl.textContent = 'Something went wrong. Please call us or try again.';
+      } catch (err) {
+        const message = err instanceof Error && err.message !== 'fail' ? err.message : null;
+        errorEl.textContent = message
+          ? `${message}. Please call us or try again.`
+          : 'Something went wrong. Please call us or try again.';
         errorEl.hidden = false;
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send enquiry';
@@ -183,14 +150,9 @@ const services = [
     margin-bottom: 1.1rem;
   }
 
-  .enquiry__step {
+  .enquiry__fields {
     display: grid;
     gap: 0.85rem;
-    animation: rise 0.35s ease;
-  }
-
-  .enquiry__step[hidden] {
-    display: none !important;
   }
 
   label {

@@ -34,7 +34,7 @@ Push this repo to GitHub, then import the project in Vercel (Git integration). S
 
 ## Content
 
-Edit Markdown under `src/content/` (`services`, `industries`, `locations`, `work`, `blog`). Site-wide contact details live in `src/data/site.ts`.
+Edit Markdown under `src/content/` (`services`, `industries`, `locations`, `blog`). Portfolio/work is synced from OKMG Webflow (`npm run sync:work` → `src/data/portfolio.json`). Site-wide contact details live in `src/data/site.ts`.
 
 ## Docs
 
