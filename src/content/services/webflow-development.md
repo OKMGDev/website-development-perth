@@ -2,6 +2,11 @@
 title: "Webflow Website Development"
 primaryKeyword: "Webflow website Perth"
 excerpt: "Marketing sites with precise design control and a visual CMS your team can update confidently."
+glance:
+  who: "Marketing teams who need design fidelity and a visual CMS with guardrails."
+  timeline: "5–9 weeks for a typical marketing site."
+  platforms: "Webflow — you own the workspace, billing and access."
+  bestWhen: "Design-led brands and campaign-heavy sites where plugin ecosystems would be a distraction."
 benefits:
   - "Component-based design system so new pages stay on-brand"
   - "CMS collections structured for how marketing actually publishes"
@@ -58,16 +63,34 @@ A design system in Webflow (typography, spacing, components) so new pages do not
 
 Webflow is excellent for marketing sites and brand-led brochure work. It is not always the right home for complex apps, heavy membership products or deep custom commerce — we will say when another stack is smarter.
 
+## Who should choose Webflow — and who should not
+
+[Hospitality](/industries/hospitality-restaurants/) brands, [professional services](/industries/professional-services/) and growth-minded [wellness](/industries/fitness-wellness/) businesses that care how the site looks *and* how quickly marketing can ship pages are the usual fit. Editors work inside components and CMS fields, not a blank canvas that slowly destroys the design system.
+
+Skip Webflow if you need a large plugin ecosystem, deep custom PHP, or a [WooCommerce](/services/woocommerce-development/)-style store inside the same CMS. Skip it if membership, complex permissions or field-staff workflows are the product — that is [web application development](/services/web-application-development/). A one-page campaign with no CMS need may only want [landing page design](/services/landing-page-design/) inside an existing project.
+
 ## Webflow vs WordPress
 
 Pick Webflow when design fidelity and marketing-team editing matter most. Pick [WordPress](/services/wordpress-development/) when you need deeper custom logic, a larger plugin ecosystem, or an editorial model that outgrows Webflow’s CMS. Our [comparison guide](/blog/webflow-vs-wordpress/) walks through the trade-offs in plain language.
 
-## Campaigns, SEO and ongoing work
+If you later outgrow Webflow, documented collections and a clean URL scheme make a [migration](/services/website-migration/) planned rather than archaeological. We do not pretend every site stays on one platform forever.
 
-Need landing pages for ads? We can ship them inside the same Webflow project via [landing page design](/services/landing-page-design/). Want ongoing polish after launch? Pair the build with [maintenance](/services/website-maintenance/) or targeted [SEO](/services/seo-services/). Redesigning an existing Webflow site is common — from key templates to a fuller IA refresh.
+## CMS schema, integrations and practical decisions
 
-## Who this suits
+The schema is the project. Collections for services, team, projects, FAQs or locations need fields that match how you write — not a generic “blog” dump. Reference fields and filters are decided in discovery so marketing is not fighting the CMS six months later. [Our process](/process/) puts this before interaction polish.
 
-Hospitality brands, professional services and growth-minded SMEs that care how the site looks *and* how quickly marketing can ship pages.
+You own the Webflow workspace and hosting plan. We work in your account or transfer the project. Site-plan limits (CMS items, form submissions, localisation) are a commercial decision you should see before build, not after you hit a ceiling.
+
+Integrations: native forms, Zapier/Make, or webhooks into a CRM, with consent copy that matches how you actually use the data. Embeds for booking or maps are fine when they are the real workflow. Native Shopify or third-party commerce add-ons are scoped as commerce work, not a toggle.
+
+Redirects, canonicals and a staging subdomain are part of launch, not a later SEO ticket. If you are replacing an existing site, we treat URL changes as a [migration](/services/website-migration/) workstream even when the visual design stays in Webflow. Publishing localisation or extra locales is a plan-limit and content-ops decision — we flag it before you design twenty templates you cannot staff.
+
+## Risks, measurement and handover
+
+Risks: interactions that look clever and fail accessibility; unoptimised images in the CMS; editors breaking a symbol because they were given designer-level access; and using Webflow as a makeshift app. We QA breakpoints and forms on phones. Animation is optional, not a personality.
+
+We measure by whether marketing can publish on-brand, whether enquiry events fire, and whether [SEO](/services/seo-services/) fields are filled for the pages that should rank. Webflow is not “good for SEO” by itself — structure and content still do the work.
+
+Handover is editor training plus a short “do / don’t” for components, CMS items and localisation. Ongoing [maintenance](/services/website-maintenance/) covers platform and dependency hygiene where relevant. Redesigning an existing Webflow site is common — from key templates to a fuller IA refresh. [Custom website design](/services/custom-website-design/) is the pairing when the visual system needs to be invented, not only implemented. Examples of marketing builds are on [our work](/work/).
 
 [Get a quote](/contact/) and share whether you already have a Webflow account or are starting fresh.

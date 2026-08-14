@@ -2,6 +2,11 @@
 title: "WordPress Website Development"
 primaryKeyword: "WordPress developer Perth"
 excerpt: "WordPress sites built for editors, SEO and long-term maintainability — not plugin bloat."
+glance:
+  who: "Teams that publish often and need to own content without calling a developer for every change."
+  timeline: "6–10 weeks including content model, build, and editor training."
+  platforms: "WordPress (block theme; WooCommerce only if commerce is in scope)."
+  bestWhen: "Professional services, education, healthcare, or any site with mixed editors and a long publishing life."
 benefits:
   - "Editor-friendly content models your team can update without a developer"
   - "Lean plugin stack — only tools that earn their keep"
@@ -54,20 +59,38 @@ We build clean theme or block-based WordPress sites, constrain the plugin surfac
 
 ## What we build on WordPress
 
-Typical deliveries include marketing sites for professional services, education, healthcare and other content-heavy businesses. We set up content models that match how you talk about services; block or carefully constrained builder workflows for safe editing; forms, CRM hooks and consent-friendly enquiry paths; and SEO basics such as titles, meta, headings, sitemap hygiene and clean URLs.
+Typical deliveries include marketing sites for [professional services](/industries/professional-services/), [education](/industries/education-childcare/), [healthcare](/industries/medical-healthcare/) and other content-heavy businesses. We set up content models that match how you talk about services; block or carefully constrained builder workflows for safe editing; forms, CRM hooks and consent-friendly enquiry paths; and SEO basics such as titles, meta, headings, sitemap hygiene and clean URLs.
 
 If you sell products, we can also deliver [WooCommerce](/services/woocommerce-development/) — but we only recommend it when WordPress commerce is the right operational fit versus [Shopify](/services/shopify-development/).
+
+You should be able to add a service page, swap a team photo and publish a resource without breaking the header. If that is not true at handover, the content model failed — not the editor.
 
 ## Lean by default
 
 Most “WordPress is slow / insecure” stories come from plugin sprawl and neglected updates. We start lean: only plugins that earn their keep, hosting that matches traffic, and a [maintenance](/services/website-maintenance/) path after launch. Staging and backups are part of delivery so go-live is controlled.
 
-## Migrations, redesigns and training
+Page builders are a decision, not a default. We use them when your team’s publishing pattern needs that flexibility and the builder can be constrained. Unrestricted canvas tools are how sites become un-QA-able. Custom features are scoped as maintainable code or a vetted plugin — not a one-off hack in the theme that dies on the next update.
 
-Moving off Wix, Squarespace or an ageing WordPress theme? We treat [migration](/services/website-migration/) and [redesign](/services/website-redesign/) as distinct workstreams so redirects, content parity and visual change stay clear. Handover includes a short editor walkthrough and notes so your team can publish without guessing.
+Roles matter as much as plugins. Editors should not all be administrators. We set capabilities so marketing can publish and media can upload, without installing software or editing PHP. If you need a form of review-before-publish, we will say whether native workflows are enough or whether you have drifted into [Drupal](/services/drupal-development/) territory.
 
-## Who this suits
+## When WordPress is the wrong CMS
 
-Choose WordPress when your team needs flexible publishing, a large ecosystem and long-term editability. Choose Webflow when design fidelity and marketing-team components matter more than deep WordPress extensibility — we cover that decision honestly in discovery and in our [Webflow vs WordPress guide](/blog/webflow-vs-wordpress/).
+Choose [Webflow](/services/webflow-development/) when design fidelity and marketing-team components matter more than deep WordPress extensibility — we cover that honestly in discovery and in our [Webflow vs WordPress guide](/blog/webflow-vs-wordpress/). Choose [Drupal](/services/drupal-development/) when governance, complex relationships and multi-role publishing are the actual problem. Choose a [web application](/services/web-application-development/) when you need authenticated workflows, not a CMS with plugins piled on.
+
+WordPress is also a poor fit if nobody on your side will own publishing, or if you want a “set and forget” brochure with zero update budget. The ecosystem only stays healthy if someone patches it.
+
+## Decisions, integrations and risk
+
+You will decide: hosting (managed WordPress that can take your traffic, not the cheapest shared box); who has admin versus editor roles; whether the blog is a real channel or a leftover menu item; and how forms reach the business. [Our process](/process/) puts the content model before theme decoration so you are not painting a house with no rooms.
+
+Integrations we treat as first-class: CRM or inbox, newsletter with consent, booking tools, and analytics events on enquiry. Membership, learning portals or heavy intra-staff tools may belong in a dedicated app rather than a plugin maze. Each plugin is a security and performance vote.
+
+Risks: abandoned page-builder licences; editors with admin access installing random plugins; PHP version lag on old hosts; and [migrating](/services/website-migration/) from Wix or Squarespace without a redirect map. We would rather leave a vanity plugin out than inherit an unmaintained dependency.
+
+## Measurement, training and related work
+
+We measure a WordPress delivery by editor independence, form reliability, performance hygiene, and whether [SEO](/services/seo-services/) fields are actually used. Core Web Vitals are a launch check, not a marketing slogan. Search rankings are not something we assign to a CMS.
+
+Moving off Wix, Squarespace or an ageing WordPress theme? We treat [migration](/services/website-migration/) and [redesign](/services/website-redesign/) as distinct workstreams so redirects, content parity and visual change stay clear. Handover includes a short editor walkthrough, notes, and credential ownership in your name. [Our work](/work/) includes WordPress builds if you want a sense of finished marketing sites.
 
 [Get a quote](/contact/) with a short note on how often you update content and what is broken about the current site.

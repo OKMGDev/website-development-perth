@@ -2,6 +2,11 @@
 title: "WooCommerce Website Development"
 primaryKeyword: "WooCommerce developer Perth"
 excerpt: "WordPress commerce builds for catalogues, B2B quirks and teams that want store + content in one place."
+glance:
+  who: "Teams already on WordPress, or stores with unusual product, membership or B2B pricing logic."
+  timeline: "8–14 weeks including hosting, payments and hardening."
+  platforms: "WordPress + WooCommerce on hosting you (or we) control."
+  bestWhen: "Content and commerce must share one CMS, or Shopify’s model would fight how you actually sell."
 benefits:
   - "Product architecture editors can maintain (variations, categories, media)"
   - "Checkout, tax and shipping setup matched to how you fulfil"
@@ -56,12 +61,34 @@ We build and refine WooCommerce stores with a clear rule: only choose Woo when t
 
 Store architecture for products, variations, categories and attributes that stay editable; theme or block-based shop templates tuned for mobile browsing; checkout, tax and shipping configuration matched to Australian fulfilment where possible; payment gateway setup and testing; and performance habits — lean plugins, caching-friendly hosting and image discipline. Admin training is part of handover so your team can update stock and copy without fear.
 
-## When WooCommerce is the right call
+Deliverables should include a product-field map your team can follow, a shortlist of extensions with a reason for each, and a staging store used for gateway and shipping tests — not a first-time checkout on the live domain.
 
-Choose WooCommerce if you need custom product rules, tight WordPress content + commerce together, or data ownership that a hosted SaaS cart does not give you comfortably. Avoid it for “set and forget” stores with no maintenance budget — that is how Woo gets a bad name. Subscriptions and B2B pricing are possible with the right extensions when the ops model is clear.
+## When WooCommerce is the right call — and when it is not
 
-## Migrations, SEO and care
+Choose WooCommerce if you need custom product rules, tight WordPress content + commerce together, or data ownership that a hosted SaaS cart does not give you comfortably. That pattern shows up in [retail](/industries/retail-ecommerce/) catalogues that sit beside a content-heavy brand, [tradies](/industries/tradies-construction/) selling parts with quote-led services, and [professional](/industries/professional-services/) firms with paid resources rather than a pure DTC fashion store.
 
-We migrate from Shopify or older carts with redirects and catalogue cleanup, and we keep [SEO](/services/seo-services/) in mind so product URLs and content are not casually destroyed. After launch, [website maintenance](/services/website-maintenance/) covers updates and monitoring. Hosting is chosen for catalogue size and peaks — cheap shared hosting is usually a false economy for stores.
+Avoid it for “set and forget” stores with no maintenance budget — that is how Woo gets a bad name. If you want Shopify’s hosted ops model, use [Shopify](/services/shopify-development/). Our [Shopify vs WooCommerce guide](/blog/shopify-vs-woocommerce/) is the briefing note for that fork. Subscriptions and B2B pricing are possible with the right extensions when the ops model is clear: who gets which price, how invoices work, and who owns failed-payment follow-up.
+
+## Hosting, extensions and operational decisions
+
+Hosting is part of the product. Managed WordPress with enough PHP workers and object cache for catalogue size beats a cheap shared plan that dies on a sale day. Image sizes, a CDN where it helps, and a lean theme are cheaper than buying speed plugins to hide a heavy stack.
+
+You will decide: which gateway matches how you already take money; shipping classes versus live rates; whether stock is managed in Woo or an inventory tool; and which roles warehouse staff versus marketers get. [Our process](/process/) treats payments, tax and shipping as a workshop, not a theme setting to “figure out later”.
+
+Extensions are where WooCommerce stores rot. We prefer fewer, well-supported plugins over a unique plugin for every merchandising whim. Checkout customisation is scoped carefully — small UX improvements are fine; rewriting checkout as a science project is how upgrades become impossible.
+
+## Risks, integrations and measurement
+
+Risks: an abandoned page builder inside the shop templates; PHP or WooCommerce major updates skipped until something is hacked; tax display that does not match how you invoice; and a [migration](/services/website-migration/) that imports 404s for old product URLs. We plan redirects and a post-launch watch window. We do not promise sales lifts.
+
+Integrations we see often: accounting exports, inventory or POS, freight, and email for order status. Each needs a failure mode (what happens when the webhook dies). CRM hooks for wholesale applications are separate from the consumer checkout path.
+
+We measure store health with order completion, payment success, and whether editors can add a variable product without a developer. [SEO](/services/seo-services/) for products is unique titles, sensible categories and no index bloat from empty tags — not stuffing every SKU with the same city name.
+
+## Care, WordPress and handover
+
+The store is still [WordPress](/services/wordpress-development/). Theme, core and plugin updates belong on [website maintenance](/services/website-maintenance/) with a restore test, not blind auto-update. Larger merchandising or B2B rule changes are projects.
+
+Handover covers admin roles, how to run a test order, backup/restore ownership, and which settings are load-bearing (permalinks, tax, shipping zones). You own hosting and the WordPress install. [Our work](/work/) includes commerce and WordPress builds if you want a sense of finished storefronts.
 
 [Get a quote](/contact/) with how many products you sell, whether you need B2B or subscriptions, and what is painful about the current store.

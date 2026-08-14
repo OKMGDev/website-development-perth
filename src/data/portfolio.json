@@ -1,9 +1,9 @@
 {
-  "syncedAt": "2026-08-03T03:39:04.872Z",
+  "syncedAt": "2026-08-14T03:24:58.813Z",
   "source": "okmg-webflow-works",
   "sourceCsv": "OKMG. - Works - 68f9e3f8013dbcd952d085d9.csv",
   "filter": "website-related-only",
-  "count": 65,
+  "count": 80,
   "facets": {
     "categories": [
       "community",
@@ -22,6 +22,65 @@
     ]
   },
   "items": [
+    {
+      "id": "bci-minerals",
+      "webflowId": "6990f943edddaa57f97ab7c6",
+      "title": "BCI Minerals",
+      "excerpt": "OKMG delivered a custom modern website for BCI Minerals, integrating live investor data and internal systems for clear shareholder communications.",
+      "summary": "OKMG delivered a custom modern website for BCI Minerals, integrating live investor data and internal systems for clear shareholder communications.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a7ab77f7f112b037c4fb0e2_BCI%20-%20linkedin%20post%20-%201080x1350.jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a7ab77f7f112b037c4fb0e2_BCI%20-%20linkedin%20post%20-%201080x1350.jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a55f7c81f4a97a1facb495a_Group%2048096214%20(1).png",
+      "bodyHtml": "<h2>Overview</h2><p>BCI Minerals, an ASX-listed company with a $1.32 billion market capitalisation, is a major player in the industrial minerals sector. Presently, it is advancing its flagship Mardie salt and potash project alongside its legacy iron ore interests. The company required a digital presence that not only reflected its scale and ambition but also served as an efficient, multi-functional tool for its growing team and increasing market audience. This case study details how OKMG partnered with BCI to transform their online presence, moving from a restrictive, developer-dependent platform to a modern, integrated and self-sufficient website that powers investor relations, recruitment and brand communication.</p><h2>The Brief</h2><p>BCI Minerals faced a critical challenge: their previous website was a bottleneck to effective communication. Constrained by an outdated content management system (CMS), even routine content updates became protracted exercises, requiring technical tickets and leading to weeks of lead time. This hindered the marketing team’s ability to share timely updates with stakeholders, investors and potential employees. The brief was clear: deliver a modern, authoritative and scalable digital platform whose core objectives were to:</p><ul><li>Empower the internal team: Transition to a self-sufficient CMS and eliminate dependency on developers for routine content updates.</li><li>Boost brand authority: Create a visually compelling site that accurately represents the scale of BCI’s operations and project portfolio.</li><li>Streamline investor communications: Integrate a centralised Investor Hub with live data to enable compliance, transparency and accessibility.</li><li>Integrate with internal systems: Connect the website with BCI’s existing technology stack to unify workflows and data.</li></ul><h2>Discovery and Strategy</h2><p>OKMG initiated the project with a discovery phase to fully understand BCI Minerals’ complex needs. This structured process involved stakeholder workshops and technical discussions covering sitemap and information architecture (IA) reviews, feature and integration planning, visual direction scoping, and technical requirements for hosting, DNS, GA4 and SEO. A critical component of this phase was the close collaboration with BCI’s strategic marketing advisor, Madeline Arnold Advisory, who provided the foundational copy deck, site structure and user journeys.</p><h2>Content and Copywriting</h2><p>While the foundational copy was developed by Madeline Arnold Advisory, OKMG’s role was to structure and present this content within the new digital ecosystem. We focused on translating the strategic narrative into a dynamic web experience. This involved planning how the content would flow across different pages, identifying opportunities for visual storytelling (such as neat timelines for the Mardie project) and structuring information hierarchies to guide users intuitively.</p><h2>Design and User Experience</h2><p>With the strategy and content framework in place, OKMG’s design team began translating BCI’s brand identity. The focus was on creating a clean, organised, and visually authoritative interface befitting an ASX-listed company.</p><h3>Mockups</h3><p>We explored several digital design concepts in Figma, pushing the visual application of BCI’s brand assets, fonts, and guidelines. After selecting a preferred direction, we developed mockups for key pages to secure stakeholder and board approval. These designs incorporated dynamic elements such as full-width video headers, subtle animations to enhance storytelling, smooth-scrolling experiences and interactive click-through carousels for project imagery. The chosen direction was then refined through two to three rounds of iterative feedback before being systematically applied to the entire sitemap.</p><h3>User Journeys</h3><p>Working from the user journeys defined during discovery, we designed intuitive pathways for BCI’s key audience segments. For investors, the journey was streamlined towards the integrated Investor Hub. For potential job candidates, clear calls-to-action led them directly to live listings. For media and project stakeholders, the architecture surfaced project information (Mardie salt and potash, legacy iron ore) with ease.</p><h2>Development</h2><p>The development phase focused on building a robust, future-proof platform. OKMG delivered a high-performance WordPress website made for speed, security and administrative autonomy. At the heart of this was the implementation of ACF Flexible Content. This enabled the BCI marketing team to build and modify pages at will using a library of pre-designed, pre-coded content blocks. This system effectively future-proofed the site, giving the client complete control to create campaign landing pages or update project information without a single line of code or a developer ticket.</p><h2>Systems Integrations</h2><p>A key requirement was to break down data silos by integrating the new website with BCI’s core business systems. OKMG built custom connections that preserved existing workflows and eliminated manual data duplication.</p><h3>ASX</h3><p>Working in partnership with Weblink, we integrated a comprehensive Investor Hub. This feature is a centralised repository for all market-sensitive information, featuring live ASX share price data, a fully searchable library of annual reports and presentations, and an automated feed of ASX announcements. This replaced a fragmented system of manual PDF uploads. It also keeps information current, compliant and accessible from any device.</p><h3>Job Board</h3><p>To streamline recruitment, we integrated the site with Action HRM, BCI’s human resources platform. This custom integration ensures that job listings on the website are automatically populated and synchronised with Action HRM. When a position is filled or a new role is created in the HR system, the website then updates instantly.</p><h3>HIVO</h3><p>We connected the website to <a href=\"https://www.okmg.com/work/hivo\">HIVO</a>, BCI’s digital asset management (DAM) system. This integration allows staff to pull approved, high-resolution imagery and brand assets directly into the CMS when building pages. This ensures brand consistency, maintains a single source of truth for creative assets, and saves time otherwise spent on manual downloading and uploading.</p><h3>AGOL Maps</h3><p>To dynamically showcase the location and scale of their operations, we integrated the site with ArcGIS Online (AGOL). This allows BCI to embed interactive, data-rich maps directly onto project pages, providing stakeholders with a powerful visual tool to understand the company's geographical footprint.</p><h3>Mailchimp and Newsletter</h3><p>Finally, we integrated Mailchimp to support segmented stakeholder communications. The website’s newsletter sign-up forms are connected to specific audience lists within Mailchimp, enabling BCI’s communications team to manage investor alerts, community updates and corporate news through their existing email marketing platform, all driven by subscriptions gathered on the website.</p><h2>SEO and Security</h2><p>Throughout the development process, we adhered to best practices for on-page SEO, including optimising site structure, meta-data and page speed. The clean, semantic codebase and fast-loading ACF architecture contribute to strong search engine visibility. On the security front, we implemented a robust security framework including SSL encryption, regular core and plugin updates, and secure hosting protocols to protect sensitive company and investor data.</p><h2>Test and Launch</h2><p>Prior to launch, the site underwent rigorous testing across devices and browsers. We worked closely with the BCI team to migrate content, configure the new integrations and conduct final user acceptance testing (UAT). The launch was executed with a carefully managed DNS cutover to minimise downtime. Following the go-live, we entered a hypercare period to provide immediate, hands-on support to monitor performance, address any minor adjustments and ensure the BCI team was confident in managing their new platform.</p><h2>Ongoing Support</h2><p>Following launch and hypercare period, BCI Minerals transitioned to OKMG’s managed support service. This ongoing partnership involves regular platform maintenance, security updates, plugin management and high-priority technical assistance as needed.</p><h2>Outcome</h2><p>A clean, organised website that accurately reflects BCI Minerals’ scale and ambition in the global industrial minerals market. The internal marketing team now publishes content and campaign pages without developer support. Investor information is consolidated, current and accessible from any device. Core business systems (like creative assets, email distribution and human resources) now run through a unified interface. Post-launch analytics are also in place to track time-on-site across investor and careers sections.&nbsp;</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "https://www.bciminerals.com.au/",
+      "okmgUrl": "https://www.okmg.com/work/bci-minerals",
+      "order": 0,
+      "featured": true,
+      "digital": true,
+      "seo": {
+        "title": "BCI Minerals | Work | Website Development Perth",
+        "description": "OKMG delivered a custom modern website for BCI Minerals, integrating live investor data and internal systems for clear shareholder communications."
+      },
+      "lastPublished": "2026-08-11T09:35:32.039Z",
+      "categories": [
+        "resources"
+      ],
+      "servicesOffered": [
+        "digital"
+      ]
+    },
+    {
+      "id": "the-sports-map-network",
+      "webflowId": "69b604d655c714ea0e793997",
+      "title": "The Sports MAP Network",
+      "excerpt": "OKMG rebuilt The Sports MAP Network’s digital platform for sports medicine professionals, improving conversion rates and driving more masterclass subscriptions.",
+      "summary": "OKMG rebuilt The Sports MAP Network’s digital platform for sports medicine professionals, improving conversion rates and driving more masterclass subscriptions.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69b604df33e9bca539d59c5c_Sports%20Map%20Network%20case%20study%20hero%20image.jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69b604df33e9bca539d59c5c_Sports%20Map%20Network%20case%20study%20hero%20image.jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69b604d28f99c60d94013e9f_hover-logo-Sports%20Map%20Network.jpg",
+      "bodyHtml": "<h2>The client</h2><p>The Sports MAP Network is Australia's premier continuing professional development platform for sports medicine clinicians. The organisation delivers masterclasses, filmed conferences and live events featuring presenters from AFL and Cricket Australia physios to renowned researchers from La Trobe University and the UK Sports Institute. With a growing community of sports physios, athletic trainers and allied health professionals across Australia, New Zealand, the UK and the USA, The Sports MAP Network had built a following through consistently excellent content. But their digital platform wasn't keeping pace with their ambition.&nbsp;</p><h2>The challenge</h2><p>The Sports MAP Network team was upfront about the challenges that needed to be addressed. Years of iterative additions had left them with a site running on 75 plugins, a technical debt that made every update feel like walking through treacle. Load times were suffering, the user journey from discovery to purchase had unnecessary friction, and the LifterLMS dashboard, which is the heart of the member experience, felt disconnected from the brand’s professional identity.</p><p>The team also wanted to improve how they converted visitors into members. The pricing and subscription logic needed to accommodate complex offers (event bundles, location‑based currency switching, multi‑seat team package, etc.). The checkout process needed simplifying, as well. The sign‑up flow needed to feel more personalised. And with a growing international audience, the platform had to handle multiple currencies and tax jurisdictions.</p><p>Add to that a wishlist of strategic new features: a group chat for masterclass members, a careers and job board with admin approval workflows, member‑only search functionality, social certificate sharing for CPD credentials, and deeper integration between WooCommerce and LifterLMS. All while protecting the active subscription data of their existing member base, a non‑negotiable requirement that ruled out any risky one‑click migrations.</p><h2>Our approach</h2><p>OKMG understood, from our first conversations with the Sports MAP Network team, that this was an opportunity to build a high‑performance digital foundation that could scale with the business for years to come.&nbsp;</p><p>We started with the basics: a logo refresh and updated brand palette that sharpened the visual identity without losing the recognition existing members had come to trust. Cleaner typography, more purposeful use of colour and a design system that would flow consistently through every touchpoint from marketing pages to the member dashboard.</p><p>With the brand foundations in place, we then moved into a full website redesign in Figma. Every page was interrogated through the lens of conversion. Where was the friction? What questions were going unanswered? How could we make the path from “interested clinician” to “active subscriber” feel effortless? The answer lay partly in design, and partly in user journey mapping. We restructured the navigation to have clearer pathways to relevant content to better serve individuals looking to upskill, clinic managers seeking team packages, and international clinicians navigating CPD requirements. The new onboarding quiz now guides new members to masterclasses suited to their experience level and clinical interests.</p><p>The checkout process underwent a complete overhaul. Where previously users encountered friction at multiple points, we streamlined the flow and integrated Stripe, PayPal, Apple Pay and Google Pay for maximum payment flexibility. Complex discount logic (bundling events with subscriptions, offering team pricing, and managing multi‑currency transactions) now runs smoothly in the background.</p><p>One major focus was the LifterLMS dashboard reskin. This is where members spend most of their time, and it needed to feel like a natural extension of the brand and not a generic plugin interface. We redesigned the dashboard to prioritise what matters: easy access to recent masterclasses, clear CPD tracking, downloadable certificates and smooth navigation between content types.</p><p>Backend optimisation was equally critical. We reduced the plugin count from over 75 to approximately 40, replacing bloated plugins with lean custom code where it made sense. The result is a faster, more secure platform that's easier to maintain and harder to breach.</p><p>The migration from staging to production was precise. Rather than a risky one‑click push, OKMG executed a careful, phased migration that preserved every active subscription, every member record, every piece of historical data.&nbsp;</p><h2>New Capabilities</h2><p>Beyond the core rebuild, we delivered a suite of features to deepen member engagement and open new revenue streams:</p><ul><li><strong>Group chat for masterclass members</strong>. A dedicated space where subscribers can discuss content, share insights and build professional connections.</li><li><strong>Careers and job board</strong>. A natural extension for a platform serving elite clinicians. With admin approval workflows to ensure quality control, employers can post roles, and members can browse opportunities.</li><li><strong>Member‑only search</strong>. Subscribers can now search the entire content library from a single interface.</li><li><strong>Podcast and blog integration</strong>. To support top‑of‑funnel discovery that feeds membership growth, free content now lives alongside paid offerings in a unified ecosystem.</li><li><strong>Social certificate sharing</strong>. Members can share their CPD achievements on professional networks directly from the platform.</li><li><strong>Location‑based currency switcher</strong>. International members now see pricing in their local currency automatically. This reduces checkout friction for UK, European and US audiences.</li><li><strong>GA4 setup with conversion tracking</strong>. Real visibility into what's working, from traffic sources to checkout completion rates, so the team can continue optimising based on data.</li></ul><h2>The outcome</h2><p>The Sports MAP Network now has a digital platform that matches the quality of its content. The new site is faster, more secure and easier to manage. But the real measure of success is in the numbers. Since launch, the team has seen a measurable uplift in conversion rates across key pages. The simplified checkout process has reduced drop‑off at the point of purchase. The improved sign‑up flow, combined with the personalised onboarding quiz, is turning more free trial users into paying members. And the new group chat and job board are driving repeat visits and longer session times, which is exactly the engagement metrics that matter for a subscription business. As they continue to expand their offering and reach new clinicians around the world, the foundation remains solid. And we'll be right here, cheering them on.</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "https://sportsmap.com.au/",
+      "okmgUrl": "https://www.okmg.com/work/the-sports-map-network",
+      "order": 0,
+      "featured": true,
+      "digital": true,
+      "seo": {
+        "title": "The Sports MAP Network | Work | Website Development Perth",
+        "description": "OKMG rebuilt The Sports MAP Network’s digital platform for sports medicine professionals, improving conversion rates and driving more masterclass subscriptions."
+      },
+      "lastPublished": "2026-08-11T09:35:44.325Z",
+      "categories": [
+        "health",
+        "community"
+      ],
+      "servicesOffered": [
+        "digital"
+      ]
+    },
     {
       "id": "business-events-perth",
       "webflowId": "68f9e3f8013dbcd952d09ce4",
@@ -43,7 +102,7 @@
         "title": "Business Events Perth | Work | Website Development Perth",
         "description": "Business Events Perth has been helping not-for-profit associations, corporations and agents bring their conferences and incentive groups to Western Australia for 50 years."
       },
-      "lastPublished": "2025-11-03T07:43:50.744Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "community",
         "education"
@@ -73,7 +132,7 @@
         "title": "Curtin University - Go Greater | Work | Website Development Perth",
         "description": "Discover how OKMG positioned Curtin University’s Go Greater campaign, promoting study abroad opportunities at a top-ranked global university."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "education"
       ],
@@ -102,7 +161,7 @@
         "title": "Curtin University - Destination Australia | Work | Website Development Perth",
         "description": "OKMG developed a creative campaign for Curtin University, promoting regional student experiences and driving applications for Destination Australia."
       },
-      "lastPublished": "2025-10-27T05:23:12.739Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "education"
       ],
@@ -116,8 +175,8 @@
       "title": "Wildhire",
       "excerpt": "OKMG partnered with Wildhire Teams to craft and launch a dynamic brand identity and website",
       "summary": "OKMG partnered with Wildhire Teams to craft and launch a dynamic brand identity and website",
-      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09b19_banner-image.png",
-      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09b19_banner-image.png",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a79697d3189e2190a91d24b_banner-image-Wildhire.png",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a79697d3189e2190a91d24b_banner-image-Wildhire.png",
       "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09b1b_wildhire-logo.png",
       "bodyHtml": "<p id=\"\">OKMG developed a comprehensive brand identity and progressive website design, reflecting Wildhire Teams' mission to connect businesses with top remote talent. The project began with an in-depth naming and branding exercise, ensuring the brand resonated with its target audience and also available URL purchases. Following the brand identity development, OKMG designed and developed a user-friendly and visually appealing custom Webflow website that showcases Wildhire Teams' services and mission effectively. Post-launch, while the website is built on the Webflow platform. OKMG continues to support by providing priority assistance and regular updates as part of a custom post-launch support plan. This ensures the website remains fresh, responsive, and aligned with Wildhire Teams' evolving business needs, reinforcing their position as leaders in remote team building.</p><p id=\"\"><a id=\"\" rel=\"https://www.wildhire.io/\" href=\"https://www.wildhire.io/\" target=\"_blank\">View live site here</a></p><p id=\"\">‍</p>",
       "contentGroups": [],
@@ -129,9 +188,9 @@
       "digital": true,
       "seo": {
         "title": "Wildhire | Work | Website Development Perth",
-        "description": "OKMG partnered with Wildhire Teams to craft and launch a dynamic brand identity and website"
+        "description": "OKMG partnered with Wildhire Teams to craft and launch a dynamic brand identity and website."
       },
-      "lastPublished": "2025-11-03T06:25:30.253Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "resources",
         "technology"
@@ -161,7 +220,7 @@
         "title": "The Fast 800 - Product Videos | Work | Website Development Perth",
         "description": "OKMG delivered vibrant, engaging product videos for The Fast 800, driving brand awareness and conversions across AU, NZ, and the UK."
       },
-      "lastPublished": "2025-11-03T07:43:50.744Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "ecommerce",
         "health"
@@ -191,7 +250,7 @@
         "title": "Scotch College | Work | Website Development Perth",
         "description": "Founded in 1897, Scotch College is one of Australia's leading independent private schools. Wanting to expand upon their brand promise of 'Preparing Boys For Life', OKMG was engaged to develop and implement a campaign to instill confidence that Scotch College is the right school for their son."
       },
-      "lastPublished": "2025-11-22T04:47:50.155Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "education"
       ],
@@ -220,7 +279,7 @@
         "title": "Craveable Brands | Work | Website Development Perth",
         "description": "Chicken Treat has been a WA favourite for 46 years. Following their consistent growth in the local market, Chicken Treat was looking to break borders into the Eastern States. The team at Craveable Brands engaged OKMG to assist in introducing Chicken Treat to future franchise partners in the east."
       },
-      "lastPublished": "2025-10-27T05:23:12.739Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "hospitality"
       ],
@@ -249,10 +308,40 @@
         "title": "CERI | Work | Website Development Perth",
         "description": "CERI is a social enterprise offering programs that are curated to educate and empower early-stage entrepreneurs, PhD students and visionaries within the Western Australian community. OKMG was engaged in designing a website that accurately reflected CERI's progressive and dynamic vision."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [],
       "servicesOffered": [
         "website"
+      ]
+    },
+    {
+      "id": "goldfields-oasis",
+      "webflowId": "68f9e3f8013dbcd952d09cf9",
+      "title": "Goldfields Oasis",
+      "excerpt": "Discover our innovative and impactful solutions in the Goldfields Oasis project. Learn more about our extensive work at OKMG and get inspired!",
+      "summary": "Discover our innovative and impactful solutions in the Goldfields Oasis project. Learn more about our extensive work at OKMG and get inspired!",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69213876e1bc6ce028098353_Rectangle%20133.jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69213876e1bc6ce028098353_Rectangle%20133.jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d098e0_GOLDFIELD%20OASIS%20EXTRACTED%20LOGO_MONO_REVERSE.png",
+      "bodyHtml": "<p>We were engaged to take over an outdated and laborious Kentico website, which wasn't serving the community in delivery of important updates and information about the centre and it's activities.</p><p>We designed and developed a brand-new custom WordPress website to suit the key user journeys and allow the in-house staff &amp; team members to keep it up to date and relevant.</p><p>We currently support the team with ongoing website hosting, updates and training.</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "https://goldfieldsoasis.com.au/",
+      "okmgUrl": "https://www.okmg.com/work/goldfields-oasis",
+      "order": 16,
+      "featured": false,
+      "digital": true,
+      "seo": {
+        "title": "Goldfields Oasis | Work | Website Development Perth",
+        "description": "We developed a user-friendly WCAG compliant website to support the Goldfields Oasis Recreation centre."
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [
+        "community",
+        "health"
+      ],
+      "servicesOffered": [
+        "digital"
       ]
     },
     {
@@ -276,7 +365,7 @@
         "title": "Perth Festival | Work | Website Development Perth",
         "description": "Perth Festival, Australia's oldest cultural event, offers a diverse arts experience and has entertained our community for 68 years, gaining global recognition."
       },
-      "lastPublished": "2025-10-27T05:23:12.739Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "community"
       ],
@@ -305,41 +394,12 @@
         "title": "Edith Cowan College | Work | Website Development Perth",
         "description": "Edith Cowan College (ECC), a pathway college for Edith Cowan University. The international education market is a highly competitive industry and it has become imperative to stand out from the crowd."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "education"
       ],
       "servicesOffered": [
         "website"
-      ]
-    },
-    {
-      "id": "mkdc",
-      "webflowId": "68f9e3f8013dbcd952d09d04",
-      "title": "MKDC",
-      "excerpt": "A full-service agency engagement requiring in-depth content and a re-designed digital presence.",
-      "summary": "A full-service agency engagement requiring in-depth content and a re-designed digital presence.",
-      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09717_mkdc-cropped.png",
-      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09717_mkdc-cropped.png",
-      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d098c8_MKDC%20LOGO.png",
-      "bodyHtml": "<p id=\"\">MKDC have established themselves as leaders within the Perth interior design industry. Combining the niche pairing of commercial interior design and aged care specialists, the team at MKDC are building towards a future where every business values the impact that interior design has on its people.</p><p id=\"\">The MKDC team required a digital presence that accurately reflected their passion for their industry, team, clients and their overall ethos of elevating human potential through empathetic design approaches. Diving deep into the people and processes, we communicated the MKDC strategy visually through both a custom interactive infographic and video content, capturing the culture and human aspects, to ultimately show the people behind the work.</p><p id=\"\">An entirely collaborative process, this website has provided MKDC a platform to effectively show how their team co-designs with clients to deliver award-winning levels of design excellence and client satisfaction.</p>",
-      "contentGroups": [],
-      "stats": [],
-      "projectUrl": "",
-      "okmgUrl": "https://www.okmg.com/work/mkdc",
-      "order": 25,
-      "featured": false,
-      "digital": true,
-      "seo": {
-        "title": "MKDC | Work | Website Development Perth",
-        "description": "A full-service agency engagement requiring in-depth content and a re-designed digital presence."
-      },
-      "lastPublished": "2025-10-27T05:23:12.739Z",
-      "categories": [
-        "property"
-      ],
-      "servicesOffered": [
-        "digital"
       ]
     },
     {
@@ -351,7 +411,7 @@
       "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d0971b_sp-hero.png",
       "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d0971b_sp-hero.png",
       "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d098cd_STUDYPERTH%20LOGO.png",
-      "bodyHtml": "<p id=\"\">StudyPerth is the first point of contact for a majority of international students looking to make the move to Perth. With such a diverse audience to consider, the complexity of each region having its own culture played a huge part in the planning of this project.</p><p id=\"\">The visual content had to be engaging and dynamic while also flexible enough to be used for a variety of end products, for a global market.</p><p id=\"\">OKMG was engaged to curate content promoting StudyPerth including, casting, scouting locations, production and delivery of the content. 10 international students were selected as brand ambassadors, ensuring each student from a different international region. Locations were chosen to reflect a genuine Perth student’s lifestyle, focusing on both Perth’s universities or TAFE campuses, as well as life off-campus.</p><p id=\"\">This vast library of royalty-free content is stored on HIVO, available for future use across the StudyPerth membership network; including all major universities, bridging and training institutions around Perth.</p>",
+      "bodyHtml": "<p>StudyPerth is the first point of contact for a majority of international students looking to make the move to Perth. With such a diverse audience to consider, the complexity of each region having its own culture played a huge part in the planning of this project. The visual content had to be engaging and dynamic while also flexible enough to be used for a variety of end products, for a global market.</p><p>OKMG was engaged to curate content promoting StudyPerth including, casting, scouting locations, production and delivery of the content. 10 international students were selected as brand ambassadors, ensuring each student from a different international region. Locations were chosen to reflect a genuine Perth student’s lifestyle, focusing on both Perth’s universities or TAFE campuses, as well as life off-campus.</p><p>This vast library of royalty-free content is stored on <a href=\"https://hivo.co/\">HIVO</a>, available for future use across the StudyPerth membership network; including all major universities, bridging and training institutions around Perth.</p>",
       "contentGroups": [],
       "stats": [],
       "projectUrl": "",
@@ -363,7 +423,7 @@
         "title": "StudyPerth | Work | Website Development Perth",
         "description": "OKMG created a digital content library for StudyPerth to inspire international students with engaging visuals showcasing Perth's student life and culture."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "education"
       ],
@@ -372,9 +432,36 @@
       ]
     },
     {
+      "id": "twin-fin-fish-and-chips",
+      "webflowId": "68f9e3f8013dbcd952d09d19",
+      "title": "Twin Fin",
+      "excerpt": "Twin Fin approached us to challenge the Fremantle harbour seafood giants, giving a fresh twist to fish & chips.",
+      "summary": "Twin Fin approached us to challenge the Fremantle harbour seafood giants, giving a fresh twist to fish & chips.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09731_TWIN%20FIN_MULTIPLE%20MOBILE_MOCKUP.png",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09731_TWIN%20FIN_MULTIPLE%20MOBILE_MOCKUP.png",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d098d0_TWIN%20FIN%20LOGO.png",
+      "bodyHtml": "<p id=\"\">OKMG was approached to develop the concept of a new venue with a core offering of affordable, no-fuss fish &amp; chips. With existing outlets catering to a loyal, mature audience, OKMG worked with Twin Fin to challenge the harbour giants, by creating a brand with a twist on fish &amp; chips.</p><p id=\"\">Requiring a full brand identity applied across both traditional and digital collateral including a website, content creation and a digital campaign strategy. We took to this blank slate challenge with great enthusiasm, all hands on deck.</p><p id=\"\">The result was Twin Fin, a place for anyone, any time of day, any season. Oh, and did we mention that there’s free ice-cream?</p><p id=\"\">Without having a deep history to ground in, Twin Fin underwent a rigorous naming process, to find a strong brand concept that would cut through the market, and represent the vibrancy of the brand.<br></p><p id=\"\">After several workshops, ‘Twin Fin Fish &amp; Chips’ was born. This name became the centerpiece of the full brand identity, giving legs to the core brand values through personality filled messaging and visuals.</p><p id=\"\">After growing the fun and approachable identity on paper, it was time to bring this to life visually. We developed a full suite of core logos, graphic devices, treatments, colours, fonts which conveyed the voice of this exciting new restaurant. A quirky mix of fun and no fuss.</p><p id=\"\">The Twin Fin identity was applied in-store through digital menu screens, as well as store signage, wall vinyls, merchandise and more. This identity seamlessly carried over to the website, designed specifically to represent the classic offering in an accessible way.</p><p id=\"\">Structured to be both fun and informative, we captured online traffic and pointed them in the right direction; through the front door.</p><p id=\"\">Through distinct branding and immersive content we were able to embody the cheeky personality of the brand, building a solid relationship between Twin Fin and the Fremantle community long before opening day.</p><p id=\"\">With brand awareness and visitation as our key objectives, the OKMG creative and in-house video department worked closely to concept and deliver a hero launch video that brought the brand tone and voice to life, kicking off the first digital campaign.</p><p id=\"\">Grounded in a strong core identity, Twin Fin secured the position as a leading provider of fish &amp; chips, launching this exciting venue as a fast-casual fish &amp; chip shop that creates its own rules.</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "",
+      "okmgUrl": "https://www.okmg.com/work/twin-fin-fish-and-chips",
+      "order": 29,
+      "featured": false,
+      "digital": false,
+      "seo": {
+        "title": "Twin Fin | Work | Website Development Perth",
+        "description": "Twin Fin approached us to challenge the Fremantle harbour seafood giants, giving a fresh twist to fish & chips."
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
+      "servicesOffered": [
+        "website"
+      ]
+    },
+    {
       "id": "hair-supplies",
       "webflowId": "68f9e3f8013dbcd952d09cfa",
-      "title": "Hair Supplies",
+      "title": "Hair Supplies - Marketing",
       "excerpt": "An e-commerce led engagement, helping an East Fremantle hair retailer go national.",
       "summary": "An e-commerce led engagement, helping an East Fremantle hair retailer go national.",
       "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09739_HS_HOMEPAGE_TRADE.png",
@@ -389,10 +476,10 @@
       "featured": false,
       "digital": true,
       "seo": {
-        "title": "Hair Supplies | Work | Website Development Perth",
+        "title": "Hair Supplies - Marketing | Work | Website Development Perth",
         "description": "An e-commerce led engagement, helping an East Fremantle hair retailer go national."
       },
-      "lastPublished": "2025-10-27T05:23:12.739Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "ecommerce"
       ],
@@ -421,7 +508,7 @@
         "title": "Cottesloe Village | Work | Website Development Perth",
         "description": "Nestled within the leafy beachside suburb of Cottesloe lies the vibrant Cottesloe Village. An open-plan mecca for shopping, eating and socialising, Cottesloe Village needed to attract a larger audience through engaging promotional material, capturing the essence of Cottesloe."
       },
-      "lastPublished": "2025-10-27T05:23:12.739Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "community"
       ],
@@ -430,7 +517,34 @@
       ]
     },
     {
-      "id": "waac",
+      "id": "hbf-animation",
+      "webflowId": "68f9e3f8013dbcd952d09cfb",
+      "title": "HBF - Animation",
+      "excerpt": "With flu season round the corner, OKMG were engaged to help educate HBF members on how to avoid illness and explain the intricacies of their health insurance.",
+      "summary": "With flu season round the corner, OKMG were engaged to help educate HBF members on how to avoid illness and explain the intricacies of their health insurance.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d097cd_hbf-iphones.jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d097cd_hbf-iphones.jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d098c3_HBF%20LOGO.png",
+      "bodyHtml": "<p id=\"\">The objective was to create digital content that resonated with members during flu season. As content around the flu often involves negative messaging, we instead opted for a more entertaining yet still educational, placing HBF as a more progressive health provider.</p><p id=\"\">We designed a series of engaging branded animations that used relatable human behaviours, encouraging our audience to learn more about their cover. This messaging was supported through simple and informative infographics, empowering HBF members to make the most of their health insurance.</p><p id=\"\">Through the creative and engaging content created we successfully distributed these pieces across numerous digital platforms. The content covered areas from Flu Season, Scooter Safety to Kids Dental Limits.</p><p id=\"\">This content provided for a far more relatable and effective format of distributing health content to a broader audience, as consumers actively enquired about membership cover in social media comments prompted by educational content.</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "",
+      "okmgUrl": "https://www.okmg.com/work/hbf-animation",
+      "order": 37,
+      "featured": false,
+      "digital": false,
+      "seo": {
+        "title": "HBF - Animation | Work | Website Development Perth",
+        "description": "With flu season round the corner, OKMG were engaged to help educate HBF members on how to avoid illness and explain the intricacies of their health insurance."
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
+      "servicesOffered": [
+        "website"
+      ]
+    },
+    {
+      "id": "waac-wa-aids-council",
       "webflowId": "68f9e3f8013dbcd952d09d1b",
       "title": "WAAC",
       "excerpt": "The Western Australian AIDS Council was founded in 1985 during the height of the HIV / AIDS pandemic and has been serving WA’s community ever since.",
@@ -442,7 +556,7 @@
       "contentGroups": [],
       "stats": [],
       "projectUrl": "",
-      "okmgUrl": "https://www.okmg.com/work/waac",
+      "okmgUrl": "https://www.okmg.com/work/waac-wa-aids-council",
       "order": 38,
       "featured": false,
       "digital": false,
@@ -450,10 +564,8 @@
         "title": "WAAC | Work | Website Development Perth",
         "description": "The Western Australian AIDS Council was founded in 1985 during the height of the HIV / AIDS pandemic and has been serving WA’s community ever since."
       },
-      "lastPublished": "2025-10-27T05:23:12.739Z",
-      "categories": [
-        "community"
-      ],
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
       "servicesOffered": [
         "website"
       ]
@@ -479,7 +591,7 @@
         "title": "Stirling Capital | Work | Website Development Perth",
         "description": "Stirling Capital came to OKMG looking for content for their newest inner-city project, Verdant Apartments. This $80M, energy-efficient, green living apartment complex was an exciting step forward for Perth."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "property"
       ],
@@ -508,7 +620,7 @@
         "title": "Construction Futures Centre | Work | Website Development Perth",
         "description": "OKMG created an immersive, interactive experience for the Construction Futures Centre, inspiring young adults to pursue careers in construction."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "education"
       ],
@@ -537,7 +649,7 @@
         "title": "Chase Residential | Work | Website Development Perth",
         "description": "OKMG's collaboration with Chase Residential, a prominent Perth real estate firm, led to the creation of a distinct brand identity, reflecting their luxury market niche."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "property"
       ],
@@ -564,12 +676,39 @@
       "digital": false,
       "seo": {
         "title": "Distinguished Homes | Work | Website Development Perth",
-        "description": "OKMG, a leading Digital Marketing Agency Perth, executed a rebranding project for Distinguished Homes, an emerging name in Perth’s luxury home building sector."
+        "description": "OKMG completed a full rebrand and website for Distinguished Homes, an emerging name in Perth’s luxury home building sector."
       },
-      "lastPublished": "2025-10-27T05:23:12.739Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "property"
       ],
+      "servicesOffered": [
+        "website"
+      ]
+    },
+    {
+      "id": "aj-diamond-club",
+      "webflowId": "68f9e3f8013dbcd952d09ce0",
+      "title": "A.J. Diamond Club",
+      "excerpt": "We support the AJ Diamond Club, a corporate members-only club for the Fremantle Dockers.",
+      "summary": "We support the AJ Diamond Club, a corporate members-only club for the Fremantle Dockers.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d098b7_ajdiamond-header-image.jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d098b7_ajdiamond-header-image.jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d099b5_ajd-logo.png",
+      "bodyHtml": "<p>The AJ Diamond club, established in 2003 and named after Arthur James Diamond, reflects a legacy of support and community spirit in Australian Rules Football.</p><p>OKMG's initial task was centralising their digital environment including updating their website and their custom mobile app for both Android and iOS users. These digital enhancements were tailored to cater to the club's exclusive membership, capped at 200 members, comprising distinguished professionals and businesspeople. Following the digital revamp, OKMG extended their expertise to refine the club's marketing strategies, assisting with email marketing and general digital support.</p><p>OKMG continues to support the AJ Diamond Club through a pro bono arrangement covering creative, digital, and marketing services, reinforcing our combined dedication to community and sports engagement.</p><p><a href=\"https://ajdiamondclub.com.au/\">Live website here.</a></p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "",
+      "okmgUrl": "https://www.okmg.com/work/aj-diamond-club",
+      "order": 59,
+      "featured": false,
+      "digital": false,
+      "seo": {
+        "title": "A.J. Diamond Club | Work | Website Development Perth",
+        "description": "We support the AJ Diamond Club, a corporate members-only club for the Fremantle Dockers."
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
       "servicesOffered": [
         "website"
       ]
@@ -593,12 +732,66 @@
       "digital": false,
       "seo": {
         "title": "Flex Fitness | Work | Website Development Perth",
-        "description": "A new brand for Flex Fitness, lifting its identity and strategy, preparing it for international expansion."
+        "description": "We delivered new brand identity for Flex Fitness, preparing the company for national and international expansion."
       },
-      "lastPublished": "2026-07-14T05:14:54.480Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "health"
       ],
+      "servicesOffered": [
+        "website"
+      ]
+    },
+    {
+      "id": "the-kids-research-institute-malaria-atlas-project",
+      "webflowId": "68f9e3f8013dbcd952d09d34",
+      "title": "The Kids Research Institute - Malaria Atlas Project",
+      "excerpt": "OKMG partnered with The Kids Research Institute to redesign the Malaria Atlas Project website showcasing vital malaria research.",
+      "summary": "OKMG partnered with The Kids Research Institute to redesign the Malaria Atlas Project website showcasing vital malaria research.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09994_Banner%20Image.png",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09995_malaria-atlast.png",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d099ad_map_revised-logo_master%20(1).png",
+      "bodyHtml": "<p>Partnering with <a href=\"https://www.thekids.org.au/campaigns/2025/35-years/\">The Kids Research Institute</a> (previously Telethon Kids Institute), we undertook a comprehensive redesign of the Malaria Atlas Project (MAP) website. Our goal was to enhance the dissemination of crucial malaria information, updating the logo and digital colour palette to better align with the project's mission. </p><p>We prioritised user experience, creating a clean, visually appealing design that catered to a diverse audience. The redesigned website featured staff profiles, research overviews, content publishing capabilities, and interactive data tools. We also developed easy-to-populate templates and an auto-scrolling homepage banner. Hosted on WordPress, we provided ongoing support for updates, security, and maintenance. </p><p>The result was an engaging, user-friendly website that effectively showcased MAP's work, improved the user journey, and enhanced functionality, leading to increased engagement and enquiries.</p><p><a href=\"https://malariaatlas.org/\" target=\"_blank\">View the live site here</a></p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "",
+      "okmgUrl": "https://www.okmg.com/work/the-kids-research-institute-malaria-atlas-project",
+      "order": 67,
+      "featured": false,
+      "digital": false,
+      "seo": {
+        "title": "The Kids Research Institute - Malaria Atlas Project | Work | Website Development Perth",
+        "description": "OKMG partnered with The Kids Research Institute to redesign the Malaria Atlas Project website showcasing vital malaria research."
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
+      "servicesOffered": [
+        "website"
+      ]
+    },
+    {
+      "id": "the-kids-research-institute-transforming-families",
+      "webflowId": "68f9e3f8013dbcd952d09d35",
+      "title": "The Kids Research Institute - Transforming Families",
+      "excerpt": "OKMG built a user-friendly platform for Transforming Families, providing vital support and resources for parents of transgender children.",
+      "summary": "OKMG built a user-friendly platform for Transforming Families, providing vital support and resources for parents of transgender children.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d0999b_Banner%20Image-min.png",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d0999d_transforming-families-banner.png",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d099ab_tki-families-white.png",
+      "bodyHtml": "<p>OKMG partnered with <a href=\"https://www.thekids.org.au/campaigns/2025/35-years/\">The Kids Research Institute</a> (previously Telethon Kids Institute) to create a transformative digital platform for the Transforming Families project. This initiative aimed to empower parents of transgender children with the resources and guidance they need to provide informed support. </p><p>The website was designed with a user-friendly interface, featuring a triage-like journey for content presentation, pop-up navigation, and a responsive design optimised for various devices. A key focus was on ensuring the site's content was contextually relevant and easily accessible to users. The website also included a robust content management system, allowing for seamless ingestion of content from various sources. SEO services were implemented to enhance the website's visibility.</p><p>The design was welcoming, visually appealing, and represented an inclusive and supportive environment. The project delivered a sustainable, practical, and multi-faceted national website, contributing to improved mental health outcomes for trans children and their families.</p><p><a href=\"https://transformingfamilies.org.au\" target=\"_blank\">View live site here</a></p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "",
+      "okmgUrl": "https://www.okmg.com/work/the-kids-research-institute-transforming-families",
+      "order": 68,
+      "featured": false,
+      "digital": false,
+      "seo": {
+        "title": "The Kids Research Institute - Transforming Families | Work | Website Development Perth",
+        "description": "OKMG built a user-friendly platform for Transforming Families, providing vital support and resources for parents of transgender children."
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
       "servicesOffered": [
         "website"
       ]
@@ -622,9 +815,9 @@
       "digital": false,
       "seo": {
         "title": "Curtin College | Work | Website Development Perth",
-        "description": "Reimagining Curtin College's brand for international student recruitment in a post-pandemic world"
+        "description": "Reimagining Curtin College's brand for international student recruitment in a post-pandemic world."
       },
-      "lastPublished": "2025-10-27T05:23:12.739Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "education"
       ],
@@ -653,12 +846,39 @@
         "title": "Dimattina Coffee | Work | Website Development Perth",
         "description": "OKMG rebuilt Dimattina Coffee’s online presence, enhancing e-commerce functionality and community engagement."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "ecommerce"
       ],
       "servicesOffered": [
         "digital"
+      ]
+    },
+    {
+      "id": "pls-pilbara-minerals",
+      "webflowId": "68f9e3f8013dbcd952d09d08",
+      "title": "PLS (Pilbara Minerals)",
+      "excerpt": "OKMG worked with PLS as a creative & digital part along their journey to become a global ASX darling.",
+      "summary": "OKMG worked with PLS as a creative & digital part along their journey to become a global ASX darling.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69083615839824bb8e6ed7c0_banner-image%20(1).jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69083615839824bb8e6ed7c0_banner-image%20(1).jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a55f81e48b6e952eebe110f_Union.png",
+      "bodyHtml": "<p id=\"\">Over the past decade, OKMG has been a marketing, creative and digital partner for PLS (previously Pilbara Minerals). From logo updates, to designing marketing assets, producing video and delivering annual reports, we’ve worked with them from their stage as an exploration company right through to their current status as a world-leading lithium producer. </p><p id=\"\">We designed and developed their current WordPress website and have refreshed this multiple times in copy structure and aesthetic feel, to keep up with the ever-changing nature of their business. This website seamlessly integrates with IRM newsroom to display current ASX data and documents.</p><p id=\"\">We work closely with their internal communications, IT and cyber security to manage and support the website with high priority service, to ensure that investors and stakeholders get the information they need when they need it.</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "",
+      "okmgUrl": "https://www.okmg.com/work/pls-pilbara-minerals",
+      "order": 978,
+      "featured": false,
+      "digital": false,
+      "seo": {
+        "title": "PLS (Pilbara Minerals) | Work | Website Development Perth",
+        "description": "OKMG worked with PLS as a creative & digital part along their journey to become a global ASX darling."
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
+      "servicesOffered": [
+        "website"
       ]
     },
     {
@@ -682,11 +902,38 @@
         "title": "Royal Flying Doctor Service | Work | Website Development Perth",
         "description": "Discover how OKMG enhanced the Royal Flying Doctor Service's digital presence. Learn more about our transformative digital solutions today!"
       },
-      "lastPublished": "2026-07-16T03:48:43.226Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "community",
         "health"
       ],
+      "servicesOffered": [
+        "website"
+      ]
+    },
+    {
+      "id": "rise-internet-service-providers",
+      "webflowId": "68f9e3f8013dbcd952d09d0f",
+      "title": "RISE Internet",
+      "excerpt": "RISE is a premium internet service provider operating in the Philippines. With operations in Cebu and Manila, RISE provides a superior service offering however required marketing to boost the brand’s profile within the market.",
+      "summary": "RISE is a premium internet service provider operating in the Philippines. With operations in Cebu and Manila, RISE provides a superior service offering however required marketing to boost the brand’s profile within the market.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69296bfe4b6efacc186c733e_Frame%2011.jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69296bfe4b6efacc186c733e_Frame%2011.jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d098e9_RISE_REVERSED%20LOGO.png",
+      "bodyHtml": "<h3><strong>Results at a glance</strong></h3><ul><li><strong>3,780 inbound leads</strong> delivered so far this year<br></li><li><strong>415 endorsed leads</strong> passed to sales<br></li><li><strong>US$40,889 in closed deals MRC</strong> attributed to inbound campaigns<br></li></ul><h3><strong>The challenge</strong></h3><p>RISE is a premium internet service provider operating in the Philippines, competing in a saturated market against established telcos. OKMG have been working closely with RISE since 2020, helping to develop the brand and build greater visibility, stronger positioning, and a fully optimised lead pipeline.</p><h3><strong>Our approach: data-driven marketing + optimisation</strong></h3><p>Alongside the branding and omni-channel digital strategy we initially implemented (across Google Ads, Social Media and email) we introduced advanced tracking, analytics and continual optimisation tools to elevate performance:</p><ul><li>We implemented heat-map analytics and user-behaviour tracking on the website to understand how visitors engage with content, forms and conversion pathways.<br></li><li>Integrated with the HubSpot CRM platform, we set up full lifecycle tracking: from ad click, to web action, to lead qualification, to sale.<br></li><li>With this data we segmented and refined paid-search campaigns: prioritising keywords and ad groups that led to high-intent behaviour (e.g., deep form engagements or repeated site visits), and we deprioritised lower-performing ones.<br></li><li>We also updated and A/B tested lead-capture forms (qualifiers, CTAs, field length) across web and social traffic, using insights from behaviour data and conversion funnels to improve lead quality.<br></li><li>Monthly and weekly reporting of performance metrics enabled rapid pivoting: we could see which campaigns drove heavy traffic but weak qualification, and restructure spend toward campaigns with higher endorsed-lead conversions.<br><br></li></ul><h3><strong>The outcome</strong></h3><p>As a result of this rigorous, data-informed optimisation process:<br></p><ul><li>RISE has received <strong>3,780 inbound leads</strong> this year, demonstrating that our campaigns successfully scaled interest.</li><li>Of those, <strong>415 leads were endorsed</strong> (qualified and handed to the sales team), representing strong lead-quality improvement.<br></li><li>Closed-deal monthly recurring charge (MRC) of <strong>US$40,889</strong> year to date can be attributed to inbound campaigns and optimised sales funnel.<br></li><li>The conversion-focus adjustments (keyword refinement, heat-map driven UX improvements, lead-form optimisation) helped shift the campaign from purely volume-driven to a balanced volume + quality model.<br><br></li></ul><h3><strong>Why it worked</strong></h3><ul><li>Using heat maps and user-behaviour analytics provided granular insights into how prospects interacted with the site, enabling UX improvements that reduced friction and improved conversion pathways.<br></li><li>The HubSpot CRM integration meant we were tracking full journey attribution from campaign click through to revenue.<br></li><li>The continual loop of “data &gt; insight &gt; optimisation” ensured campaigns stayed aligned with the highest-value outcomes (endorsed leads &amp; closed deals), rather than only chasing surface metrics.<br></li><li>The alignment between OKMG’s digital performance team and the RISE internal marketing/sales teams ensured insights from the campaigns were actioned quickly in the field.<br><br></li></ul><h3><strong>Final word</strong></h3><p>By coupling creative branding and omni-channel media with a robust analytics and optimisation framework, OKMG helped RISE not only raise awareness but also deliver <em>measurable business outcomes</em>. The result: nearly 4,000 inbound enquiries, hundreds of qualified leads, and tangible closed revenue.</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "",
+      "okmgUrl": "https://www.okmg.com/work/rise-internet-service-providers",
+      "order": 980,
+      "featured": false,
+      "digital": false,
+      "seo": {
+        "title": "RISE Internet | Work | Website Development Perth",
+        "description": "RISE is a premium internet service provider operating in the Philippines. With operations in Cebu and Manila, RISE provides a superior service offering however required marketing to boost the brand’s profile within the market."
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
       "servicesOffered": [
         "website"
       ]
@@ -712,7 +959,7 @@
         "title": "HIVO Digital Asset Management | Work | Website Development Perth",
         "description": "OKMG partnered to design, develop, and market HIVO, a cloud-based DAM platform revolutionising content management with secure, efficient solutions."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "technology"
       ],
@@ -721,30 +968,28 @@
       ]
     },
     {
-      "id": "city-of-cockburn",
+      "id": "city-of-cockburn-event",
       "webflowId": "68f9e3f8013dbcd952d09d4a",
-      "title": "City of Cockburn",
+      "title": "City of Cockburn - Cockburn Global",
       "excerpt": "A comprehensive communication strategy for the City of Cockburn’s upcoming event Cockburn Global 2024, driving impactful engagement.",
       "summary": "A comprehensive communication strategy for the City of Cockburn’s upcoming event Cockburn Global 2024, driving impactful engagement.",
       "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09b21_banner-image.png",
       "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09b21_banner-image.png",
       "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09b27_logo-City%20of%20Cockburn.png",
-      "bodyHtml": "<p>OKMG partnered with the City of Cockburn to create a dynamic communications strategy for their upcoming Cockburn Global 2024 event. This project involved crafting core messaging that resonated with the event’s goals and target audience. We developed a full suite of communication materials, including press releases, event invitations, overviews, and promotional content for emails, newsletters, and social media ads. Our approach was designed to maximize outreach, foster community engagement, and amplify the event’s impact. The result was a cohesive and compelling communication strategy and content plan that set the stage for a successful Cockburn Global 2024.</p>",
+      "bodyHtml": "<p>OKMG partnered with the City of Cockburn to create a dynamic communications strategy for their Cockburn Global event. This project involved crafting core messaging that resonated with the event’s goals and target audience. We developed a full suite of communication materials, including press releases, event invitations, overviews, and promotional content for emails, newsletters, and social media ads. Our approach was designed to maximize outreach, foster community engagement, and amplify the event’s impact. The result was a cohesive and compelling communication strategy and content plan that set the stage for a successful Cockburn Global.</p>",
       "contentGroups": [],
       "stats": [],
       "projectUrl": "",
-      "okmgUrl": "https://www.okmg.com/work/city-of-cockburn",
+      "okmgUrl": "https://www.okmg.com/work/city-of-cockburn-event",
       "order": 991,
       "featured": false,
       "digital": false,
       "seo": {
-        "title": "City of Cockburn | Work | Website Development Perth",
+        "title": "City of Cockburn - Cockburn Global | Work | Website Development Perth",
         "description": "A comprehensive communication strategy for the City of Cockburn’s upcoming event Cockburn Global 2024, driving impactful engagement."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
-      "categories": [
-        "technology"
-      ],
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
       "servicesOffered": [
         "website"
       ]
@@ -768,9 +1013,9 @@
       "digital": false,
       "seo": {
         "title": "DFES | Work | Website Development Perth",
-        "description": "Approved Digital Services provider for Department of Fire & Emergency Services."
+        "description": "OKMG are an approved Digital Services provider for Department of Fire & Emergency Services."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "community"
       ],
@@ -799,7 +1044,7 @@
         "title": "Hair Supplies | Work | Website Development Perth",
         "description": "A refreshed custom Shopify experience for Hair Supplies, improving customer experience."
       },
-      "lastPublished": "2025-11-18T01:25:18.408Z",
+      "lastPublished": "Tue Nov 18 2025 01:25:18 GMT+0000 (Coordinated Universal Time)",
       "categories": [
         "ecommerce"
       ],
@@ -809,9 +1054,36 @@
       ]
     },
     {
+      "id": "hair-supplies-website",
+      "webflowId": "68f9e3f8013dbcd952d0a05b",
+      "title": "Hair Supplies - Website",
+      "excerpt": "OKMG delivered a custom Shopify experience for Hair Supplies, improving customer experience.",
+      "summary": "OKMG delivered a custom Shopify experience for Hair Supplies, improving customer experience.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09f25_6879defd7413a2e83a96a2a5_Banner%20Image.jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09f25_6879defd7413a2e83a96a2a5_Banner%20Image.jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09f31_Logo-Hair%20Supplies.png",
+      "bodyHtml": "<p id=\"\">In anticipation of Hair Supplies' new Perth store opening in Q4 2025, OKMG undertook a comprehensive refresh of their Shopify website. This project aimed to build on their existing Shopify storefront and bank-end systems, with a new homepage and global sitewide styling. As a long-term marketing partner, OKMG focused on reflecting Hair Supplies' legacy as a generational hair care business, catering to trade and commercial B2B clients. Our team redesigned the Shopify website to improve user experience and streamline navigation. This update will ensured that the business is well-positioned for successful market penetration, reinforcing their standing in the hair care industry.</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "",
+      "okmgUrl": "https://www.okmg.com/work/hair-supplies-website",
+      "order": 994,
+      "featured": false,
+      "digital": false,
+      "seo": {
+        "title": "Hair Supplies - Website | Work | Website Development Perth",
+        "description": "OKMG delivered a custom Shopify experience for Hair Supplies, improving customer experience."
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
+      "servicesOffered": [
+        "website"
+      ]
+    },
+    {
       "id": "curtin-college-video",
       "webflowId": "68f9e3f8013dbcd952d0a05e",
-      "title": "Curtin College",
+      "title": "Curtin College - Video",
       "excerpt": "Enhanced international student engagement through authentic visual content, driving inquiries and TikTok interaction.",
       "summary": "Enhanced international student engagement through authentic visual content, driving inquiries and TikTok interaction.",
       "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09f33_banner-image.png",
@@ -826,10 +1098,10 @@
       "featured": false,
       "digital": false,
       "seo": {
-        "title": "Curtin College | Work | Website Development Perth",
+        "title": "Curtin College - Video | Work | Website Development Perth",
         "description": "Enhanced international student engagement through authentic visual content, driving inquiries and TikTok interaction."
       },
-      "lastPublished": "2025-11-18T01:25:18.408Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "education"
       ],
@@ -858,7 +1130,7 @@
         "title": "West Australian Crystal Crab | Work | Website Development Perth",
         "description": "OKMG built Southern Trading Australia’s immersive digital platform spotlighting the West Australian crystal crab for the international culinary market."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "produce"
       ],
@@ -913,7 +1185,7 @@
         "title": "Heirloom Honey Co. | Work | Website Development Perth",
         "description": "Bringing to life and to market, a unique story, brand and product line of exclusive West Australian honey."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "produce"
       ],
@@ -958,7 +1230,7 @@
         "title": "Revo Fitness - Full Service | Work | Website Development Perth",
         "description": "OKMG partnered with Revo Fitness, to take them from 5 gyms to 21+ and national expansion, building in house team."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "ecommerce",
         "technology",
@@ -990,38 +1262,9 @@
         "title": "State Swim | Work | Website Development Perth",
         "description": "Enhanced State Swim's digital and marketing strategy, delivering a user-friendly, integrated web experience for Australian and Singaporean markets."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "community"
-      ],
-      "servicesOffered": [
-        "digital"
-      ]
-    },
-    {
-      "id": "bci-minerals",
-      "webflowId": "6990f943edddaa57f97ab7c6",
-      "title": "BCI Minerals",
-      "excerpt": "OKMG delivered a custom modern website for BCI Minerals, integrating live investor data and internal systems for clear shareholder communications.",
-      "summary": "OKMG delivered a custom modern website for BCI Minerals, integrating live investor data and internal systems for clear shareholder communications.",
-      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6990f543dfd1c29c053a10d0_BCI%20Minerals%20case%20study%20hero%20image.jpg",
-      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6990f543dfd1c29c053a10d0_BCI%20Minerals%20case%20study%20hero%20image.jpg",
-      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a55f7c81f4a97a1facb495a_Group%2048096214%20(1).png",
-      "bodyHtml": "<h2>Overview</h2><p>BCI Minerals, an ASX-listed company with a $1.32 billion market capitalisation, is a major player in the industrial minerals sector. Presently, it is advancing its flagship Mardie salt and potash project alongside its legacy iron ore interests. The company required a digital presence that not only reflected its scale and ambition but also served as an efficient, multi-functional tool for its growing team and increasing market audience. This case study details how OKMG partnered with BCI to transform their online presence, moving from a restrictive, developer-dependent platform to a modern, integrated and self-sufficient website that powers investor relations, recruitment and brand communication.</p><h2>The Brief</h2><p>BCI Minerals faced a critical challenge: their previous website was a bottleneck to effective communication. Constrained by an outdated content management system (CMS), even routine content updates became protracted exercises, requiring technical tickets and leading to weeks of lead time. This hindered the marketing team’s ability to share timely updates with stakeholders, investors and potential employees. The brief was clear: deliver a modern, authoritative and scalable digital platform whose core objectives were to:</p><ul><li>Empower the internal team: Transition to a self-sufficient CMS and eliminate dependency on developers for routine content updates.</li><li>Boost brand authority: Create a visually compelling site that accurately represents the scale of BCI’s operations and project portfolio.</li><li>Streamline investor communications: Integrate a centralised Investor Hub with live data to enable compliance, transparency and accessibility.</li><li>Integrate with internal systems: Connect the website with BCI’s existing technology stack to unify workflows and data.</li></ul><h2>Discovery and Strategy</h2><p>OKMG initiated the project with a discovery phase to fully understand BCI Minerals’ complex needs. This structured process involved stakeholder workshops and technical discussions covering sitemap and information architecture (IA) reviews, feature and integration planning, visual direction scoping, and technical requirements for hosting, DNS, GA4 and SEO. A critical component of this phase was the close collaboration with BCI’s strategic marketing advisor, Madeline Arnold Advisory, who provided the foundational copy deck, site structure and user journeys.</p><h2>Content and Copywriting</h2><p>While the foundational copy was developed by Madeline Arnold Advisory, OKMG’s role was to structure and present this content within the new digital ecosystem. We focused on translating the strategic narrative into a dynamic web experience. This involved planning how the content would flow across different pages, identifying opportunities for visual storytelling (such as neat timelines for the Mardie project) and structuring information hierarchies to guide users intuitively.</p><h2>Design and User Experience</h2><p>With the strategy and content framework in place, OKMG’s design team began translating BCI’s brand identity. The focus was on creating a clean, organised, and visually authoritative interface befitting an ASX-listed company.</p><h3>Mockups</h3><p>We explored several digital design concepts in Figma, pushing the visual application of BCI’s brand assets, fonts, and guidelines. After selecting a preferred direction, we developed mockups for key pages to secure stakeholder and board approval. These designs incorporated dynamic elements such as full-width video headers, subtle animations to enhance storytelling, smooth-scrolling experiences and interactive click-through carousels for project imagery. The chosen direction was then refined through two to three rounds of iterative feedback before being systematically applied to the entire sitemap.</p><h3>User Journeys</h3><p>Working from the user journeys defined during discovery, we designed intuitive pathways for BCI’s key audience segments. For investors, the journey was streamlined towards the integrated Investor Hub. For potential job candidates, clear calls-to-action led them directly to live listings. For media and project stakeholders, the architecture surfaced project information (Mardie salt and potash, legacy iron ore) with ease.</p><h2>Development</h2><p>The development phase focused on building a robust, future-proof platform. OKMG delivered a high-performance WordPress website made for speed, security and administrative autonomy. At the heart of this was the implementation of ACF Flexible Content. This enabled the BCI marketing team to build and modify pages at will using a library of pre-designed, pre-coded content blocks. This system effectively future-proofed the site, giving the client complete control to create campaign landing pages or update project information without a single line of code or a developer ticket.</p><h2>Systems Integrations</h2><p>A key requirement was to break down data silos by integrating the new website with BCI’s core business systems. OKMG built custom connections that preserved existing workflows and eliminated manual data duplication.</p><h3>ASX</h3><p>Working in partnership with Weblink, we integrated a comprehensive Investor Hub. This feature is a centralised repository for all market-sensitive information, featuring live ASX share price data, a fully searchable library of annual reports and presentations, and an automated feed of ASX announcements. This replaced a fragmented system of manual PDF uploads. It also keeps information current, compliant and accessible from any device.</p><h3>Job Board</h3><p>To streamline recruitment, we integrated the site with Action HRM, BCI’s human resources platform. This custom integration ensures that job listings on the website are automatically populated and synchronised with Action HRM. When a position is filled or a new role is created in the HR system, the website then updates instantly.</p><h3>HIVO</h3><p>We connected the website to <a href=\"https://www.okmg.com/work/hivo\">HIVO</a>, BCI’s digital asset management (DAM) system. This integration allows staff to pull approved, high-resolution imagery and brand assets directly into the CMS when building pages. This ensures brand consistency, maintains a single source of truth for creative assets, and saves time otherwise spent on manual downloading and uploading.</p><h3>AGOL Maps</h3><p>To dynamically showcase the location and scale of their operations, we integrated the site with ArcGIS Online (AGOL). This allows BCI to embed interactive, data-rich maps directly onto project pages, providing stakeholders with a powerful visual tool to understand the company's geographical footprint.</p><h3>Mailchimp and Newsletter</h3><p>Finally, we integrated Mailchimp to support segmented stakeholder communications. The website’s newsletter sign-up forms are connected to specific audience lists within Mailchimp, enabling BCI’s communications team to manage investor alerts, community updates and corporate news through their existing email marketing platform, all driven by subscriptions gathered on the website.</p><h2>SEO and Security</h2><p>Throughout the development process, we adhered to best practices for on-page SEO, including optimising site structure, meta-data and page speed. The clean, semantic codebase and fast-loading ACF architecture contribute to strong search engine visibility. On the security front, we implemented a robust security framework including SSL encryption, regular core and plugin updates, and secure hosting protocols to protect sensitive company and investor data.</p><h2>Test and Launch</h2><p>Prior to launch, the site underwent rigorous testing across devices and browsers. We worked closely with the BCI team to migrate content, configure the new integrations and conduct final user acceptance testing (UAT). The launch was executed with a carefully managed DNS cutover to minimise downtime. Following the go-live, we entered a hypercare period to provide immediate, hands-on support to monitor performance, address any minor adjustments and ensure the BCI team was confident in managing their new platform.</p><h2>Ongoing Support</h2><p>Following launch and hypercare period, BCI Minerals transitioned to OKMG’s managed support service. This ongoing partnership involves regular platform maintenance, security updates, plugin management and high-priority technical assistance as needed.</p><h2>Outcome</h2><p>A clean, organised website that accurately reflects BCI Minerals’ scale and ambition in the global industrial minerals market. The internal marketing team now publishes content and campaign pages without developer support. Investor information is consolidated, current and accessible from any device. Core business systems (like creative assets, email distribution and human resources) now run through a unified interface. Post-launch analytics are also in place to track time-on-site across investor and careers sections.&nbsp;</p>",
-      "contentGroups": [],
-      "stats": [],
-      "projectUrl": "https://www.bciminerals.com.au/",
-      "okmgUrl": "https://www.okmg.com/work/bci-minerals",
-      "order": 1198,
-      "featured": false,
-      "digital": true,
-      "seo": {
-        "title": "BCI Minerals | Work | Website Development Perth",
-        "description": "OKMG delivered a custom modern website for BCI Minerals, integrating live investor data and internal systems for clear shareholder communications."
-      },
-      "lastPublished": "2026-07-15T01:17:28.107Z",
-      "categories": [
-        "resources"
       ],
       "servicesOffered": [
         "digital"
@@ -1048,39 +1291,9 @@
         "title": "Long Point Brewing Co. | Work | Website Development Perth",
         "description": "Phased Shopify launch builds momentum for Kennedy Bay's coastal brewery through distinctive voice and strategic digital presence."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "hospitality",
-        "community"
-      ],
-      "servicesOffered": [
-        "digital"
-      ]
-    },
-    {
-      "id": "the-sports-map-network",
-      "webflowId": "69b604d655c714ea0e793997",
-      "title": "The Sports MAP Network",
-      "excerpt": "OKMG rebuilt The Sports MAP Network’s digital platform for sports medicine professionals, improving conversion rates and driving more masterclass subscriptions.",
-      "summary": "OKMG rebuilt The Sports MAP Network’s digital platform for sports medicine professionals, improving conversion rates and driving more masterclass subscriptions.",
-      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69b604df33e9bca539d59c5c_Sports%20Map%20Network%20case%20study%20hero%20image.jpg",
-      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69b604df33e9bca539d59c5c_Sports%20Map%20Network%20case%20study%20hero%20image.jpg",
-      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69b604d28f99c60d94013e9f_hover-logo-Sports%20Map%20Network.jpg",
-      "bodyHtml": "<h2>The client</h2><p>The Sports MAP Network is Australia's premier continuing professional development platform for sports medicine clinicians. The organisation delivers masterclasses, filmed conferences and live events featuring presenters from AFL and Cricket Australia physios to renowned researchers from La Trobe University and the UK Sports Institute. With a growing community of sports physios, athletic trainers and allied health professionals across Australia, New Zealand, the UK and the USA, The Sports MAP Network had built a following through consistently excellent content. But their digital platform wasn't keeping pace with their ambition.&nbsp;</p><h2>The challenge</h2><p>The Sports MAP Network team was upfront about the challenges that needed to be addressed. Years of iterative additions had left them with a site running on 75 plugins, a technical debt that made every update feel like walking through treacle. Load times were suffering, the user journey from discovery to purchase had unnecessary friction, and the LifterLMS dashboard, which is the heart of the member experience, felt disconnected from the brand’s professional identity.</p><p>The team also wanted to improve how they converted visitors into members. The pricing and subscription logic needed to accommodate complex offers (event bundles, location‑based currency switching, multi‑seat team package, etc.). The checkout process needed simplifying, as well. The sign‑up flow needed to feel more personalised. And with a growing international audience, the platform had to handle multiple currencies and tax jurisdictions.</p><p>Add to that a wishlist of strategic new features: a group chat for masterclass members, a careers and job board with admin approval workflows, member‑only search functionality, social certificate sharing for CPD credentials, and deeper integration between WooCommerce and LifterLMS. All while protecting the active subscription data of their existing member base, a non‑negotiable requirement that ruled out any risky one‑click migrations.</p><h2>Our approach</h2><p>OKMG understood, from our first conversations with the Sports MAP Network team, that this was an opportunity to build a high‑performance digital foundation that could scale with the business for years to come.&nbsp;</p><p>We started with the basics: a logo refresh and updated brand palette that sharpened the visual identity without losing the recognition existing members had come to trust. Cleaner typography, more purposeful use of colour and a design system that would flow consistently through every touchpoint from marketing pages to the member dashboard.</p><p>With the brand foundations in place, we then moved into a full website redesign in Figma. Every page was interrogated through the lens of conversion. Where was the friction? What questions were going unanswered? How could we make the path from “interested clinician” to “active subscriber” feel effortless? The answer lay partly in design, and partly in user journey mapping. We restructured the navigation to have clearer pathways to relevant content to better serve individuals looking to upskill, clinic managers seeking team packages, and international clinicians navigating CPD requirements. The new onboarding quiz now guides new members to masterclasses suited to their experience level and clinical interests.</p><p>The checkout process underwent a complete overhaul. Where previously users encountered friction at multiple points, we streamlined the flow and integrated Stripe, PayPal, Apple Pay and Google Pay for maximum payment flexibility. Complex discount logic (bundling events with subscriptions, offering team pricing, and managing multi‑currency transactions) now runs smoothly in the background.</p><p>One major focus was the LifterLMS dashboard reskin. This is where members spend most of their time, and it needed to feel like a natural extension of the brand and not a generic plugin interface. We redesigned the dashboard to prioritise what matters: easy access to recent masterclasses, clear CPD tracking, downloadable certificates and smooth navigation between content types.</p><p>Backend optimisation was equally critical. We reduced the plugin count from over 75 to approximately 40, replacing bloated plugins with lean custom code where it made sense. The result is a faster, more secure platform that's easier to maintain and harder to breach.</p><p>The migration from staging to production was precise. Rather than a risky one‑click push, OKMG executed a careful, phased migration that preserved every active subscription, every member record, every piece of historical data.&nbsp;</p><h2>New Capabilities</h2><p>Beyond the core rebuild, we delivered a suite of features to deepen member engagement and open new revenue streams:</p><ul><li><strong>Group chat for masterclass members</strong>. A dedicated space where subscribers can discuss content, share insights and build professional connections.</li><li><strong>Careers and job board</strong>. A natural extension for a platform serving elite clinicians. With admin approval workflows to ensure quality control, employers can post roles, and members can browse opportunities.</li><li><strong>Member‑only search</strong>. Subscribers can now search the entire content library from a single interface.</li><li><strong>Podcast and blog integration</strong>. To support top‑of‑funnel discovery that feeds membership growth, free content now lives alongside paid offerings in a unified ecosystem.</li><li><strong>Social certificate sharing</strong>. Members can share their CPD achievements on professional networks directly from the platform.</li><li><strong>Location‑based currency switcher</strong>. International members now see pricing in their local currency automatically. This reduces checkout friction for UK, European and US audiences.</li><li><strong>GA4 setup with conversion tracking</strong>. Real visibility into what's working, from traffic sources to checkout completion rates, so the team can continue optimising based on data.</li></ul><h2>The outcome</h2><p>The Sports MAP Network now has a digital platform that matches the quality of its content. The new site is faster, more secure and easier to manage. But the real measure of success is in the numbers. Since launch, the team has seen a measurable uplift in conversion rates across key pages. The simplified checkout process has reduced drop‑off at the point of purchase. The improved sign‑up flow, combined with the personalised onboarding quiz, is turning more free trial users into paying members. And the new group chat and job board are driving repeat visits and longer session times, which is exactly the engagement metrics that matter for a subscription business. As they continue to expand their offering and reach new clinicians around the world, the foundation remains solid. And we'll be right here, cheering them on.</p>",
-      "contentGroups": [],
-      "stats": [],
-      "projectUrl": "https://sportsmap.com.au/",
-      "okmgUrl": "https://www.okmg.com/work/the-sports-map-network",
-      "order": 1200,
-      "featured": false,
-      "digital": true,
-      "seo": {
-        "title": "The Sports MAP Network | Work | Website Development Perth",
-        "description": "OKMG rebuilt The Sports MAP Network’s digital platform for sports medicine professionals, improving conversion rates and driving more masterclass subscriptions."
-      },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
-      "categories": [
-        "health",
         "community"
       ],
       "servicesOffered": [
@@ -1125,7 +1338,7 @@
       "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09ef0_banner-image.png",
       "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09ef0_banner-image.png",
       "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09f0e_logo-Advisian.png",
-      "bodyHtml": "<p id=\"\">Advisian, a leader in strategic, management, and technical consulting, sought to enhance its brand presence through a compelling visual narrative. With a focus on resource, energy, and infrastructure challenges, Advisian needed a video that encapsulated its expertise and innovative solutions.</p><p id=\"\">OKMG was engaged to create a brand profile video that would resonate with Advisian's target audience and reinforce its market position. Our approach centred on crafting a narrative that highlighted Advisian's unique value proposition, using a professional tone and dynamic visuals to engage viewers. The result was a high-impact video that effectively communicated Advisian's brand story, enhancing its visibility and engagement across digital platforms.</p><p id=\"\"><a href=\"https://www.youtube.com/watch?v=M9nTmyWgZQU&ab_channel=OKMG\" target=\"_blank\">Watch Full Video Here</a></p>",
+      "bodyHtml": "<p>Advisian, a leader in strategic, management, and technical consulting, sought to enhance its brand presence through a compelling visual narrative. With a focus on resource, energy and infrastructure challenges, Advisian needed a video that encapsulated its expertise and innovative solutions.</p><p>OKMG was engaged to create a brand profile video that would resonate with Advisian's target audience and reinforce its market position. Our approach centred on crafting a narrative that highlighted Advisian's unique value proposition, using a professional tone and dynamic visuals to engage viewers. The result was a high-impact video that effectively communicated Advisian's brand story, enhancing its visibility and engagement across digital platforms.</p><p><a href=\"https://www.youtube.com/watch?v=M9nTmyWgZQU&ab_channel=OKMG\" target=\"_blank\">Watch Full Video Here</a></p>",
       "contentGroups": [],
       "stats": [],
       "projectUrl": "",
@@ -1137,7 +1350,7 @@
         "title": "Advisian | Work | Website Development Perth",
         "description": "OKMG crafted a compelling brand profile video for Advisian, enhancing their market presence and audience engagement."
       },
-      "lastPublished": "2025-10-27T05:23:12.739Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [],
       "servicesOffered": [
         "website"
@@ -1162,12 +1375,41 @@
       "digital": true,
       "seo": {
         "title": "Albany Herring | Work | Website Development Perth",
-        "description": "OKMG enables Albany Herring’s complete brand transformation from sea to shelf to create resonant positioning for Western Australia’s prized herring."
+        "description": "OKMG crafted brand, product & website Western Australia’s prized Albany Herring."
       },
-      "lastPublished": "2026-04-14T08:39:54.555Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "produce",
         "community"
+      ],
+      "servicesOffered": [
+        "digital"
+      ]
+    },
+    {
+      "id": "aquatic-life-industries",
+      "webflowId": "6a49a4f84480068d7c9fb662",
+      "title": "Aquatic Life Industries",
+      "excerpt": "OKMG work with Aquatic Life Industries to build brands and bring their vision to life.",
+      "summary": "OKMG work with Aquatic Life Industries to build brands and bring their vision to life.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a49a49ebe53daa1c797ff6d_ALI%20case%20study%20banner.jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a49a49ebe53daa1c797ff6d_ALI%20case%20study%20banner.jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a49a4a688f8dc3c9b78d710_hover-logo-Aquatic%20Life%20Industries.jpg",
+      "bodyHtml": "<p>Aquatic Life Industries (ALI) is a wholly WA-owned, vertically integrated aquatic resources business - spanning wild harvest, aquaculture, trading and R&amp;D across more than 30 sustainably managed fishery licences. OKMG partners with ALI as an embedded creative and brand agency, delivering strategy, copywriting, website content, print collateral, video production and event branding across the full ALI brand family, including Southern Trading Australia (STA), West Australian Crystal Crab, Shark Bay Blue and Shark Bay Vongole.</p><p>Our work has included developing brand narratives and website copy for ALI's parent site and sub-brands, producing video content on location with fishing crews and leadership, designing and branding The Captain's Table premium dining series, and managing vehicle and event branding rollouts in partnership with ALI's operations team.</p><p>The result is a consistent, trust-led brand presence across a complex portfolio - one that reflects ALI's position as a leading sustainable seafood operator in Western Australia while giving each sub-brand room to tell its own story.</p><p><a href=\"https://aquaticlife.com.au/\">ALI website here.</a></p><p>‍</p><p>‍</p><p>‍</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "https://aquaticlife.com.au/",
+      "okmgUrl": "https://www.okmg.com/work/aquatic-life-industries",
+      "order": 9999,
+      "featured": false,
+      "digital": true,
+      "seo": {
+        "title": "Aquatic Life Industries | Work | Website Development Perth",
+        "description": "OKMG work with Aquatic Life Industries to build brands and bring their vision to life."
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [
+        "produce"
       ],
       "servicesOffered": [
         "digital"
@@ -1194,7 +1436,7 @@
         "title": "BEGA Peanut Butter | Work | Website Development Perth",
         "description": "A promotional video campaign for Australia's great heroes"
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "ecommerce"
       ],
@@ -1223,66 +1465,35 @@
         "title": "Cancer Council WA | Work | Website Development Perth",
         "description": "OKMG successfully crafted a compelling brand profile video for Cancer Council WA, enhancing their visibility and community engagement."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [],
       "servicesOffered": [
         "website"
       ]
     },
     {
-      "id": "chalice-mining",
-      "webflowId": "68f9e3f8013dbcd952d09d45",
-      "title": "Chalice Mining",
-      "excerpt": "OKMG delivered a bold, brand-centric annual report for Chalice Mining, showcasing their market-leading position and green metals focus.",
-      "summary": "OKMG delivered a bold, brand-centric annual report for Chalice Mining, showcasing their market-leading position and green metals focus.",
-      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09afd_banner-image.png",
-      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09afd_banner-image.png",
-      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09b00_logo-chalice-mining.png",
-      "bodyHtml": "<p id=\"\">OKMG is engaged annually to produce Chalice Mining's Annual Report. Each year we complete a comprehensive audit and review of Chalice's existing marketing materials and brand collateral, consolidating the look and feel used day-to-day into a striking brand showcase utilising the best assets and applications from throughout the year. Visually we always want to capture Chalice's innovative spirit while we work closely each year with Chalice Mining's communications team to produce a clear and effective annual report document. By combining Chalice Mining's corporate narrative, sustainability report and financial reporting, our annual reports serve the company well in effectively communicating their annual progress and milestones to their shareholders.</p>",
-      "contentGroups": [],
-      "stats": [],
-      "projectUrl": "",
-      "okmgUrl": "https://www.okmg.com/work/chalice-mining",
-      "order": 9999,
-      "featured": false,
-      "digital": false,
-      "seo": {
-        "title": "Chalice Mining | Work | Website Development Perth",
-        "description": "OKMG delivered a bold, brand-centric annual report for Chalice Mining, showcasing their market-leading position and green metals focus."
-      },
-      "lastPublished": "2026-07-16T03:36:39.197Z",
-      "categories": [
-        "resources"
-      ],
-      "servicesOffered": [
-        "website"
-      ]
-    },
-    {
-      "id": "chalice-mining-2025-annual-report",
+      "id": "chalice-mining-annual-report-design",
       "webflowId": "6921243f6e87b741c5c30b2a",
-      "title": "Chalice Mining  2025 Annual Report",
-      "excerpt": "Every year, OKMG works closely with Chalice Mining to deliver their annual ASX report.",
-      "summary": "Every year, OKMG works closely with Chalice Mining to deliver their annual ASX report.",
+      "title": "Chalice Mining - Annual Report Design",
+      "excerpt": "OKMG deliver bold, brand-centric annual reports for Chalice Mining, showcasing their market-leading position and green metals focus.",
+      "summary": "OKMG deliver bold, brand-centric annual reports for Chalice Mining, showcasing their market-leading position and green metals focus.",
       "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a575e5651c128f04f71cc19_Chalice%20Mining.png",
       "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a575e5651c128f04f71cc19_Chalice%20Mining.png",
       "hoverLogo": null,
-      "bodyHtml": "<p id=\"\">In 2025, <a id=\"\" href=\"https://www.okmg.com/work/chalice-mining\"><strong id=\"\">Chalice Mining</strong></a>’s flagship Gonneville Project, the largest undeveloped palladium-nickel-copper project in the Western world, achieved a Strategic Project Status from the WA Government and Major Project Status from the Commonwealth. The company's Pre-Feasibility Study also moved towards completion, while a metallurgical breakthrough simplified the nickel processing pathway and strengthened project economics. Additionally, the memorandum of understanding (MOU) with Mitsubishi Corporation marked a step towards securing a tier-one development partner.&nbsp;&nbsp;</p><p id=\"\">Each year, OKMG are engaged to design an annual report that communicates values, trust, and progress to shareholders. The design approach unites corporate narrative, sustainability reporting and financial performance into a document that communicated progress with clarity and impact. Our latest document was a nice evolution from previous years, bringing back in a refined use of the orange gradient, a cleaner navigation, and clear communication of updated project and company status within the market.</p>",
+      "bodyHtml": "<p>OKMG have been regularly engaged to design an annual reports that communicates values, trust, and progress to shareholders. </p><p>Our design approach unites corporate narrative, sustainability reporting and financial performance into a document that communicated progress with clarity and impact. </p><p>Each year, we provide an authentic evolution from previous years', ensuring the company is genuinely reflected truely in its current and future aspirations.</p>",
       "contentGroups": [],
       "stats": [],
       "projectUrl": "",
-      "okmgUrl": "https://www.okmg.com/work/chalice-mining-2025-annual-report",
+      "okmgUrl": "https://www.okmg.com/work/chalice-mining-annual-report-design",
       "order": 9999,
       "featured": false,
       "digital": false,
       "seo": {
-        "title": "Chalice Mining  2025 Annual Report | Work | Website Development Perth",
-        "description": "Every year, OKMG works closely with Chalice Mining to deliver their annual ASX report."
+        "title": "Chalice Mining - Annual Report Design | Work | Website Development Perth",
+        "description": "OKMG deliver bold, brand-centric annual reports for Chalice Mining, showcasing their market-leading position and green metals focus."
       },
-      "lastPublished": "2026-07-16T03:36:39.197Z",
-      "categories": [
-        "resources"
-      ],
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
       "servicesOffered": [
         "website"
       ]
@@ -1308,7 +1519,7 @@
         "title": "City of Belmont | Work | Website Development Perth",
         "description": "Digital marketing campaign support for the \"Visit Belmont\" initiative, increasing engagement and visitor interest."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [],
       "servicesOffered": [
         "digital",
@@ -1316,9 +1527,39 @@
       ]
     },
     {
-      "id": "city-of-cockburns-2025-year-in-review-video",
+      "id": "city-of-cockburns-rangers-reality-check-video",
+      "webflowId": "6a49a6a90a823a3819656cdd",
+      "title": "City of Cockburn - Ranger Video",
+      "excerpt": "Debunking ranger myths with a megadose of humour and unrelenting 90 seconds of fun.",
+      "summary": "Debunking ranger myths with a megadose of humour and unrelenting 90 seconds of fun.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a49a598b221c183c37d7647_City%20of%20Cockburn%20Rangers%20case%20study%20banner-image.jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a49a598b221c183c37d7647_City%20of%20Cockburn%20Rangers%20case%20study%20banner-image.jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a49a5a4b550267ae3289a92_City%20of%20Cockburn%27s%20Rangers%20Reality%20Check%20Video.jpg",
+      "bodyHtml": "<p>Not really stated in the brief, but OKMG ‘kept it real’ in debunking the myths surrounding the job of Rangers in Cockburn. For one, they are not mystical animal whisperers. OKMG developed the Rangers Reality Check, a ninety-second comedic gem that captures the authentic, sometimes chaotic, always dedicated nature of ranger work across Cockburn’s diverse community.</p><p>The video strips away misconceptions with trademark Australian humour, showing rangers navigating everything from wandering livestock to community compliance matters with professionalism and a (very) healthy dose of reality. Rather than perpetuating Hollywood fantasies of rangers communing with wildlife, OKMG layered lighthearted vignettes, not stiff or overly formal storytelling moments, that hilariously showcase the true scope of their role: technically proficient problem solvers (e.g. forensic sniffing of upturned barbecue grills for tell-tale clues to wandering pets), community educators, and local government representatives who just happen to encounter animals. </p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "",
+      "okmgUrl": "https://www.okmg.com/work/city-of-cockburns-rangers-reality-check-video",
+      "order": 9999,
+      "featured": false,
+      "digital": false,
+      "seo": {
+        "title": "City of Cockburn - Ranger Video | Work | Website Development Perth",
+        "description": "Debunking ranger myths with a megadose of humour and unrelenting 90 seconds of fun."
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [
+        "community",
+        "education"
+      ],
+      "servicesOffered": [
+        "website"
+      ]
+    },
+    {
+      "id": "city-of-cockburns-year-in-review-video",
       "webflowId": "6a49a8118eb07b9ca5744597",
-      "title": "City of Cockburn's 2025 Year-in-Review Video",
+      "title": "City of Cockburn - Year-in-Review Video",
       "excerpt": "Celebrating community achievements through dynamic visual storytelling that strengthened civic pride and engagement.",
       "summary": "Celebrating community achievements through dynamic visual storytelling that strengthened civic pride and engagement.",
       "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a49a79488f8dc3c9b795943_City%20of%20Cockburn%20Year%20in%20Review%20banner-image.jpg",
@@ -1328,18 +1569,16 @@
       "contentGroups": [],
       "stats": [],
       "projectUrl": "",
-      "okmgUrl": "https://www.okmg.com/work/city-of-cockburns-2025-year-in-review-video",
+      "okmgUrl": "https://www.okmg.com/work/city-of-cockburns-year-in-review-video",
       "order": 9999,
       "featured": false,
       "digital": false,
       "seo": {
-        "title": "City of Cockburn's 2025 Year-in-Review Video | Work | Website Development Perth",
+        "title": "City of Cockburn - Year-in-Review Video | Work | Website Development Perth",
         "description": "Celebrating community achievements through dynamic visual storytelling that strengthened civic pride and engagement."
       },
-      "lastPublished": "2026-07-26T04:22:15.403Z",
-      "categories": [
-        "community"
-      ],
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
       "servicesOffered": [
         "website"
       ]
@@ -1363,9 +1602,9 @@
       "digital": true,
       "seo": {
         "title": "Debakarn | Work | Website Development Perth",
-        "description": "Website refresh and ongoing support for research and educational initiative."
+        "description": "OKMG delivered a website and ongoing support for the Debakarn research initiative."
       },
-      "lastPublished": "2026-02-17T09:33:26.983Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "education",
         "community"
@@ -1395,7 +1634,7 @@
         "title": "Ellen Hooper | Work | Website Development Perth",
         "description": "Branding transformation project for professional consultant and coaching programs."
       },
-      "lastPublished": "2026-01-23T02:44:55.593Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "education",
         "community"
@@ -1425,7 +1664,7 @@
         "title": "Feral Brewing | Work | Website Development Perth",
         "description": "OKMG elevated Feral Brewing's brand with a dynamic video, boosting their online presence and audience engagement."
       },
-      "lastPublished": "2025-10-27T05:23:12.739Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [],
       "servicesOffered": [
         "website"
@@ -1450,9 +1689,9 @@
       "digital": true,
       "seo": {
         "title": "Fortified Support | Work | Website Development Perth",
-        "description": "OKMG assisted Fortified Support with brand refinements, custom email signature generator, and website design & development."
+        "description": "OKMG assisted Fortified Support with brand refinements, custom email signature generator and website design & development."
       },
-      "lastPublished": "2026-07-16T03:48:43.226Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "health"
       ],
@@ -1480,14 +1719,41 @@
       "digital": true,
       "seo": {
         "title": "Globe Metals & Mining | Work | Website Development Perth",
-        "description": "OKMG repositions an ASX-listed mining company with modern digital infrastructure to attract investment and drive growth."
+        "description": "OKMG repositioned an ASX-listed mining company with modern digital infrastructure to attract investment and drive growth."
       },
-      "lastPublished": "2026-07-15T10:14:28.899Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "resources"
       ],
       "servicesOffered": [
         "digital",
+        "website"
+      ]
+    },
+    {
+      "id": "golden-west-cold-storage",
+      "webflowId": "68f9e3f8013dbcd952d09d43",
+      "title": "Golden West Cold Storage",
+      "excerpt": "A modern website or Golden West Cold Storage, aligning with the aesthetic of existing Golden West entities.",
+      "summary": "A modern website or Golden West Cold Storage, aligning with the aesthetic of existing Golden West entities.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09aee_banner-image.png",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09aee_banner-image.png",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09af1_hover-logo.png",
+      "bodyHtml": "<p id=\"\">Golden West Cold Storage engaged OKMG for the creation of a new WordPress website, to improve and align with the existing brand aesthetic standards Golden West Logistics and Golden West Ice. The refreshed design featured a colour scheme of blue, orange, and white, ensuring brand consistency while introducing a contemporary feel while keeping it simple and classic. The website, developed on WordPress CMS, included a simple user navigation through key sections, informing prospective clients and driving existing clients to their client portal login. The backend is editable and scalable structure to facilitate ongoing updates and future integrations with their client portal. Initially, the design will incorporate placeholders, pending the client’s supply of final content, fonts, images, and logos. This project also establishes a scalable template for subsequent website refreshes across the rest of the Golden West business group.</p><p>‍</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "",
+      "okmgUrl": "https://www.okmg.com/work/golden-west-cold-storage",
+      "order": 9999,
+      "featured": false,
+      "digital": false,
+      "seo": {
+        "title": "Golden West Cold Storage | Work | Website Development Perth",
+        "description": "A modern website or Golden West Cold Storage, aligning with the aesthetic of existing Golden West entities."
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
+      "servicesOffered": [
         "website"
       ]
     },
@@ -1512,7 +1778,7 @@
         "title": "Grand Chelem | Work | Website Development Perth",
         "description": "Digitally supporting Grand Chelem, a high-end clothing, lifestyle and wine brand."
       },
-      "lastPublished": "2026-04-14T08:39:54.555Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "ecommerce"
       ],
@@ -1539,9 +1805,9 @@
       "digital": true,
       "seo": {
         "title": "Helm Road | Work | Website Development Perth",
-        "description": "OKMG creates strategic branding to digitally realise Helm Road’s value proposition on property investment."
+        "description": "OKMG created strategic branding to digitally realise Helm Road’s value proposition on property investment."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "property"
       ],
@@ -1570,7 +1836,7 @@
         "title": "ISWA | Work | Website Development Perth",
         "description": "OKMG’s WordPress redesign for ISWA brings Indian culture to life in Australia, makes community connection effortless, and welcomes every generation."
       },
-      "lastPublished": "2026-07-07T06:18:13.704Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "community"
       ],
@@ -1597,9 +1863,9 @@
       "digital": true,
       "seo": {
         "title": "Largs Bay Swim Centre | Work | Website Development Perth",
-        "description": "OKMG's web and brand strategy created a vibrant online community for Largs Bay Swim Centre."
+        "description": "OKMG delivered a custom website for Largs Bay Swim Centre integrating into Udio."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "community",
         "health"
@@ -1629,7 +1895,7 @@
         "title": "Launch@22 | Work | Website Development Perth",
         "description": "A new logo and brand identity for a progressive accelerator programme."
       },
-      "lastPublished": "2025-11-03T07:43:50.744Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "education"
       ],
@@ -1658,39 +1924,9 @@
         "title": "Mareterram | Work | Website Development Perth",
         "description": "A brand profile video that beautifully captures their journey and new direction under Sea Harvest."
       },
-      "lastPublished": "2025-12-02T08:58:57.928Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "produce"
-      ],
-      "servicesOffered": [
-        "website"
-      ]
-    },
-    {
-      "id": "ndsa",
-      "webflowId": "697459a77558c779b82431a0",
-      "title": "NDSA",
-      "excerpt": "Logo redesign and 30-year anniversary graphic to celebrate Notre Dame Student Association.",
-      "summary": "Logo redesign and 30-year anniversary graphic to celebrate Notre Dame Student Association.",
-      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/697459a3290b5b9790be5b8b_NDSA%20hero.jpg",
-      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/697459a3290b5b9790be5b8b_NDSA%20hero.jpg",
-      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/697459f0d50cc16bbbe7a64a_hover-logo-NDSA.jpg",
-      "bodyHtml": "<h2>The Challenge</h2><p>The Notre Dame Student Association (NDSA) has represented student interests at the University of Notre Dame Australia's Fremantle campus since 1996. As the association approached its 30th anniversary, NDSA needed a brand refresh that could honour three decades of student representation.</p><h2>The Logo</h2><p>OKMG delivered a dual-focused branding project, beginning with a refined logo set in custom fonts that are crisp and clean with a black-on-white balance, versatile across digital and print applications. The geometric precision of the Bauhaus-inspired typeface and logo design communicates professionalism and modernity.</p><h2>The Anniversary Identity</h2><p>For the 30-year anniversary celebration, OKMG developed a distinctive commemorative graphic based on the shape of the local building on campus that is distinctly recognisable to the student body. We then paired this with a fun and fresh palette of navy blue, bright teal blue, black and grey against white. The navy blue anchors the design in institutional credibility, the bright teal injects energy and contemporary appeal that resonates with current students, and the neutral greys provide balance.</p><h2>The Result</h2><p>Together, the logo redesign and anniversary identity support NDSA's mission of representing students, fostering community and enhancing campus life, providing the association with branding that reflects both its established position and its ongoing commitment to serving Notre Dame students at the Walyalup Fremantle campus.</p>",
-      "contentGroups": [],
-      "stats": [],
-      "projectUrl": "",
-      "okmgUrl": "https://www.okmg.com/work/ndsa",
-      "order": 9999,
-      "featured": false,
-      "digital": false,
-      "seo": {
-        "title": "NDSA | Work | Website Development Perth",
-        "description": "Logo redesign and 30-year anniversary graphic to celebrate Notre Dame Student Association."
-      },
-      "lastPublished": "2026-02-17T09:33:26.983Z",
-      "categories": [
-        "education",
-        "community"
       ],
       "servicesOffered": [
         "website"
@@ -1725,14 +1961,68 @@
       "digital": true,
       "seo": {
         "title": "Nestor Group | Work | Website Development Perth",
-        "description": "Express WordPress redesign by OKMG transformed outdated Wix site into a showcase for Perth building excellence."
+        "description": "OKMG designed & developed a custom website to showcase Nestor Group's beautiful building projects."
       },
-      "lastPublished": "2025-11-18T01:25:18.408Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "property"
       ],
       "servicesOffered": [
         "digital"
+      ]
+    },
+    {
+      "id": "new-me-surgery-website",
+      "webflowId": "68f9e3f8013dbcd952d09d46",
+      "title": "New Me Weight Loss Surgery",
+      "excerpt": "OKMG developed a brand and website for New Me, enhancing patient engagement and boosting enquiries for weight loss surgery.",
+      "summary": "OKMG developed a brand and website for New Me, enhancing patient engagement and boosting enquiries for weight loss surgery.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09bc9_banner-image.jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09bc9_banner-image.jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09b06_logo-newme.png",
+      "bodyHtml": "<p id=\"\">OKMG created a ground-up brand identity and launched a refreshed digital experience that positioned New Me as a trusted provider of transformative healthcare through weight loss surgery. Our visual identity and brand system covered the logo, logomark, graphic device, typography, and colour palette. It was imperative to come up with a cohesive visual identity that balanced medical expertise with compassionate patient care, so we conceptualised every design element to impart feelings of maturity, trust, and transformation.</p><p id=\"\">Following approval of the new branding, we designed and developed a fully responsive custom Webflow website with user journeys focussed on educating patients through their transformation journey (from initial consultation to post-surgical care) and quick referral resources for GPs. The site features intuitive navigation, a BMI calculator, and educational content that instills confidence and trust. OKMG continues to support New Me with integrated B2B marketing strategies, SEO optimisation, and CRM implementation that streamlines patient communication.&nbsp;</p><p id=\"\">We’re so happy to support New Me with ongoing brand positioning and marketing, helping them connect more effectively with their transformative-healthcare-seeking patients and establish lasting relationships that extend well beyond the surgical procedure.</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "https://www.newme.com.au/",
+      "okmgUrl": "https://www.okmg.com/work/new-me-surgery-website",
+      "order": 9999,
+      "featured": false,
+      "digital": false,
+      "seo": {
+        "title": "New Me Weight Loss Surgery | Work | Website Development Perth",
+        "description": "OKMG developed a brand and website for New Me, enhancing patient engagement and boosting enquiries for weight loss surgery."
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
+      "servicesOffered": [
+        "website"
+      ]
+    },
+    {
+      "id": "notre-dame-student-association",
+      "webflowId": "697459a77558c779b82431a0",
+      "title": "Notre Dame Student Association ",
+      "excerpt": "Logo redesign and 30-year anniversary graphic to celebrate Notre Dame Student Association.",
+      "summary": "Logo redesign and 30-year anniversary graphic to celebrate Notre Dame Student Association.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/697459a3290b5b9790be5b8b_NDSA%20hero.jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/697459a3290b5b9790be5b8b_NDSA%20hero.jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/697459f0d50cc16bbbe7a64a_hover-logo-NDSA.jpg",
+      "bodyHtml": "<h2>The Challenge</h2><p>The Notre Dame Student Association (NDSA) has represented student interests at the University of Notre Dame Australia's Fremantle campus since 1996. As the association approached its 30th anniversary, NDSA needed a brand refresh that could honour three decades of student representation.</p><h2>The Logo</h2><p>OKMG delivered a dual-focused branding project, beginning with a refined logo set in custom fonts that are crisp and clean with a black-on-white balance, versatile across digital and print applications. The geometric precision of the Bauhaus-inspired typeface and logo design communicates professionalism and modernity.</p><h2>The Anniversary Identity</h2><p>For the 30-year anniversary celebration, OKMG developed a distinctive commemorative graphic based on the shape of the local building on campus that is distinctly recognisable to the student body. We then paired this with a fun and fresh palette of navy blue, bright teal blue, black and grey against white. The navy blue anchors the design in institutional credibility, the bright teal injects energy and contemporary appeal that resonates with current students, and the neutral greys provide balance.</p><h2>The Result</h2><p>Together, the logo redesign and anniversary identity support NDSA's mission of representing students, fostering community and enhancing campus life, providing the association with branding that reflects both its established position and its ongoing commitment to serving Notre Dame students at the Walyalup Fremantle campus.</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "",
+      "okmgUrl": "https://www.okmg.com/work/notre-dame-student-association",
+      "order": 9999,
+      "featured": false,
+      "digital": false,
+      "seo": {
+        "title": "Notre Dame Student Association  | Work | Website Development Perth",
+        "description": "Logo redesign and 30-year anniversary graphic to celebrate Notre Dame Student Association."
+      },
+      "lastPublished": "2026-08-10T06:57:39.089Z",
+      "categories": [],
+      "servicesOffered": [
+        "website"
       ]
     },
     {
@@ -1756,10 +2046,39 @@
         "title": "Penguin Electrical | Work | Website Development Perth",
         "description": "Modernising Perth's trusted electrical service provider with a redesigned digital presence and reliable WordPress hosting."
       },
-      "lastPublished": "2026-07-07T06:18:13.704Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [],
       "servicesOffered": [
         "digital"
+      ]
+    },
+    {
+      "id": "perth-craft-beer-fest",
+      "webflowId": "68f9e3f8013dbcd952d0a053",
+      "title": "Perth Craft Beer Fest",
+      "excerpt": "Producing captivating marketing videos, showcasing the vibrant spirit of Perth's ultimate beer festival",
+      "summary": "Producing captivating marketing videos, showcasing the vibrant spirit of Perth's ultimate beer festival",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09eff_banner-image.png",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09eff_banner-image.png",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d09f11_logo-FrothTown.png",
+      "bodyHtml": "<p>Froth Town, formerly known as Perth Craft Beer Fest, is a premier beer, booze, and food festival held annually at Claremont Showgrounds. Known for showcasing over 55 local and international breweries, Froth Town offers a vibrant carnival atmosphere with live music and diverse culinary experiences. Seeking to elevate their brand presence, Froth Town approached OKMG to create a compelling brand profile video. </p><p>Froth Town needed a dynamic video to capture the festival's essence and engage a broader audience online.</p><p>OKMG crafted a visually engaging brand profile video, focusing on Froth Town's lively spirit and diverse offerings. The video was designed to resonate with both local and international audiences, emphasising the festival's unique atmosphere. </p><p>The brand profile video was successfully launched on YouTube, significantly enhancing Froth Town's online visibility and engagement.</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "",
+      "okmgUrl": "https://www.okmg.com/work/perth-craft-beer-fest",
+      "order": 9999,
+      "featured": false,
+      "digital": false,
+      "seo": {
+        "title": "Perth Craft Beer Fest | Work | Website Development Perth",
+        "description": "Producing captivating marketing videos, showcasing the vibrant spirit of Perth's ultimate beer festival"
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [
+        "hospitality"
+      ],
+      "servicesOffered": [
+        "website"
       ]
     },
     {
@@ -1781,9 +2100,9 @@
       "digital": true,
       "seo": {
         "title": "Quintilian School | Work | Website Development Perth",
-        "description": "OKMG took over Quintilian School's marketing, building custom live dashboards and driving school tours, parent engagement, and enrolments through channel optimisation and budget management while currently refreshing their visual identity and website."
+        "description": "Driving school tours, enrolment and parent engagement through marketing, branding and website design & development."
       },
-      "lastPublished": "2026-07-27T00:13:48.784Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "education"
       ],
@@ -1812,9 +2131,38 @@
         "title": "Rockford Capital | Work | Website Development Perth",
         "description": "OKMG successfully converted Rockford Capital’s vibe-coded website into a polished WordPress lead‑gen engine with calculators converting R&D data to funding estimates."
       },
-      "lastPublished": "2026-07-07T06:18:13.704Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "technology"
+      ],
+      "servicesOffered": [
+        "digital"
+      ]
+    },
+    {
+      "id": "shark-bay-vongole",
+      "webflowId": "6a49a44f077e14e0024233f9",
+      "title": "Shark Bay Vongole",
+      "excerpt": "OKMG crafted a complete brand and visual identity for Shark Bay Vongole",
+      "summary": "OKMG crafted a complete brand and visual identity for Shark Bay Vongole",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a49a37c88f8dc3c9b78c4a8_Shark%20Bay%20Vongole%20case%20study%20banner.jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a49a37c88f8dc3c9b78c4a8_Shark%20Bay%20Vongole%20case%20study%20banner.jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a49a38470325ae14aa7a69b_hover-logo-Shark%20Bay%20Vongole.jpg",
+      "bodyHtml": "<p>Shark Bay Vongole is a premium seafood brand under the Aquatic Life Industries (ALI) family, sourced from Australia's first UNESCO World Heritage marine site. This beautiful seafood product is hand-collected using custom rakes across shallow tidal flats, with zero dredging and zero bycatch and is sold wholesale and retail to chefs and home cooks. </p><p>OKMG developed the origin story and crafted brand from the ground up, across branding, packaging, website design &amp; development and digital channel setup, helping bring a distinctly hand-harvested product to market with its own clear identity. The result is a foundation of accurate, source-grounded copy that reflects how Shark Bay Vongole is actually harvested - distinct from ALI's other seafood brands - as the product moves toward full market launch.</p><p><a href=\"https://sharkbayvongole.com.au/\">Live site here</a>.</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "https://sharkbayvongole.com.au/",
+      "okmgUrl": "https://www.okmg.com/work/shark-bay-vongole",
+      "order": 9999,
+      "featured": false,
+      "digital": true,
+      "seo": {
+        "title": "Shark Bay Vongole | Work | Website Development Perth",
+        "description": "OKMG crafted a complete brand and visual identity for Shark Bay Vongole"
+      },
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [
+        "produce"
       ],
       "servicesOffered": [
         "digital"
@@ -1841,10 +2189,37 @@
         "title": "The Orthopaedic Group WA | Work | Website Development Perth",
         "description": "Refreshed digital presence showcasing top-tier orthopaedic care with patient-focused digital solutions."
       },
-      "lastPublished": "2026-07-16T03:48:43.226Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "health"
       ],
+      "servicesOffered": [
+        "digital"
+      ]
+    },
+    {
+      "id": "the-talent-code-tennis-coach",
+      "webflowId": "69745300fe4ab7cb4798e8ec",
+      "title": "The Talent Code",
+      "excerpt": "Express WordPress build and refined brand identity for performance-driven coach.",
+      "summary": "Express WordPress build and refined brand identity for performance-driven coach.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69744fb0d571e41defe1a1e2_Talent%20Code%20hero.jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69744fb0d571e41defe1a1e2_Talent%20Code%20hero.jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/69744fb8da69b3a595bce59f_hover-logo-Talent%20Code.jpg",
+      "bodyHtml": "<h2>The Challenge</h2><p>Jelena, a former WTA athlete who reached rankings of WTA 750 in singles and WTA 550 in doubles, had transitioned from professional tennis to coaching at The Talent Code which needed a digital presence to capture the unique positioning of “talent is the spark” but “the code is you.” The positioning communicates the former professional athlete’s serious performance credentials as well as her accessible, human-centred approach. Her many positive client testimonials validate her approach, with parents and players describing remarkable technical development alongside confidence building and mental strength gains. The challenge was clear: create a brand and digital platform that honoured Jelena's WTA pedigree and make her coaching feel accessible to Perth's diverse tennis community.</p><h2>The Website</h2><p>OKMG delivered an integrated branding and digital project, beginning with logo and brand identity development that captured The Talent Code’s philosophy of performance meeting personal development. The brand identity established a visual language that was athletic and thoughtful to both reflect Jelena's background and her coaching methodology. Following the brand foundation, OKMG designed and developed a WordPress website build that brought the identity to life through clean design and purposeful content architecture. The WordPress platform enabled Jelena to independently manage content updates, testimonials, and program information. Meanwhile, integration with ClubSpark booking systems made it easy for clients to register.</p><h2>The Results</h2><p>The resulting brand and website embody The Talent Code philosophy. They're built from the inside out, with clear structure supporting genuine connection, mirroring exactly how Jelena approaches coaching regardless of whether someone is trying tennis for the first time or competing at tournament level. </p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "https://thetalentcode.com.au/",
+      "okmgUrl": "https://www.okmg.com/work/the-talent-code-tennis-coach",
+      "order": 9999,
+      "featured": false,
+      "digital": true,
+      "seo": {
+        "title": "The Talent Code | Work | Website Development Perth",
+        "description": "Express WordPress build and refined brand identity for performance-driven coach."
+      },
+      "lastPublished": "2026-08-10T06:57:48.413Z",
+      "categories": [],
       "servicesOffered": [
         "digital"
       ]
@@ -1870,7 +2245,7 @@
         "title": "The Talent Code | Work | Website Development Perth",
         "description": "Express WordPress build and refined brand identity for performance-driven coach."
       },
-      "lastPublished": "2026-02-17T09:33:26.983Z",
+      "lastPublished": "Tue Feb 17 2026 09:33:26 GMT+0000 (Coordinated Universal Time)",
       "categories": [
         "education",
         "community"
@@ -1900,7 +2275,7 @@
         "title": "Truth Engine | Work | Website Development Perth",
         "description": "OKMG produced a hero video for Truth Engine and refreshed their website to showcase their software product and customer successes."
       },
-      "lastPublished": "2026-07-26T04:39:52.483Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "technology",
         "property"
@@ -1910,7 +2285,7 @@
       ]
     },
     {
-      "id": "vedi",
+      "id": "vedi-vet-software",
       "webflowId": "68f9e3f8013dbcd952d09d44",
       "title": "Vedi",
       "excerpt": "Vedi's 'Vet Voices' video series showcases how technology enhances animal care and vet practice operations.",
@@ -1922,7 +2297,7 @@
       "contentGroups": [],
       "stats": [],
       "projectUrl": "",
-      "okmgUrl": "https://www.okmg.com/work/vedi",
+      "okmgUrl": "https://www.okmg.com/work/vedi-vet-software",
       "order": 9999,
       "featured": false,
       "digital": false,
@@ -1930,11 +2305,8 @@
         "title": "Vedi | Work | Website Development Perth",
         "description": "Vedi's 'Vet Voices' video series showcases how technology enhances animal care and vet practice operations."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
-      "categories": [
-        "community",
-        "technology"
-      ],
+      "lastPublished": "2026-08-10T06:23:28.067Z",
+      "categories": [],
       "servicesOffered": [
         "website"
       ]
@@ -1960,13 +2332,40 @@
         "title": "Wild West Octopus | Work | Website Development Perth",
         "description": "OKMG helps Fins Seafood in recreating local octopus into an irresistible culinary outlaw through storytelling and bold visual identity."
       },
-      "lastPublished": "2026-07-14T05:30:56.832Z",
+      "lastPublished": "2026-08-10T06:23:28.067Z",
       "categories": [
         "produce"
       ],
       "servicesOffered": [
         "digital",
         "website"
+      ]
+    },
+    {
+      "id": "mkdc-design-consultants",
+      "webflowId": "68f9e3f8013dbcd952d09d04",
+      "title": "MKDC",
+      "excerpt": "A refined redesign, website rebuild and renewed digital presence for new leadership.",
+      "summary": "A refined redesign, website rebuild and renewed digital presence for new leadership.",
+      "heroImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a7aa03c622dd251af7a486d_MKDC%20case%20study%20banner-image.jpg",
+      "homepageImage": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/6a7aa03c622dd251af7a486d_MKDC%20case%20study%20banner-image.jpg",
+      "hoverLogo": "https://cdn.prod.website-files.com/68f9e3f8013dbcd952d08590/68f9e3f8013dbcd952d098c8_MKDC%20LOGO.png",
+      "bodyHtml": "<p>Since 1992, MKDC has established itself as a leader within the Perth interior design industry. Built on the niche pairing of commercial interior design and aged care specialisation, the business moves forward under new leadership, carrying the same belief that interior design shapes the people within it.</p><p>Moving into this next chapter, MKDC needed a digital presence that still reflected three decades of passion for the industry, their team, their clients and the ethos of elevating human potential through empathetic design. Rather than starting over, we chose to refresh with a restrained, minimalist site design, refining the visuals and content to give the business a clean foundation to grow from here.</p><p>This new website gives MKDC a platform to show how their team continues to grow, co-design with clients and deliver award-winning design excellence.</p>",
+      "contentGroups": [],
+      "stats": [],
+      "projectUrl": "",
+      "okmgUrl": "https://www.okmg.com/work/mkdc-design-consultants",
+      "order": 9879900,
+      "featured": false,
+      "digital": true,
+      "seo": {
+        "title": "MKDC | Work | Website Development Perth",
+        "description": "A refined redesign, website rebuild and renewed digital presence for new leadership."
+      },
+      "lastPublished": "2026-08-11T09:24:48.383Z",
+      "categories": [],
+      "servicesOffered": [
+        "digital"
       ]
     }
   ]

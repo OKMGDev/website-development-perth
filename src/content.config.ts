@@ -17,6 +17,14 @@ const services = defineCollection({
     title: z.string(),
     primaryKeyword: z.string(),
     excerpt: z.string(),
+    glance: z
+      .object({
+        who: z.string(),
+        timeline: z.string(),
+        platforms: z.string(),
+        bestWhen: z.string(),
+      })
+      .optional(),
     benefits: z.array(z.string()),
     process: z.array(z.string()),
     faqs: z.array(faqSchema).default([]),

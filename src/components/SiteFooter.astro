@@ -25,12 +25,15 @@ const services = serviceGroups
           <Mail size={16} stroke-width={1.75} />
           {site.email}
         </a>
-        <span>
-          <MapPin size={16} stroke-width={1.75} />
-          {site.address}
-        </span>
+        {
+          site.offices.map((office) => (
+            <a href={office.mapsUrl} rel="noopener noreferrer" target="_blank">
+              <MapPin size={16} stroke-width={1.75} />
+              {office.formatted}
+            </a>
+          ))
+        }
       </p>
-      <p class="muted">ABN {site.abn}</p>
     </div>
 
     <div class="footer__services">
@@ -54,7 +57,7 @@ const services = serviceGroups
   <div class="container footer__bottom">
     <p>© {new Date().getFullYear()} {site.name}</p>
     <p class="footer__operator">
-      Website Development Perth is operated by <a href="https://okmg.com/" rel="noopener noreferrer" target="_blank">OKMG</a>, a Perth digital agency.
+      WDP is a digital showcase by <a href="https://okmg.com/" rel="noopener noreferrer" target="_blank">OKMG</a>
     </p>
   </div>
 </footer>

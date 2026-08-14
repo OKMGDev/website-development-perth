@@ -1,0 +1,61 @@
+# Website Development Perth
+> Perth website design and development for SMEs. Operated by OKMG. Mosman Park and Perth CBD, WA.
+
+Website Development Perth builds conversion-focused sites for Perth businesses (WordPress, Webflow, Shopify, WooCommerce, custom). Phone 1300 93 6564.
+https://www.websitedevelopmentperth.com.au/
+
+## Services
+- Custom website design: https://www.websitedevelopmentperth.com.au/services/custom-website-design/
+- WordPress development: https://www.websitedevelopmentperth.com.au/services/wordpress-development/
+- Webflow development: https://www.websitedevelopmentperth.com.au/services/webflow-development/
+- Shopify development: https://www.websitedevelopmentperth.com.au/services/shopify-development/
+- WooCommerce development: https://www.websitedevelopmentperth.com.au/services/woocommerce-development/
+- Drupal development: https://www.websitedevelopmentperth.com.au/services/drupal-development/
+- Web application development: https://www.websitedevelopmentperth.com.au/services/web-application-development/
+- Website redesign: https://www.websitedevelopmentperth.com.au/services/website-redesign/
+- Landing page design: https://www.websitedevelopmentperth.com.au/services/landing-page-design/
+- Website maintenance: https://www.websitedevelopmentperth.com.au/services/website-maintenance/
+- SEO services: https://www.websitedevelopmentperth.com.au/services/seo-services/
+- UX/UI design: https://www.websitedevelopmentperth.com.au/services/ux-ui-design/
+- Website migration: https://www.websitedevelopmentperth.com.au/services/website-migration/
+
+## Industries
+- Tradies & construction: https://www.websitedevelopmentperth.com.au/industries/tradies-construction/
+- Professional services: https://www.websitedevelopmentperth.com.au/industries/professional-services/
+- Hospitality & restaurants: https://www.websitedevelopmentperth.com.au/industries/hospitality-restaurants/
+- Retail & e-commerce: https://www.websitedevelopmentperth.com.au/industries/retail-ecommerce/
+- Medical & healthcare: https://www.websitedevelopmentperth.com.au/industries/medical-healthcare/
+- Fitness & wellness: https://www.websitedevelopmentperth.com.au/industries/fitness-wellness/
+- Education & childcare: https://www.websitedevelopmentperth.com.au/industries/education-childcare/
+- Real estate: https://www.websitedevelopmentperth.com.au/industries/real-estate/
+
+## Locations
+Suburb pages exist only where there is genuine local context. Other Perth areas are covered from the locations hub.
+- Locations hub: https://www.websitedevelopmentperth.com.au/locations/
+- Fremantle: https://www.websitedevelopmentperth.com.au/locations/fremantle/
+- Subiaco: https://www.websitedevelopmentperth.com.au/locations/subiaco/
+- Victoria Park: https://www.websitedevelopmentperth.com.au/locations/victoria-park/
+- Osborne Park: https://www.websitedevelopmentperth.com.au/locations/osborne-park/
+- Joondalup: https://www.websitedevelopmentperth.com.au/locations/joondalup/
+- Midland: https://www.websitedevelopmentperth.com.au/locations/midland/
+- Rockingham: https://www.websitedevelopmentperth.com.au/locations/rockingham/
+- Mandurah: https://www.websitedevelopmentperth.com.au/locations/mandurah/
+
+## Guides
+- Website cost in Perth: https://www.websitedevelopmentperth.com.au/blog/website-cost-perth/
+- How to choose a web developer: https://www.websitedevelopmentperth.com.au/blog/choose-web-developer-perth/
+- How long a website project takes: https://www.websitedevelopmentperth.com.au/blog/website-project-timeline/
+- Webflow vs WordPress: https://www.websitedevelopmentperth.com.au/blog/webflow-vs-wordpress/
+- Shopify vs WooCommerce: https://www.websitedevelopmentperth.com.au/blog/shopify-vs-woocommerce/
+- Local SEO website checklist: https://www.websitedevelopmentperth.com.au/blog/local-seo-website-checklist-perth/
+- Website redesign checklist: https://www.websitedevelopmentperth.com.au/blog/website-redesign-checklist/
+- Website for Perth tradies: https://www.websitedevelopmentperth.com.au/blog/website-for-tradies-guide/
+
+## Company
+- About: https://www.websitedevelopmentperth.com.au/about/
+- Process: https://www.websitedevelopmentperth.com.au/process/
+- FAQ: https://www.websitedevelopmentperth.com.au/faq/
+- Work: https://www.websitedevelopmentperth.com.au/work/
+- Contact: https://www.websitedevelopmentperth.com.au/contact/
+
+Optional full index: https://www.websitedevelopmentperth.com.au/llms-full.txt

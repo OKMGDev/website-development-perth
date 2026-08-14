@@ -8,7 +8,7 @@ import { site } from '../data/site';
 
 <BaseLayout
   title="About Us | Website Development Perth"
-  description="Meet the Perth web development team approach — practical delivery, truthful proof and websites built for real enquiries."
+  description="Website Development Perth is a Perth website practice operated by OKMG, working from Mosman Park and Perth CBD for SMEs across Western Australia."
   jsonLd={breadcrumbList([
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about/' },
@@ -19,29 +19,69 @@ import { site } from '../data/site';
       <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
       <h1>About {site.name}</h1>
       <p class="lead">
-        We help Perth SMEs get websites that do a job: explain the offer, prove the work and make the next step obvious.
+        We help Perth SMEs get websites that do a job: explain the offer, prove the work, and make the next step obvious.
       </p>
       <p class="about-operator">
-        Website Development Perth is operated by <a href="https://okmg.com/" rel="noopener noreferrer" target="_blank">OKMG</a>, a Perth digital agency.
+        Website Development Perth is operated by <a href={site.parentOrganization.url} rel="noopener noreferrer" target="_blank">{site.parentOrganization.name}</a>, a Perth digital agency. Work is delivered by that local team — not a white-label farm with a Perth phone number.
       </p>
+      <dl class="glance">
+        <div>
+          <dt>Mosman Park</dt>
+          <dd>{site.offices[0].formatted}</dd>
+        </div>
+        <div>
+          <dt>Perth CBD</dt>
+          <dd>{site.offices[1].formatted}</dd>
+        </div>
+        <div>
+          <dt>Phone</dt>
+          <dd><a href={site.phoneHref}>{site.phoneDisplay}</a></dd>
+        </div>
+        <div>
+          <dt>Email</dt>
+          <dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>
+        </div>
+      </dl>
     </div>
   </section>
+
   <section class="section" style="padding-top: 0">
     <div class="container prose">
-      <h2>What we believe</h2>
+      <h2>What this brand is</h2>
       <p>
-        Search-led websites should still feel human. Every page should help a visitor complete a task — not exist only to capture a keyword variant.
+        Website Development Perth is the website-focused practice: custom design, WordPress, Webflow, Shopify, WooCommerce, Drupal, web apps, redesign, migration, SEO and care plans. If you need a site that wins work in Perth, this is the front door.
       </p>
+      <p>
+        It is not a separate company inventing a backstory. The operator is OKMG. That relationship is stated in the footer, on this page, and in structured data so search engines and language models attribute work correctly.
+      </p>
+
+      <h2>Where we work</h2>
+      <p>
+        Two Perth offices — Mosman Park on Stirling Highway and St Georges Terrace in the CBD — and a service area across Perth and surrounds. Suburb pages exist only where we can write genuine local context. We do not pretend to have a shopfront in every postcode we service.
+      </p>
+      <p>
+        Remote collaboration inside Western Australia is normal. Face-to-face workshops happen when they help decisions; they are not theatre.
+      </p>
+
       <h2>How we work</h2>
       <p>
-        We scope clearly, design around conversion paths, and build on the platform that fits your team. Content edits live in Git via Markdown collections so the agency can maintain quality without a fragile plugin CMS.
+        We scope before we design. Platform follows how you edit and what you integrate, not a trend. Delivery follows a written <a href="/process/">process</a>: discovery, structure, build, launch, optional support. Content for this site itself lives in Git as Markdown collections so quality does not depend on a fragile plugin CMS.
       </p>
+      <p>
+        For the buying questions — cost, timeline, how to choose a developer — use the <a href="/blog/">guides</a>. For the job itself, start at <a href="/services/">services</a> or <a href="/contact/">contact</a>.
+      </p>
+
       <h2>Proof policy</h2>
       <p>
-        We do not invent testimonials, awards or metrics. Until client-approved proof is available, placeholders stay labelled. Real business details (phone, email, service area) remain visible in the footer and on contact.
+        We do not invent testimonials, awards or metrics. Until a client approves publication, numbers and quotes stay off the page. The <a href="/work/">work gallery</a> shows capability from the OKMG portfolio; individual project URLs stay canonical to OKMG unless a case study is rewritten and approved for this domain.
       </p>
       <p>
-        Team bios and photography will be added when branding assets are supplied.
+        Named team bios will appear here when we have approved portraits and roles to publish. Until then, the operator, offices, phone and email are the facts that matter for an enquiry.
+      </p>
+
+      <h2>What we believe</h2>
+      <p>
+        Search-led websites should still feel human. Every page should help a visitor complete a task. Thin keyword variants waste everyone’s time — including the models that try to cite you.
       </p>
     </div>
   </section>
@@ -51,7 +91,7 @@ import { site } from '../data/site';
 <style>
   .about-operator {
     margin-top: 1.25rem;
-    max-width: 42ch;
+    max-width: 52ch;
     color: var(--ink-muted);
   }
 

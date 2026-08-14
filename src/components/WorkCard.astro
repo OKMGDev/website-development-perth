@@ -1,0 +1,111 @@
+---
+import { formatFacetLabel } from '../lib/portfolio';
+
+interface Props {
+  id: string;
+  title: string;
+  excerpt: string;
+  image?: string | null;
+  categories?: string[];
+  headingLevel?: 'h2' | 'h3';
+  filterable?: boolean;
+}
+
+const {
+  id,
+  title,
+  excerpt,
+  image = null,
+  categories = [],
+  headingLevel = 'h2',
+  filterable = false,
+} = Astro.props;
+
+const Heading = headingLevel;
+const tags = categories.filter(Boolean);
+---
+
+<a
+  class="work-card"
+  href={`/work/${id}/`}
+  data-work-card={filterable ? '' : undefined}
+  data-title={filterable ? title : undefined}
+  data-excerpt={filterable ? excerpt : undefined}
+  data-categories={filterable ? tags.join(',') : undefined}
+>
+  {image ? (
+    <img src={image} alt={`${title} website project`} loading="lazy" width="640" height="400" />
+  ) : null}
+  <div class:list={['work-card__body', !image && 'work-card__body--no-image']}>
+    {tags.length > 0 && (
+      <p class="work-card__tags">{tags.map((tag) => formatFacetLabel(tag)).join(' · ')}</p>
+    )}
+    <Heading>{title}</Heading>
+    <p>{excerpt}</p>
+    <span>View project →</span>
+  </div>
+</a>
+
+<style>
+  .work-card {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--line);
+    background: var(--bg-elevated);
+    overflow: hidden;
+  }
+
+  .work-card[hidden] {
+    display: none;
+  }
+
+  .work-card:hover {
+    border-color: var(--ink);
+  }
+
+  .work-card img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+  }
+
+  .work-card__body {
+    padding: 0 1.15rem 1.15rem;
+  }
+
+  .work-card__body--no-image {
+    padding-top: 1.15rem;
+  }
+
+  .work-card__tags {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.45rem;
+  }
+
+  .work-card :is(h2, h3) {
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .work-card p {
+    color: var(--ink-muted);
+    margin: 0 0 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .work-card span {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+</style>

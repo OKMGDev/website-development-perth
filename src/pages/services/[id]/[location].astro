@@ -4,7 +4,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import FaqAccordion from '../../../components/FaqAccordion.astro';
 import CtaBand from '../../../components/CtaBand.astro';
-import { breadcrumbList, faqSchema, serviceSchema } from '../../../lib/seo';
+import { breadcrumbList } from '../../../lib/seo';
 import {
   serviceLocationDescription,
   serviceLocationFaqs,
@@ -49,21 +49,12 @@ const crumbs = [
   { name: location.data.title, path },
 ];
 
-const jsonLd = [
-  breadcrumbList(crumbs),
-  serviceSchema({
-    name: pageTitle,
-    description: pageDescription,
-    path,
-    areaServed: location.data.areaServed,
-  }),
-  faqSchema(faqs),
-].filter(Boolean);
+const jsonLd = breadcrumbList(crumbs);
 
 const seoTitle = `${service.data.title} in ${location.data.title} | Perth`;
 ---
 
-<BaseLayout title={seoTitle} description={pageDescription} jsonLd={jsonLd}>
+<BaseLayout title={seoTitle} description={pageDescription} noindex={true} jsonLd={jsonLd}>
   <section class="page-hero">
     <div class="container">
       <Breadcrumbs

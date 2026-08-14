@@ -2,7 +2,7 @@
 
 ## Pre-deploy
 
-- [ ] Replace placeholder ABN, phone confirmation and any temporary contact details in `src/data/site.ts`
+- [ ] Confirm phone and contact details in `src/data/site.ts`
 - [ ] Add real testimonials, case metrics and logos only when verified
 - [ ] Review privacy policy with business owner
 - [ ] Set env vars on Vercel: `RESEND_API_KEY`, `ENQUIRY_TO_EMAIL` (`dev@okmg.com`), `ENQUIRY_CC_EMAIL` (`andy@okmg.com`), `ENQUIRY_FROM_EMAIL`, optional `CRM_WEBHOOK_URL`, `PUBLIC_GA4_ID`
@@ -15,6 +15,7 @@
 - [ ] Trailing-slash canonicals consistent
 - [ ] `/sitemap-index.xml` lists only indexable URLs (no thank-you)
 - [ ] `robots.txt` references sitemap and disallows thank-you
+- [ ] Service×location pages remain `noindex` and outside the sitemap until each combination has genuinely authored local content
 - [ ] 404 page recovers to home/services/contact
 - [ ] Mobile sticky Call / Get a Quote bar works
 - [ ] Core Web Vitals smoke test on home, a service page, contact

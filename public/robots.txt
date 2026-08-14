@@ -1,6 +1,18 @@
 User-agent: *
 Allow: /
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
 Disallow: /thank-you/
 
 Sitemap: https://www.websitedevelopmentperth.com.au/sitemap-index.xml

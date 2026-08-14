@@ -2,6 +2,11 @@
 title: "Drupal Website Development"
 primaryKeyword: "Drupal developer Perth"
 excerpt: "Structured, permission-heavy sites for organisations that need governance and complex content models."
+glance:
+  who: "Organisations with complex content relationships, multi-role publishing or stricter governance."
+  timeline: "10–16+ weeks. Discovery and content modelling are front-loaded."
+  platforms: "Drupal — not a default for a simple brochure site."
+  bestWhen: "Education, healthcare or institutional publishing where WordPress or Webflow would be a stretch."
 benefits:
   - "Content models designed for complex relationships and governance"
   - "Editorial UX and roles that match how your organisation publishes"
@@ -56,12 +61,34 @@ We use Drupal when the complexity is real: structured content types, access cont
 
 Content model design before pixels — types, fields, taxonomies and relationships; editorial UX so publishers are not fighting the admin; roles and permissions that match how your organisation actually works; a front-end build that stays maintainable across releases; and integration planning for CRM, SSO or internal systems when justified. Architecture stays upgrade-aware so you are not trapped on an unsupported version.
 
+You should leave with a documented content model, a role matrix (who can create, review, publish), and training that matches those roles — not a single “admin” login shared around the office.
+
+## When Drupal is justified — and when it is overkill
+
+[Education](/industries/education-childcare/) sites with programmes, campuses, staff and policies; [healthcare](/industries/medical-healthcare/) organisations with structured information and careful publishing; and large [professional](/industries/professional-services/) or membership bodies with many authors are the usual fit. The common thread is governance: drafts, reviews, and content that relates to other content.
+
+Drupal is overkill for a five-page service site. It is also the wrong default if what you really need is an authenticated product — that may be [web application development](/services/web-application-development/) with Drupal only as the public CMS, or no Drupal at all. We would rather lose a CMS sale than park you on a platform your editors will resent.
+
 ## Upgrades, hosting and SEO
 
-Older Drupal sites often need a major version jump or a controlled rebuild. We start with a module and content audit so timeline and risk are visible before you commit. Hosting can be AU or suitable regional options depending on compliance and latency. Both Drupal and WordPress can rank well; Drupal shines when structured content and access control are complex.
+Older Drupal sites often need a major version jump or a controlled rebuild. We start with a module and content audit so timeline and risk are visible before you commit. Custom modules that nobody can explain are the usual landmine. A [migration](/services/website-migration/) from Drupal 7 or an abandoned distro is treated as inventory-plus-rebuild, not a button in the UI.
 
-## Who this suits
+Hosting can be AU or suitable regional options depending on compliance and latency. You own the account. Both Drupal and WordPress can rank well; Drupal shines when structured content and access control are complex. [SEO](/services/seo-services/) still needs titles, sensible URLs and internal links — the CMS does not rank by brand name.
 
-Education, larger memberships, multi-stakeholder organisations and teams with compliance or publishing process requirements. Drupal projects take longer than a simple brochure site because discovery and content modelling are front-loaded — that is the point.
+## Decisions, integrations and risk
+
+You will decide: which content types exist; which fields are required; which roles map to real jobs (subject-matter author versus comms publisher); and whether SSO is worth the operational cost. [Our process](/process/) front-loads information architecture because changing a content type after fifty nodes exist is expensive.
+
+Integrations we will scope when justified: CRM, SSO, DAM, search, and internal APIs. Each module is a future upgrade cost. We prefer fewer, well-maintained modules and documented custom code over a graveyard of abandoned projects. Search API, media, and workflow modules are chosen for the version you will actually run.
+
+Risks: editors never trained, so they paste from Word and break layouts; a theme that fights core markup; skipping security releases; and treating Drupal like WordPress with extra steps. Editorial UX is a deliverable. If the admin is hostile, the model failed.
+
+## Measurement, care and handover
+
+We measure Drupal delivery by whether the right people can publish without a developer, whether permissions match policy, and whether the site can take a core update without an archaeology project. Page-speed and accessibility are launch checks. We do not invent search rankings as a Drupal benefit.
+
+[Website maintenance](/services/website-maintenance/) after launch covers security updates, module hygiene and a restore path. Feature work and new content types are projects. Handover includes environment access, role documentation, and how to add an editor without handing out full admin. Examples of structured digital work sit on [our work](/work/).
+
+Drupal projects take longer than a simple brochure site because discovery and content modelling are front-loaded — that is the point.
 
 [Get a quote](/contact/) with your current Drupal version (if any), how many editors you have, and what “complex” means in your content.

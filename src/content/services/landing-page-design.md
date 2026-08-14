@@ -2,6 +2,11 @@
 title: "Landing Page Design"
 primaryKeyword: "landing page design Perth"
 excerpt: "Focused pages for campaigns and offers — one message, one action, measurable results."
+glance:
+  who: "Campaigns that need one offer, one action, and tracking that matches the ad or email."
+  timeline: "1–3 weeks once offer, proof and assets are ready."
+  platforms: "WordPress, Webflow, Shopify or static — usually inside the site you already run."
+  bestWhen: "Paid traffic or a specific promotion. Evergreen SEO still lives on service pages."
 benefits:
   - "One job, one primary CTA — built for campaign traffic"
   - "Message match with the ad or email that sent the click"
@@ -56,16 +61,36 @@ We design and build landing pages for ads, email and partner traffic — on Word
 
 A single primary offer and CTA (quote, call, book, buy); message hierarchy that matches the ad or email that sent the click; proof that is real — testimonials, process, guarantees — never invented metrics; mobile-first layout with fast load habits; and a form or conversion path with consent and thank-you tracking. Optional variants are available when you want to test headline or offer treatments.
 
+“Proof” means something a sceptical Perth buyer can believe: a named process, a genuine client comment you already have permission to use, or a clear inclusion list. We will not fabricate star ratings or “number one” claims. If you have no proof yet, we design around process and offer clarity rather than fake social widgets.
+
 ## Where pages live and how fast they ship
 
 We usually ship pages inside your existing site so brand and analytics stay consistent. Standalone pages are fine when the campaign needs isolation. Once offer, proof and assets are clear, many pages ship in 1–3 weeks; multi-variant or complex integrations take longer.
 
+[Webflow](/services/webflow-development/) is often the fastest home for marketing-owned campaign pages. WordPress and Shopify work when that is already your stack. A new [custom website](/services/custom-website-design/) is overkill if you only need one offer URL.
+
+## When a landing page is the wrong tool
+
+Do not commission a landing page to fix a site that cannot explain the business. That is a [redesign](/services/website-redesign/) or IA problem. Do not use a landing page as a doorway suburb clone for [SEO](/services/seo-services/) — that strategy ages badly and we will not build it.
+
+A landing page is a poor fit when the offer is still being invented in Slack, when legal has not approved claims, or when nobody will look at the conversion data. [Fitness](/industries/fitness-wellness/) trial offers, [property](/industries/real-estate/) inspection registrations and [professional services](/industries/professional-services/) lead magnets work when the next step is a real diary slot or a defined consult — not “learn more”.
+
+## Decisions, tracking and integrations
+
+You will choose: primary CTA (form, click-to-call, booking embed, or buy); how much site navigation to hide; whether the page is indexable; and which campaign parameters must survive the click. Message match is non-negotiable: if the ad promises a specific offer, the first screen must repeat it.
+
+Tracking is part of the build, not a plugin we “might add”. Form submit, thank-you view, and (where relevant) call or booking confirmation are the events that matter. We wire what your ad and analytics accounts can actually receive. Vanity scroll maps without an event plan do not tell you if the campaign paid for itself.
+
+Integrations we keep tight: CRM or email capture with consent, calendar embeds you already pay for, and ad platform tags you will maintain. Chat widgets that cover the CTA are usually a conversion leak. Payment on a landing page is only in scope when checkout already exists (for example Shopify) and the offer maps to a real SKU.
+
+## Risks, measurement and handover
+
+Risks: too many CTAs; a form that asks for a life story; slow hero video on 4G; and launching without a thank-you page so ads cannot see conversions. We QA on phones first because campaign traffic is rarely desktop-led.
+
+Success is conversion against an agreed action, plus lead quality you can describe (for example “booked intro” versus “blank enquiry”). We do not guarantee a conversion rate. After the campaign, you own the page URL, copy, and any variants. We document how to duplicate the template for the next offer so you are not starting from a blank canvas each time. Ongoing hosting and CMS updates sit with your existing [maintenance](/services/website-maintenance/) if you have one.
+
 ## Landing pages vs service pages
 
-Service pages earn organic search and explain the full offer. Landing pages convert paid or campaign traffic. Use both: evergreen [service pages](/services/) for SEO, campaign pages for focused offers. Pair with [SEO](/services/seo-services/) when a page also targets search intent — but do not pretend every ad page is an SEO strategy.
-
-## Who this suits
-
-Businesses running Google/Meta ads, seasonal offers, event registrations or lead magnets who need pages that match the promise in the ad.
+Service pages earn organic search and explain the full offer. Landing pages convert paid or campaign traffic. Use both: evergreen [service pages](/services/) for SEO, campaign pages for focused offers. Pair with [SEO](/services/seo-services/) when a page also targets search intent — but do not pretend every ad page is an SEO strategy. [Our process](/process/) still applies: brief, structure, build, tracking QA.
 
 [Get a quote](/contact/) with the offer, traffic source and where you want the page hosted.

@@ -26,6 +26,13 @@ export function getFeaturedPortfolio(limit = 3): PortfolioItem[] {
   return portfolioData.items.slice(0, limit);
 }
 
+/** Top projects using the Webflow "Order on work page" value. */
+export function getPortfolioByOrder(limit = 5): PortfolioItem[] {
+  return [...portfolioData.items]
+    .sort((a, b) => (a.order ?? 9999) - (b.order ?? 9999) || a.title.localeCompare(b.title))
+    .slice(0, limit);
+}
+
 export function scrubAgencyMentions(input: string): string {
   if (!input) return input;
   return input
@@ -62,12 +69,7 @@ export function scrubAgencyMentions(input: string): string {
 
 export function getPortfolioFacets() {
   const categories = portfolioData.facets?.categories ?? [];
-  // Only website-related service facets
-  const services = (portfolioData.facets?.services ?? []).filter((id) =>
-    id === 'website' || id === 'digital'
-  );
   return {
     categories: categories.map((id) => ({ id, label: formatFacetLabel(id) })),
-    services: services.map((id) => ({ id, label: formatFacetLabel(id) })),
   };
 }

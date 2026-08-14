@@ -1,0 +1,43 @@
+# Website Development Perth — full fact index
+
+Website Development Perth is a Perth website design and development brand for SMEs. It is operated by OKMG. Offices: 608–610 Stirling Hwy, Mosman Park, Perth WA 6012; and 143 St Georges Terrace, Perth WA 6000. Phone 1300 93 6564. Email hello@websitedevelopmentperth.com.au. Service area: Perth and surrounds across Western Australia. Meetings are by appointment or online; there is no walk-in showroom.
+
+Canonical site: https://www.websitedevelopmentperth.com.au/
+Parent organisation: OKMG — https://okmg.com/
+Google Maps (Mosman Park): https://www.google.com/maps/search/?api=1&query=608-610+Stirling+Hwy%2C+Mosman+Park+WA+6012
+Google Maps (Perth CBD): https://www.google.com/maps/search/?api=1&query=143+St+Georges+Terrace%2C+Perth+WA+6000
+Google Business Profile: https://share.google/yc1j4NIqjuf5APEAm
+
+Typical project start: two to four weeks after an agreed scope. Typical custom brochure or service site: 6–10 weeks when content is moving. Enquiry replies: usually within one business day.
+
+## What we build
+
+WordPress, Webflow, Shopify, WooCommerce, Drupal, custom web applications, website redesign, landing pages, maintenance, SEO, UX/UI, and migrations. Service index: https://www.websitedevelopmentperth.com.au/services/
+
+## How a project runs
+
+1. Discovery & scope — written scope, not a vibe.
+2. Structure & design — information architecture, templates, conversion-led visual system.
+3. Build — agreed stack, content model, forms, SEO foundations, responsive QA.
+4. Launch — redirects if needed, analytics events, content check, go-live support.
+5. Support — optional maintenance after launch.
+
+Process page: https://www.websitedevelopmentperth.com.au/process/
+
+## Pricing stance
+
+There is no honest single “Perth average” website price. Cost follows unique templates, content labour, integrations and migration risk — not page count. Buying guide: https://www.websitedevelopmentperth.com.au/blog/website-cost-perth/
+
+## Local pages
+
+Dedicated suburb pages exist only where there is genuine local context (Fremantle, Subiaco, Victoria Park, Osborne Park, Joondalup, Midland, Rockingham, Mandurah). Other areas are listed on the locations hub without thin doorway pages. Service×suburb URLs are not indexed until they have unique local copy.
+
+Locations hub: https://www.websitedevelopmentperth.com.au/locations/
+
+## Proof policy
+
+Testimonials, awards and metrics appear only when verified. Portfolio detail URLs on this domain are not indexed; many project records originate from OKMG work shown for capability.
+
+## URL index
+
+See https://www.websitedevelopmentperth.com.au/llms.txt for the short URL list of services, industries, locations, guides and company pages.

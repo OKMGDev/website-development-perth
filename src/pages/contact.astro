@@ -2,17 +2,23 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import EnquiryForm from '../components/EnquiryForm.astro';
-import { breadcrumbList } from '../lib/seo';
+import { breadcrumbList, organizationSchema } from '../lib/seo';
 import { site } from '../data/site';
+
+const mapsEmbed = (query: string) =>
+  `https://maps.google.com/maps?q=${encodeURIComponent(query)}&z=16&output=embed`;
 ---
 
 <BaseLayout
   title="Contact & Get a Quote | Website Development Perth"
-  description="Request a website quote, send a quick enquiry or book a consultation. Perth-wide servicing with a clear response-time expectation."
-  jsonLd={breadcrumbList([
-    { name: 'Home', path: '/' },
-    { name: 'Contact', path: '/contact/' },
-  ])}
+  description="Request a website quote, send a quick enquiry or book a consultation. Perth-wide servicing from Mosman Park and Perth CBD."
+  jsonLd={[
+    breadcrumbList([
+      { name: 'Home', path: '/' },
+      { name: 'Contact', path: '/contact/' },
+    ]),
+    organizationSchema(),
+  ]}
 >
   <section class="page-hero">
     <div class="container contact-grid">
@@ -25,10 +31,52 @@ import { site } from '../data/site';
         <ul class="contact-list">
           <li><strong>Phone:</strong> <a href={site.phoneHref}>{site.phoneDisplay}</a></li>
           <li><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
-          <li><strong>Address:</strong> {site.address}</li>
         </ul>
       </div>
       <EnquiryForm />
+    </div>
+  </section>
+
+  <section class="section nap" id="offices">
+    <div class="container">
+      <p class="section__eyebrow">Offices</p>
+      <h2 class="section__title">Name, address and maps</h2>
+      <p class="section__lead">
+        Meetings are by appointment at Mosman Park or Perth CBD, or online. We do not run a walk-in showroom.
+      </p>
+
+      <div class="nap-grid">
+        {
+          site.offices.map((office) => (
+            <article class="nap-card">
+              <h3>{office.label}</h3>
+              <p>
+                <a href={office.mapsUrl} rel="noopener noreferrer" target="_blank">
+                  {office.formatted}
+                </a>
+              </p>
+              <iframe
+                class="contact-map"
+                title={`Map of ${site.name} at ${office.formatted}`}
+                src={mapsEmbed(office.formatted)}
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </article>
+          ))
+        }
+      </div>
+
+      <ul class="nap-meta">
+        <li><strong>Service area:</strong> {site.serviceArea}</li>
+        <li>
+          <strong>Google:</strong>
+          <a href={site.googleBusinessUrl} rel="noopener noreferrer" target="_blank">
+            WDP on Google Business Profile
+          </a>
+          — leave a review on the listing.
+        </li>
+      </ul>
     </div>
   </section>
 </BaseLayout>
@@ -47,10 +95,59 @@ import { site } from '../data/site';
     gap: 0.65rem;
   }
 
+  .nap {
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--line);
+  }
+
+  .nap-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .nap-card {
+    padding: 1.4rem;
+    background: var(--bg);
+    border: 1px solid var(--line);
+  }
+
+  .nap-card h3 {
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    margin: 0 0 0.45rem;
+  }
+
+  .nap-card p {
+    margin: 0 0 1rem;
+  }
+
+  .contact-map {
+    display: block;
+    width: 100%;
+    height: 14rem;
+    border: 0;
+    outline: 1px solid var(--line);
+    background: var(--bg-elevated);
+  }
+
+  .nap-meta {
+    list-style: none;
+    padding: 0;
+    margin: 1.75rem 0 0;
+    display: grid;
+    gap: 0.55rem;
+    color: var(--ink-muted);
+  }
+
   @media (min-width: 900px) {
     .contact-grid {
       grid-template-columns: 1fr 1fr;
       align-items: start;
+    }
+
+    .nap-grid {
+      grid-template-columns: 1fr 1fr;
     }
   }
 </style>

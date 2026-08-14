@@ -2,37 +2,129 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { breadcrumbList } from '../lib/seo';
+import { breadcrumbList, howToSchema } from '../lib/seo';
+
+const processSteps = [
+  {
+    name: 'Discovery & scope',
+    text: 'Goals, audience, competitors, platform constraints and success measures. You leave with a written scope, not a vibe.',
+  },
+  {
+    name: 'Structure & design',
+    text: 'Information architecture, key templates and a visual system that supports conversion — brand-first without clutter.',
+  },
+  {
+    name: 'Build',
+    text: 'Implementation on the agreed stack with content modelling, forms, SEO foundations and responsive QA.',
+  },
+  {
+    name: 'Launch',
+    text: 'Redirects (if needed), analytics events, final content check and go-live support.',
+  },
+  {
+    name: 'Support',
+    text: 'Optional maintenance for updates, monitoring and small improvements after launch.',
+  },
+];
 ---
 
 <BaseLayout
   title="Our Process | Website Development Perth"
-  description="A clear website delivery process for Perth businesses — scope, design, build, launch and support without surprise theatre."
-  jsonLd={breadcrumbList([
-    { name: 'Home', path: '/' },
-    { name: 'Process', path: '/process/' },
-  ])}
+  description="A five-step website delivery process for Perth businesses — discovery, structure, build, launch and support, with written scope and checkpoints."
+  jsonLd={[
+    breadcrumbList([
+      { name: 'Home', path: '/' },
+      { name: 'Process', path: '/process/' },
+    ]),
+    howToSchema({
+      name: 'How Website Development Perth delivers a website',
+      description:
+        'A five-step website delivery process for Perth businesses: discovery and scope, structure and design, build, launch and optional support.',
+      steps: processSteps,
+    }),
+  ]}
 >
   <section class="page-hero">
     <div class="container">
       <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Our Process' }]} />
       <h1>Our process</h1>
-      <p class="lead">Reduce risk with a delivery path you can follow — and checkpoints that keep decisions moving.</p>
+      <p class="lead">
+        Reduce risk with a delivery path you can follow — checkpoints that keep decisions moving, and a scope that says what is in and what is not.
+      </p>
+      <dl class="glance">
+        <div>
+          <dt>Typical start</dt>
+          <dd>2–4 weeks after an agreed scope</dd>
+        </div>
+        <div>
+          <dt>Custom / service site</dt>
+          <dd>Usually 6–10 weeks once content is moving</dd>
+        </div>
+        <div>
+          <dt>Redesign</dt>
+          <dd>Often 6–12 weeks for a typical SME site</dd>
+        </div>
+        <div>
+          <dt>Landing page</dt>
+          <dd>1–3 weeks when offer and assets are ready</dd>
+        </div>
+      </dl>
     </div>
   </section>
+
   <section class="section" style="padding-top: 0">
     <div class="container prose">
-      <h2>1. Discovery & scope</h2>
-      <p>Goals, audience, competitors, platform constraints and success measures. You leave with a written scope, not a vibe.</p>
-      <h2>2. Structure & design</h2>
-      <p>Information architecture, key templates and a visual system that supports conversion — brand-first without clutter.</p>
+      <p>
+        Timelines stretch when copy, photography or committee review arrives late — not because we “add weeks for quality”. For the calendar view, read <a href="/blog/website-project-timeline/">how long a website project takes</a>. For what drives price, see <a href="/blog/website-cost-perth/">website cost in Perth</a>.
+      </p>
+
+      <h2>1. Discovery &amp; scope</h2>
+      <p>
+        We start with the job: who you sell to, what the site must do, which platform your team can actually run, and how you will know it worked (enquiries, bookings, orders — not “a modern look”).
+      </p>
+      <p>
+        <strong>We need from you:</strong> examples you like and dislike, access to the current site and analytics if they exist, and an honest note on who approves copy.
+      </p>
+      <p>
+        <strong>You leave with:</strong> a written scope, assumptions (content supplied or drafted with us), and a platform recommendation we can defend. No moodboard-as-contract.
+      </p>
+
+      <h2>2. Structure &amp; design</h2>
+      <p>
+        Information architecture first: services, proof, locations, contact. Then key templates and a visual system that can survive the next six pages you add after launch.
+      </p>
+      <p>
+        Feedback is timeboxed after structure and after visual design so colour debates do not arrive on an unsettled sitemap. Brand-first does not mean clutter.
+      </p>
+
       <h2>3. Build</h2>
-      <p>Implementation on the agreed stack with content modelling, forms, SEO foundations and responsive QA.</p>
+      <p>
+        Implementation on the agreed stack — WordPress, Webflow, Shopify, WooCommerce, Drupal, or custom — with content modelling, forms, SEO foundations (titles, canonicals, sensible URLs) and QA on real phones.
+      </p>
+      <p>
+        Integrations are wired for the paths you will actually use (inbox, CRM, booking). We would rather ship one reliable enquiry path than five half-connected tools.
+      </p>
+
       <h2>4. Launch</h2>
-      <p>Redirects (if needed), analytics events, final content check and go-live support.</p>
+      <p>
+        Staging cutover, not “edit live and hope”. If you already have a site, redirects, analytics events and a final content check are part of go-live — not a favour afterwards. DNS and email records are planned so the website move does not take the inbox down.
+      </p>
+      <p>
+        You get a short watch window for critical fixes. Training sits here when the CMS is meant to be used by your team.
+      </p>
+
       <h2>5. Support</h2>
-      <p>Optional maintenance for updates, monitoring and small improvements after launch.</p>
-      <p>Want the timeline view? Read <a href="/blog/website-project-timeline/">how long a website project takes</a>.</p>
+      <p>
+        Optional <a href="/services/website-maintenance/">maintenance</a>: updates, backups, monitoring and a monthly allowance for small fixes. New sections, redesigns and campaign pages stay as quoted project work so the care plan remains predictable.
+      </p>
+
+      <h2>Where projects stall</h2>
+      <p>
+        Missing copy, photography after UI is locked, extra stakeholders appearing in week six, and “can we just add a shop” mid-build. Discovery is designed to surface those risks while they are still cheap.
+      </p>
+      <p>
+        Ready to start? <a href="/contact/">Send the brief</a> — goals, current site, and constraints are enough.
+      </p>
     </div>
   </section>
   <CtaBand />

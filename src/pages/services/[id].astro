@@ -54,6 +54,28 @@ const jsonLd = [
       />
       <h1>{entry.data.title}</h1>
       <p class="lead">{entry.data.excerpt}</p>
+      {
+        entry.data.glance && (
+          <dl class="glance">
+            <div>
+              <dt>Who it’s for</dt>
+              <dd>{entry.data.glance.who}</dd>
+            </div>
+            <div>
+              <dt>Timeline</dt>
+              <dd>{entry.data.glance.timeline}</dd>
+            </div>
+            <div>
+              <dt>Platforms</dt>
+              <dd>{entry.data.glance.platforms}</dd>
+            </div>
+            <div>
+              <dt>Best when</dt>
+              <dd>{entry.data.glance.bestWhen}</dd>
+            </div>
+          </dl>
+        )
+      }
       <div class="btn-row">
         <a class="btn btn--primary" href="/contact/" data-track="cta">Get a Quote</a>
         <a class="btn btn--ghost" href="/services/">All services</a>
@@ -148,6 +170,10 @@ const jsonLd = [
 </BaseLayout>
 
 <style>
+  .page-hero .btn-row {
+    margin-top: 1.5rem;
+  }
+
   .section-link {
     margin-top: 1.5rem;
   }

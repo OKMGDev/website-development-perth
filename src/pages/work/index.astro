@@ -2,8 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CtaBand from '../../components/CtaBand.astro';
+import WorkCard from '../../components/WorkCard.astro';
 import { breadcrumbList } from '../../lib/seo';
-import { formatFacetLabel, getPortfolioFacets, getPortfolioItems, scrubAgencyMentions } from '../../lib/portfolio';
+import { getPortfolioFacets, getPortfolioItems, scrubAgencyMentions } from '../../lib/portfolio';
 
 const work = getPortfolioItems().map((item) => ({
   ...item,
@@ -26,7 +27,7 @@ const facets = getPortfolioFacets();
       <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Work' }]} />
       <h1>Work</h1>
       <p class="lead">
-        Website and digital builds — WordPress, Shopify, Webflow and custom platforms for Perth businesses.
+        Website and digital builds for Perth and Australian businesses — WordPress, Shopify, Webflow and custom platforms. The gallery is capability from OKMG, which operates this practice. Individual case studies stay on OKMG unless a project is rewritten and approved for this site.
       </p>
     </div>
   </section>
@@ -56,18 +57,6 @@ const facets = getPortfolioFacets();
           </div>
         </div>
 
-        <div class="work-filters__group" role="group" aria-label="Filter by website service">
-          <p class="work-filters__label">Website service</p>
-          <div class="work-filters__chips">
-            <button type="button" class="chip is-active" data-filter-service="all">All</button>
-            {facets.services.map((facet) => (
-              <button type="button" class="chip" data-filter-service={facet.id}>
-                {facet.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
         <p class="work-filters__meta">
           <span data-work-count>{work.length}</span> projects
           <button type="button" class="work-filters__reset" data-work-reset hidden>Clear filters</button>
@@ -76,35 +65,14 @@ const facets = getPortfolioFacets();
 
       <div class="work-grid" data-work-grid>
         {work.map((item) => (
-          <a
-            class="work-card"
-            href={`/work/${item.id}/`}
-            data-work-card
-            data-title={item.title}
-            data-excerpt={item.excerpt}
-            data-categories={(item.categories || []).join(',')}
-            data-services={(item.servicesOffered || []).join(',')}
-          >
-            {item.homepageImage || item.heroImage ? (
-              <img
-                src={item.homepageImage || item.heroImage}
-                alt={`${item.title} website project`}
-                loading="lazy"
-                width="640"
-                height="400"
-              />
-            ) : null}
-            <div>
-              {(item.categories || []).length > 0 && (
-                <p class="work-card__tags">
-                  {(item.categories || []).map((tag) => formatFacetLabel(tag)).join(' · ')}
-                </p>
-              )}
-              <h2>{item.title}</h2>
-              <p>{item.excerpt}</p>
-              <span>View project →</span>
-            </div>
-          </a>
+          <WorkCard
+            id={item.id}
+            title={item.title}
+            excerpt={item.excerpt}
+            image={item.homepageImage || item.heroImage}
+            categories={item.categories || []}
+            filterable
+          />
         ))}
       </div>
 
@@ -125,14 +93,11 @@ const facets = getPortfolioFacets();
     const cards = [...grid.querySelectorAll('[data-work-card]')];
 
     let category = 'all';
-    let service = 'all';
 
-    const setActive = (selector: string, value: string) => {
-      root.querySelectorAll(selector).forEach((btn) => {
+    const setActiveCategory = (value: string) => {
+      root.querySelectorAll('[data-filter-category]').forEach((btn) => {
         if (!(btn instanceof HTMLElement)) return;
-        const key = selector.includes('category') ? 'filterCategory' : 'filterService';
-        const attr = key === 'filterCategory' ? 'data-filter-category' : 'data-filter-service';
-        btn.classList.toggle('is-active', btn.getAttribute(attr) === value);
+        btn.classList.toggle('is-active', btn.getAttribute('data-filter-category') === value);
       });
     };
 
@@ -145,12 +110,10 @@ const facets = getPortfolioFacets();
         const title = (card.dataset.title || '').toLowerCase();
         const excerpt = (card.dataset.excerpt || '').toLowerCase();
         const cats = (card.dataset.categories || '').split(',').filter(Boolean);
-        const services = (card.dataset.services || '').split(',').filter(Boolean);
 
         const matchesQuery = !q || title.includes(q) || excerpt.includes(q);
         const matchesCategory = category === 'all' || cats.includes(category);
-        const matchesService = service === 'all' || services.includes(service);
-        const show = matchesQuery && matchesCategory && matchesService;
+        const show = matchesQuery && matchesCategory;
 
         card.hidden = !show;
         if (show) visible += 1;
@@ -158,7 +121,7 @@ const facets = getPortfolioFacets();
 
       if (countEl) countEl.textContent = String(visible);
       if (empty instanceof HTMLElement) empty.hidden = visible > 0;
-      const filtered = Boolean(q) || category !== 'all' || service !== 'all';
+      const filtered = Boolean(q) || category !== 'all';
       if (resetBtn instanceof HTMLElement) resetBtn.hidden = !filtered;
     };
 
@@ -166,16 +129,7 @@ const facets = getPortfolioFacets();
       btn.addEventListener('click', () => {
         if (!(btn instanceof HTMLElement)) return;
         category = btn.getAttribute('data-filter-category') || 'all';
-        setActive('[data-filter-category]', category);
-        apply();
-      });
-    });
-
-    root.querySelectorAll('[data-filter-service]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        if (!(btn instanceof HTMLElement)) return;
-        service = btn.getAttribute('data-filter-service') || 'all';
-        setActive('[data-filter-service]', service);
+        setActiveCategory(category);
         apply();
       });
     });
@@ -183,16 +137,18 @@ const facets = getPortfolioFacets();
     search?.addEventListener('input', apply);
     resetBtn?.addEventListener('click', () => {
       category = 'all';
-      service = 'all';
       if (search instanceof HTMLInputElement) search.value = '';
-      setActive('[data-filter-category]', category);
-      setActive('[data-filter-service]', service);
+      setActiveCategory(category);
       apply();
     });
   }
 </script>
 
 <style>
+  .page-hero .lead {
+    max-width: 62ch;
+  }
+
   .work-filters {
     display: grid;
     gap: 1.25rem;
@@ -279,63 +235,6 @@ const facets = getPortfolioFacets();
   .work-grid {
     display: grid;
     gap: 1.25rem;
-  }
-
-  .work-card {
-    display: grid;
-    gap: 1rem;
-    text-decoration: none;
-    color: inherit;
-    border: 1px solid var(--line);
-    background: var(--bg-elevated);
-    overflow: hidden;
-  }
-
-  .work-card[hidden] {
-    display: none;
-  }
-
-  .work-card:hover {
-    border-color: var(--ink);
-  }
-
-  .work-card img {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-    display: block;
-  }
-
-  .work-card div {
-    padding: 0 1.15rem 1.15rem;
-  }
-
-  .work-card__tags {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin: 0 0 0.45rem;
-  }
-
-  .work-card h2 {
-    font-size: 1.25rem;
-    margin-bottom: 0.4rem;
-  }
-
-  .work-card p {
-    color: var(--ink-muted);
-    margin: 0 0 0.75rem;
-    font-size: 0.95rem;
-  }
-
-  .work-card span {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
   }
 
   .work-empty {

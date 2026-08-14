@@ -10,9 +10,16 @@ export default defineConfig({
   adapter: vercel(),
   integrations: [
     sitemap({
-      filter: (page) =>
-        !page.includes('/thank-you/') &&
-        !/\/work\/.+/.test(new URL(page).pathname),
+      filter: (page) => {
+        const pathname = new URL(page).pathname;
+        const isServiceLocation = /^\/services\/[^/]+\/[^/]+\/$/.test(pathname);
+
+        return (
+          !page.includes('/thank-you/') &&
+          !/\/work\/.+/.test(pathname) &&
+          !isServiceLocation
+        );
+      },
     }),
   ],
   image: {

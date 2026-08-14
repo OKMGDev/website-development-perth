@@ -3,11 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { breadcrumbList } from '../lib/seo';
+import { site } from '../data/site';
 ---
 
 <BaseLayout
   title="Why Us | Website Development Perth"
-  description="Differentiation without fluff — intent-led architecture, truthful proof and conversion paths that respect your visitors."
+  description="Why Perth businesses choose Website Development Perth — intent-led pages, platform honesty, conversion without dark patterns, and proof we will not invent."
   jsonLd={breadcrumbList([
     { name: 'Home', path: '/' },
     { name: 'Why Us', path: '/why-us/' },
@@ -17,20 +18,142 @@ import { breadcrumbList } from '../lib/seo';
     <div class="container">
       <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Why Us' }]} />
       <h1>Why work with us</h1>
-      <p class="lead">Trust signals that hold up under scrutiny — and a build approach tuned for Perth service businesses.</p>
+      <p class="lead">
+        A Perth website should explain the offer, prove the work, and make the next step obvious. We build for that job — not for a keyword variant or a theme demo.
+      </p>
+      <dl class="glance">
+        <div>
+          <dt>Offices</dt>
+          <dd>Mosman Park and Perth CBD</dd>
+        </div>
+        <div>
+          <dt>Service area</dt>
+          <dd>{site.serviceArea}</dd>
+        </div>
+        <div>
+          <dt>Typical start</dt>
+          <dd>2–4 weeks after an agreed scope</dd>
+        </div>
+        <div>
+          <dt>Reply time</dt>
+          <dd>Usually within one business day</dd>
+        </div>
+      </dl>
     </div>
   </section>
+
   <section class="section" style="padding-top: 0">
-    <div class="container prose">
-      <h2>One page, one job</h2>
-      <p>We avoid cannibalising ourselves with thin variants. Services, industries and locations each own a distinct intent.</p>
-      <h2>Conversion without dark patterns</h2>
-      <p>No fake urgency, no pre-ticked consent, no vague form destinations. You get a clear quote path and a real response-time expectation.</p>
-      <h2>Platform honesty</h2>
-      <p>Shopify is not WooCommerce. Migration is not redesign. We keep those conversations — and pages — distinct.</p>
-      <h2>Proof you can trust</h2>
-      <p>If a logo, award or metric is not verified, it does not appear as fact. Placeholders stay labelled until clients approve publication.</p>
+    <div class="container">
+      <div class="why-grid">
+        <article>
+          <h2>One page, one job</h2>
+          <p>
+            Services, industries and locations each own a distinct intent. We do not publish thin suburb swaps or duplicate service copy to chase extra URLs. That is better for visitors, search, and the models that quote this site.
+          </p>
+        </article>
+        <article>
+          <h2>Conversion without dark patterns</h2>
+          <p>
+            One primary action, visible phone and email, and forms that respect consent. No fake urgency, no pre-ticked boxes, no “get a quote” maze that dumps you into a newsletter list.
+          </p>
+        </article>
+        <article>
+          <h2>Platform honesty</h2>
+          <p>
+            Shopify is not WooCommerce. Webflow is not WordPress. Migration is not redesign. We keep those conversations — and the pages — distinct so you buy the job you actually need.
+          </p>
+        </article>
+        <article>
+          <h2>Proof you can trust</h2>
+          <p>
+            If a logo, award or metric is not verified, it does not appear as fact. Placeholders stay labelled until clients approve publication. We would rather look quieter than look dishonest.
+          </p>
+        </article>
+      </div>
     </div>
   </section>
-  <CtaBand />
+
+  <section class="section">
+    <div class="container prose">
+      <h2>Who this is for</h2>
+      <p>
+        Perth SMEs that need a site their customers can understand and their team can run: tradies, professional firms, hospitality, retail, clinics, schools, and similar service businesses. If you already know the offer and need the website to stop leaking enquiries, we are a fit.
+      </p>
+      <p>
+        Read <a href="/about/">how the brand is operated</a>, then <a href="/process/">how a project runs</a>. Pricing logic lives in the <a href="/blog/website-cost-perth/">Perth website cost guide</a> — we quote after scope, not from a bait number.
+      </p>
+
+      <h2>Who this is not for</h2>
+      <p>
+        We will say no — or point you somewhere cheaper — when the brief is a one-page “make it pretty” with no offer, a ranking guarantee, a doorway-page suburb farm, or a rebuild that throws away URLs without a redirect map. Those jobs fail in public. We would rather not take them.
+      </p>
+
+      <h2>How we differ from the usual Perth shortlist</h2>
+      <p>
+        <strong>Versus a freelancer who designs in the CMS.</strong> You get a written scope, distinct workstreams (redesign vs migration vs SEO), and a handover your staff can use. You do not get a personality-dependent site that only one person can edit.
+      </p>
+      <p>
+        <strong>Versus an offshore template shop.</strong> Local time zone, Mosman Park and Perth CBD offices, and copy written for WA customers — not a theme with “Perth” find-and-replaced. Phone and email stay on the page.
+      </p>
+      <p>
+        <strong>Versus a generic full-service pitch.</strong> Website Development Perth is a focused website practice, operated by <a href="https://okmg.com/" rel="noopener noreferrer" target="_blank">OKMG</a>. You are not buying a bundled “brand + ads + social + SEO” package unless those are actually scoped. The site has one job.
+      </p>
+
+      <h2>What “SEO” means here</h2>
+      <p>
+        Technical foundations, intent-led structure, and content that answers the question. It does not mean we will manufacture a page for every postcode. See <a href="/services/seo-services/">SEO services</a> and the <a href="/blog/local-seo-website-checklist-perth/">local SEO checklist</a> for what we actually do.
+      </p>
+
+      <h2>How to test us before you buy</h2>
+      <ul>
+        <li>Ask which platform we would <em>not</em> recommend for your brief — and why.</li>
+        <li>Ask what the quote assumes about content, photography and integrations.</li>
+        <li>Ask how redirects and analytics are handled if you already have a site.</li>
+        <li>Read a service page and a comparison guide. If the copy could sit on any agency site, keep shopping.</li>
+      </ul>
+      <p>
+        Then <a href="/contact/">request a quote</a> with goals, examples and constraints. We typically reply within one business day.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Tell us the job, not the vibe"
+    text="A short brief is enough: what the site must do, who it is for, and what you already have."
+  />
 </BaseLayout>
+
+<style>
+  .page-hero h1 {
+    max-width: 18ch;
+  }
+
+  .why-grid {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .why-grid article {
+    padding: 1.5rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--accent);
+  }
+
+  .why-grid h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .why-grid p {
+    color: var(--ink-muted);
+    margin: 0;
+  }
+
+  @media (min-width: 700px) {
+    .why-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

@@ -9,12 +9,12 @@ import { organizationSchema, websiteSchema, faqSchema } from '../lib/seo';
 import {
   getIndustryIcon,
   getServiceIcon,
-  glanceIcons,
   processIcons,
   whyIcons,
 } from '../lib/icons';
 import { featuredServiceIds } from '../data/serviceGroups';
-import { getFeaturedPortfolio, scrubAgencyMentions } from '../lib/portfolio';
+import WorkCard from '../components/WorkCard.astro';
+import { getPortfolioByOrder, scrubAgencyMentions } from '../lib/portfolio';
 
 const allServices = await getCollection('services');
 const byId = Object.fromEntries(allServices.map((s) => [s.id, s]));
@@ -24,16 +24,12 @@ const industries = (await getCollection('industries')).sort((a, b) =>
   a.data.title.localeCompare(b.data.title)
 );
 
-const featuredWork = getFeaturedPortfolio(3).map((item) => ({
+const featuredWork = getPortfolioByOrder(6).map((item) => ({
   ...item,
   title: scrubAgencyMentions(item.title),
   excerpt: scrubAgencyMentions(item.excerpt),
 }));
-const [primaryWork, ...otherWork] = featuredWork;
 
-const GlanceLocation = glanceIcons.location;
-const GlanceProcess = glanceIcons.process;
-const GlanceReply = glanceIcons.reply;
 const ProcessScope = processIcons.scope;
 const ProcessBuild = processIcons.build;
 const ProcessLaunch = processIcons.launch;
@@ -45,7 +41,7 @@ const homeFaqs = [
   {
     question: 'Do you only build websites for Perth businesses?',
     answer:
-      'Perth is our focus and service area. We work with local SMEs that need a clear website, redesign or platform build — remote collaboration is fine within WA.',
+      'Perth is our focus and service area, from offices in Mosman Park and Perth CBD. We work with local SMEs that need a clear website, redesign or platform build — remote collaboration is fine within WA.',
   },
   {
     question: 'How soon can we start?',
@@ -69,16 +65,21 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
 >
   <section class="hero">
     <div class="hero__media" aria-hidden="true">
-      <video
-        class="hero__video"
-        muted
-        loop
-        playsinline
-        preload="none"
-        poster="/hero-perth.svg"
-        data-hero-video
-        data-src="/hero-bg.mp4"
-      ></video>
+      <img
+        class="hero__poster"
+        src="/hero-poster.jpg"
+        alt=""
+        width="1280"
+        height="720"
+      />
+      <iframe
+        class="hero__yt"
+        data-hero-yt
+        data-src="https://www.youtube-nocookie.com/embed/daAeufLLXvQ?autoplay=1&mute=1&controls=0&loop=1&playlist=daAeufLLXvQ&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&fs=0&cc_load_policy=0"
+        title="Banner background video"
+        allow="autoplay; encrypted-media"
+        tabindex="-1"
+      ></iframe>
     </div>
     <div class="container">
       <div class="hero__inner reveal">
@@ -99,32 +100,6 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
             <Phone size={16} stroke-width={1.75} />
             {site.phoneDisplay}
           </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="glance" aria-label="At a glance">
-    <div class="container glance__inner">
-      <div>
-        <GlanceLocation class="icon" size={22} stroke-width={1.75} />
-        <div>
-          <strong>Perth-wide</strong>
-          <span>Local servicing across WA</span>
-        </div>
-      </div>
-      <div>
-        <GlanceProcess class="icon" size={22} stroke-width={1.75} />
-        <div>
-          <strong>Clear process</strong>
-          <span>Scope, build, launch</span>
-        </div>
-      </div>
-      <div>
-        <GlanceReply class="icon" size={22} stroke-width={1.75} />
-        <div>
-          <strong>Direct contact</strong>
-          <span>Call or request a quote</span>
         </div>
       </div>
     </div>
@@ -217,22 +192,18 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
         <p class="section__lead">Recent website builds and digital platforms for Perth businesses.</p>
       </div>
       {
-        primaryWork && (
+        featuredWork.length > 0 && (
           <div class="work-grid">
-            <a class="work-feature" href={`/work/${primaryWork.id}/`}>
-              <span>Featured</span>
-              <h3>{primaryWork.title}</h3>
-              <p>{primaryWork.excerpt}</p>
-              <em>View project →</em>
-            </a>
-            <div class="work-stack">
-              {otherWork.map((item) => (
-                <a href={`/work/${item.id}/`}>
-                  <h3>{item.title}</h3>
-                  <p>{item.excerpt}</p>
-                </a>
-              ))}
-            </div>
+            {featuredWork.map((item) => (
+              <WorkCard
+                id={item.id}
+                title={item.title}
+                excerpt={item.excerpt}
+                image={item.homepageImage || item.heroImage}
+                categories={item.categories || []}
+                headingLevel="h3"
+              />
+            ))}
           </div>
         )
       }
@@ -272,11 +243,11 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
 </BaseLayout>
 
 <script>
-  // Hold the hero video back until after load so it never competes with LCP,
+  // Hold the YouTube banner back until after load so it never competes with LCP,
   // and skip it entirely on small screens or reduced-motion preferences.
-  const video = document.querySelector('[data-hero-video]');
-  if (video instanceof HTMLVideoElement) {
-    const src = video.dataset.src;
+  const frame = document.querySelector('[data-hero-yt]');
+  if (frame instanceof HTMLIFrameElement) {
+    const src = frame.dataset.src;
     const wantsVideo =
       Boolean(src) &&
       window.matchMedia('(min-width: 768px)').matches &&
@@ -284,9 +255,7 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
 
     if (wantsVideo) {
       const start = () => {
-        video.src = src as string;
-        video.load();
-        void video.play().catch(() => {});
+        frame.src = src as string;
       };
       if (document.readyState === 'complete') start();
       else window.addEventListener('load', start, { once: true });
@@ -298,6 +267,7 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
   .hero {
     position: relative;
     isolation: isolate;
+    overflow: hidden;
     min-height: min(88svh, 52rem);
     display: flex;
     align-items: flex-end;
@@ -308,25 +278,40 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
   .hero > .container {
     width: min(100% - 2rem, var(--max));
     position: relative;
+    z-index: 1;
   }
 
   .hero__media {
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: 0;
     overflow: hidden;
+    pointer-events: none;
   }
 
-  .hero__media img,
-  .hero__video {
+  .hero__poster {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background: #0c1218;
   }
 
-  .hero__video {
-    display: block;
-    background: #0c1218;
+  .hero__yt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 0;
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100%;
+    min-width: 177.78vh;
+    transform: translate(-50%, -50%) scale(1.15);
+    pointer-events: none;
+  }
+
+  .hero__yt:not([src]) {
+    display: none;
   }
 
   .hero__media::after {
@@ -388,41 +373,6 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
   .btn--ghost-light:hover {
     border-color: #fff;
     background: rgba(255, 255, 255, 0.08);
-  }
-
-  .glance {
-    background: var(--bg-elevated);
-    border-bottom: 1px solid var(--line);
-  }
-
-  .glance__inner {
-    display: grid;
-    gap: 1.25rem;
-    padding-block: 1.35rem;
-  }
-
-  .glance__inner > div {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.85rem;
-    align-items: start;
-  }
-
-  .glance__inner > div > div {
-    display: grid;
-    gap: 0.2rem;
-  }
-
-  .glance__inner strong {
-    font-family: var(--font-display);
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
-  }
-
-  .glance__inner span {
-    color: var(--ink-muted);
-    font-size: 0.95rem;
   }
 
   @keyframes hero-rise {
@@ -591,79 +541,7 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
 
   .work-grid {
     display: grid;
-    gap: 1rem;
-  }
-
-  .work-feature {
-    display: block;
-    min-height: 16rem;
-    padding: 2rem;
-    background: var(--ink);
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .work-feature:hover {
-    color: #fff;
-  }
-
-  .work-feature span {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 1.25rem;
-  }
-
-  .work-feature h3 {
-    color: #fff;
-    font-size: clamp(1.6rem, 3vw, 2.3rem);
-    max-width: 14ch;
-  }
-
-  .work-feature p {
-    color: rgba(255, 255, 255, 0.72);
-    max-width: 40ch;
-  }
-
-  .work-feature em {
-    font-style: normal;
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #ff7a78;
-  }
-
-  .work-stack {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .work-stack a {
-    display: block;
-    padding: 1.5rem;
-    background: var(--bg-elevated);
-    border: 1px solid var(--line);
-    text-decoration: none;
-  }
-
-  .work-stack a:hover {
-    border-color: rgba(17, 17, 17, 0.28);
-    color: var(--ink);
-  }
-
-  .work-stack h3 {
-    text-transform: uppercase;
-    font-size: 1.05rem;
-    margin-bottom: 0.4rem;
-  }
-
-  .work-stack p {
-    color: var(--ink-muted);
-    margin: 0;
+    gap: 1.25rem;
   }
 
   .why-grid {
@@ -711,12 +589,6 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
   }
 
   @media (min-width: 700px) {
-    .glance__inner {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      padding-block: 1.5rem;
-    }
-
     .service-grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -733,6 +605,10 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
+
+    .work-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (min-width: 960px) {
@@ -747,11 +623,7 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
     }
 
     .work-grid {
-      grid-template-columns: 1.4fr 1fr;
-    }
-
-    .work-stack {
-      grid-template-rows: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 

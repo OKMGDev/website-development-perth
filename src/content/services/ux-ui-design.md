@@ -2,6 +2,11 @@
 title: "UX/UI Design"
 primaryKeyword: "UX UI design Perth"
 excerpt: "Interface design that clarifies journeys, reduces friction and makes complex offers feel simple."
+glance:
+  who: "Teams that need flows and a UI system before (or without) a full website or app build."
+  timeline: "3–8 weeks depending on research depth and screen count."
+  platforms: "Figma, handed to WordPress, Webflow, custom, or your own developers."
+  bestWhen: "Structure is unsettled, or an existing product UI is fighting the people who use it."
 benefits:
   - "Flows and wireframes that settle structure before visual polish"
   - "Figma UI with reusable components and clear states"
@@ -56,13 +61,35 @@ We deliver UX/UI for marketing sites and lighter web products: wireflows, key sc
 
 User flows for the jobs that matter (enquire, book, buy, find a service); wireframes that settle structure before visual polish; UI design in Figma with consistent type, spacing and components; notes for implementation (states, breakpoints, content rules); and optional design-only handover for your internal team or another developer. Revision rounds are structured — typically after wireframes and after visual UI — so feedback stays focused.
 
+A useful file is not a gallery of pretty frames. Empty, error, loading and success states for forms and key tasks are part of the kit. Content rules (character counts, image ratios, what happens when a title wraps) save more build time than another unused colour token.
+
+## When to buy UX/UI on its own
+
+Commission design-only when an internal team or another developer will build, when stakeholders need alignment before a stack decision, or when a product’s confusion is concentrated in a few flows. [Medical](/industries/medical-healthcare/) booking and intake, [education](/industries/education-childcare/) enrolment paths, and [professional](/industries/professional-services/) consultation funnels benefit from this because the cost of a wrong screen is operational, not just aesthetic.
+
+Skip a standalone UX project if you already know the sitemap and only want a visual refresh inside an existing CMS — that is often [website redesign](/services/website-redesign/). Skip it if you need authenticated workflows, permissions and APIs designed as a product; pair UX with [web application development](/services/web-application-development/) instead of treating Figma as the whole delivery.
+
 ## Research without theatre
 
 We do lightweight research when it changes decisions: stakeholder interviews, analytics review, competitor teardown. Full lab studies only when the product risk justifies them. Smaller sites get a lighter pattern library; larger products get a fuller design system — not enterprise overhead by default.
 
-## UX/UI inside a build
+We will not invent personas that nobody in the business recognises. If analytics and sales conversations already show where people stall, we start there. [Our process](/process/) puts journey agreement before visual polish so you are not approving colours on an unsettled flow.
 
-On most website projects, UX/UI is a phase before development — not a separate vanity exercise. Pair with [custom website design](/services/custom-website-design/), [WordPress](/services/wordpress-development/), [Webflow](/services/webflow-development/) or [web application development](/services/web-application-development/). We also improve existing product UI with audits and prioritised flow fixes.
+## Decisions, constraints and integrations with the real stack
+
+You will decide: mobile-first breakpoints that match how customers actually arrive; which brand rules are load-bearing versus open; how many templates exist (home, service, article, app shell); and whether design must map to [WordPress](/services/wordpress-development/), [Webflow](/services/webflow-development/) or a custom front end. Designing components that the chosen CMS cannot support is wasted money.
+
+Accessibility is a design constraint, not a developer surprise: contrast, focus order, form labels, and motion that can be reduced. We note those in the file. Third-party embeds (booking, maps, chat) get a designed slot so they do not explode the layout.
+
+## Risks, measurement and handover
+
+Risks: designing every page instead of a template system; stakeholders giving visual notes on wireframes; and a kit so large nobody implements it. We timebox rounds. Developers should not need a meeting to learn what a hover state does.
+
+We measure UX work by whether build questions drop, whether key tasks are completable in prototype or staging, and whether enquiry or booking paths lost steps rather than gained them. We do not claim conversion percentages we have not measured.
+
+Handover includes organised Figma pages, component naming, and implementation notes. File ownership sits with you. Browse [our work](/work/) for how those journeys look once implemented.
+
+When UX/UI sits inside a build, it is a phase before development — not a separate vanity exercise. Pair with [custom website design](/services/custom-website-design/), [WordPress](/services/wordpress-development/), [Webflow](/services/webflow-development/) or [web application development](/services/web-application-development/). We also improve existing product UI with audits and prioritised flow fixes.
 
 ## Who this suits
 
