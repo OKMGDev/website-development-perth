@@ -15,7 +15,7 @@ relatedServices:
   - website-migration
 seo:
   title: "Ecommerce platform selection guide"
-  description: "A practical ecommerce platform guide for Perth retailers: hosted carts, WooCommerce, custom builds, marketplaces, and when Shopify vs Woo is the fork."
+  description: "Ecommerce platform guide for Perth retailers — hosted carts, WooCommerce, custom builds, marketplaces, and when Shopify vs WooCommerce is the fork."
 ---
 
 The right ecommerce platform is the one that matches how you actually sell, fulfil and administer orders — not the one with the loudest ads. **Start with operations, then pick a cart.** Feature checklists come last, because every major platform can “do” products, payments and shipping on paper.

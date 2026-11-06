@@ -48,7 +48,7 @@ relatedServices:
   - custom-website-design
 seo:
   title: "Webflow Website Development in Perth"
-  description: "Webflow website development in Perth with precise design control, CMS collections and marketing-friendly editing."
+  description: "Webflow website development in Perth with precise design control, CMS collections and a marketing-friendly editor your team can actually use."
 ---
 
 ## Webflow website development in Perth

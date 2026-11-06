@@ -48,7 +48,7 @@ relatedServices:
   - website-maintenance
 seo:
   title: "WooCommerce Website Development in Perth"
-  description: "WooCommerce development in Perth when WordPress commerce is the right fit — flexible products, careful hosting and maintenance."
+  description: "WooCommerce development in Perth when WordPress commerce is the right fit — flexible products, careful hosting and a maintainable store setup."
 ---
 
 ## WooCommerce development in Perth

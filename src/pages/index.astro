@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { Picture } from 'astro:assets';
 import { ArrowRight, Phone } from '@lucide/astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FaqAccordion from '../components/FaqAccordion.astro';
@@ -15,6 +16,7 @@ import {
 import { featuredServiceIds } from '../data/serviceGroups';
 import WorkCard from '../components/WorkCard.astro';
 import { getPortfolioByOrder, scrubAgencyMentions } from '../lib/portfolio';
+import heroPoster from '../assets/hero-poster.jpg';
 
 const allServices = await getCollection('services');
 const byId = Object.fromEntries(allServices.map((s) => [s.id, s]));
@@ -65,12 +67,18 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
 >
   <section class="hero">
     <div class="hero__media" aria-hidden="true">
-      <img
+      <Picture
         class="hero__poster"
-        src="/hero-poster.jpg"
+        src={heroPoster}
         alt=""
-        width="1280"
-        height="720"
+        width={1280}
+        height={720}
+        formats={['avif', 'webp']}
+        fallbackFormat="jpeg"
+        quality={80}
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
       />
       <iframe
         class="hero__yt"
@@ -289,6 +297,14 @@ const jsonLd = [organizationSchema(), websiteSchema(), faqSchema(homeFaqs)].filt
     pointer-events: none;
   }
 
+  .hero__media :global(picture.hero__poster),
+  .hero__media :global(.hero__poster) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero__media :global(picture.hero__poster img),
   .hero__poster {
     display: block;
     width: 100%;

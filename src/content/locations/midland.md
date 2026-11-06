@@ -17,7 +17,7 @@ faqs:
 areaServed: "Midland, Western Australia"
 seo:
   title: "Website Development in Midland | Perth Agency"
-  description: "Website design and development for Midland businesses — clear process, local servicing across Perth, quote-ready enquiries."
+  description: "Website design and development for Midland businesses — clear process, Perth-based servicing, and quote-ready enquiry paths for eastern suburbs SMEs."
 ---
 
 We help Midland businesses plan, design and launch websites that explain their offer clearly and make enquiries easy. We service Midland as part of our Perth-wide coverage. Meetings can be online or on-site by appointment — we do not have a Midland office or showroom.

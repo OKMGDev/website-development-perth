@@ -1,7 +1,7 @@
 ---
 title: "Professional Services"
 primaryKeyword: "professional services website Perth"
-excerpt: "Sites for legal, accounting and advisory firms that communicate expertise without sounding hollow."
+excerpt: "Website development for Perth legal, accounting and advisory firms — clear expertise, sector pages and consultation paths without hollow slogans."
 painPoints:
   - "Abstract services hard to explain"
   - "Partner-led buying journeys"
@@ -24,7 +24,7 @@ faqs:
     answer: "Yes. We pull the useful explanations out of brochures and turn them into readable pages, and keep PDFs for documents that should stay downloadable — engagement info, checklists — rather than as the whole website."
 seo:
   title: "Website Development for Professional Services | Perth"
-  description: "Sites for legal, accounting and advisory firms that communicate expertise without sounding hollow."
+  description: "Website development for Perth legal, accounting and advisory firms — service and sector pages that show expertise and make consultation requests easy."
 ---
 
 ## How professional buyers actually research a firm

@@ -48,7 +48,7 @@ relatedServices:
   - website-migration
 seo:
   title: "Website Maintenance & Support in Perth"
-  description: "Website maintenance in Perth — updates, backups, monitoring and small fixes, with larger work quoted separately."
+  description: "Website maintenance in Perth — updates, backups, monitoring and small fixes each month, with larger redesign or feature work quoted separately."
 ---
 
 ## Website maintenance and support

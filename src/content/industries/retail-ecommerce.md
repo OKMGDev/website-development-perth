@@ -1,7 +1,7 @@
 ---
 title: "Retail & E-commerce"
 primaryKeyword: "ecommerce website Perth"
-excerpt: "Storefronts and brand sites that help Perth retailers sell with clarity online and in-store."
+excerpt: "Website and ecommerce development for Perth retailers — storefronts and brand sites that help you sell with clarity both online and in-store."
 painPoints:
   - "Product discovery friction"
   - "Shipping expectations for WA"
@@ -24,7 +24,7 @@ faqs:
     answer: "Choose from operations, not hype. Shopify suits teams that want hosted commerce primitives. WooCommerce suits teams already in WordPress who need the store and content tightly combined."
 seo:
   title: "Website Development for Retail & E-commerce | Perth"
-  description: "Storefronts and brand sites that help Perth retailers sell with clarity online and in-store."
+  description: "Website and ecommerce development for Perth retailers — storefronts and brand sites that help you sell with clarity both online and in-store."
 ---
 
 ## Catalogue friction versus a store that helps people buy

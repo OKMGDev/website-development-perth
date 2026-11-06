@@ -48,7 +48,7 @@ relatedServices:
   - website-migration
 seo:
   title: "Shopify Website Development in Perth"
-  description: "Shopify development for Perth retailers — product templates, checkout clarity and ops fit for Australian selling."
+  description: "Shopify development for Perth retailers — product templates, checkout clarity and operational fit for Australian payments, shipping and tax."
 ---
 
 ## Shopify website development for Perth retailers

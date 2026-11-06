@@ -1,7 +1,7 @@
 ---
 title: "Tradies & Construction"
 primaryKeyword: "website for tradies Perth"
-excerpt: "Sites that show your trade, service areas and proof — and make it easy to request a job quote."
+excerpt: "Website development for Perth tradies and builders — show your trade, service areas and proof, and make job quotes easy on mobile."
 painPoints:
   - "Hard to show breadth of services without clutter"
   - "Mobile enquiries from job sites"
@@ -24,7 +24,7 @@ faqs:
     answer: "Yes. We draft service pages from how you already quote jobs — trade, typical scope, suburbs, and photos you already have on your phone. You review in short passes rather than writing from a blank page."
 seo:
   title: "Website Development for Tradies & Construction | Perth"
-  description: "Sites that show your trade, service areas and proof — and make it easy to request a job quote."
+  description: "Website development for Perth tradies and builders — clear trade pages, suburb coverage, photo proof and mobile quote forms that help win jobs."
 ---
 
 ## How Perth customers choose a trade business

@@ -48,7 +48,7 @@ relatedServices:
   - website-maintenance
 seo:
   title: "Drupal Website Development in Perth"
-  description: "Drupal development in Perth for complex content, multi-role publishing and governance — not a default for simple brochure sites."
+  description: "Drupal development in Perth for complex content models, multi-role publishing and governance — chosen when a simple brochure CMS is not enough."
 ---
 
 ## Drupal website development in Perth

@@ -1,7 +1,7 @@
 ---
 title: "Real Estate"
 primaryKeyword: "real estate website Perth"
-excerpt: "Agent and agency sites that support listings, suburbs and lead capture without feeling generic."
+excerpt: "Website development for Perth real estate agents and agencies — listings support, suburb pages and lead capture without a generic template feel."
 painPoints:
   - "Listing presentation and speed"
   - "Suburb and specialty positioning"
@@ -24,7 +24,7 @@ faqs:
     answer: "Yes. We treat brand systems as constraints, not as a reason to ship a generic theme. Templates for agents, suburbs and listings stay inside the guidelines while still making the next action obvious."
 seo:
   title: "Website Development for Real Estate | Perth"
-  description: "Agent and agency sites that support listings, suburbs and lead capture without feeling generic."
+  description: "Website development for Perth real estate agents and agencies — listings support, suburb pages and lead capture without a generic template feel."
 ---
 
 ## Why an agency site still matters beside the portals

@@ -15,7 +15,7 @@ relatedServices:
   - seo-services
 seo:
   title: "Website maintenance checklist for SMEs"
-  description: "A small-business website maintenance checklist: security, backups, forms, content, performance and when to use a care plan."
+  description: "Small-business website maintenance checklist for Perth sites — security, backups, forms, content, performance and when a care plan makes sense."
 ---
 
 A small-business website rarely fails in a dramatic way. It fails quietly: an expired certificate, a contact form that stops sending, a plugin hole, last year’s opening hours, a privacy policy that no longer matches how you collect enquiries.

@@ -15,7 +15,7 @@ relatedServices:
   - woocommerce-development
 seo:
   title: "Shopify vs WooCommerce: which should Perth retailers choose?"
-  description: "A decision guide focused on operations, ownership and growth — not feature checklists."
+  description: "Shopify vs WooCommerce for Perth retailers — a practical decision guide on operations, ownership and growth, not a feature-checklist shootout."
 ---
 
 Shopify and WooCommerce can both sell products well. The better choice for a Perth retailer is rarely about who lists more features. It is about who will run the store, how unusual your catalogue and fulfilment really are, and whether you want a hosted commerce platform or a WordPress site that also takes orders.

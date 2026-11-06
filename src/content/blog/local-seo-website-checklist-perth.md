@@ -15,7 +15,7 @@ relatedServices:
   - landing-page-design
 seo:
   title: "Local SEO website checklist for Perth"
-  description: "A Perth service-business checklist for local SEO on the website: GBP, NAP, service pages, reviews, technical health — without suburb doorway spam."
+  description: "Local SEO website checklist for Perth service businesses — Google Business Profile, NAP, service pages, reviews and technical health without doorway spam."
 ---
 
 For a Perth service business, local SEO is mostly **clarity and consistency**: a website that matches how people search, a Google Business Profile that matches the website, and pages that a human would send a friend. It is not a unique paragraph-swapped page for every suburb from Joondalup to Rockingham.

@@ -1,7 +1,7 @@
 ---
 title: "Fitness & Wellness"
 primaryKeyword: "fitness website Perth"
-excerpt: "Studios and wellness brands that need schedules, memberships and a strong first impression."
+excerpt: "Website development for Perth fitness and wellness brands — class schedules, memberships and a first impression that matches the studio floor."
 painPoints:
   - "Class timetable updates"
   - "Membership vs casual paths"
@@ -24,7 +24,7 @@ faqs:
     answer: "Yes, if we design for how you actually update. That might be a timetable embed you already use, a CMS the studio manager can edit, and campaign landing pages that do not require a full redesign each January."
 seo:
   title: "Website Development for Fitness & Wellness | Perth"
-  description: "Studios and wellness brands that need schedules, memberships and a strong first impression."
+  description: "Website development for Perth fitness and wellness brands — class schedules, memberships and a first impression that matches the studio floor."
 ---
 
 ## What a studio website has to do that an app does not

@@ -15,7 +15,7 @@ relatedServices:
   - wordpress-development
 seo:
   title: "Web design vs development in Perth"
-  description: "A Perth buyer’s guide to web design versus web development: what each covers, when you need both, and how to brief the right mix."
+  description: "Web design vs web development in Perth — what each covers, when you need both, and how to brief the right mix for a site that wins local work."
 ---
 
 Web design and web development are related jobs, not interchangeable labels. **Design** decides how the site is structured, how it looks, and how a visitor moves from “what is this?” to an enquiry. **Development** turns that plan into a working site: templates, editing, forms, performance, integrations and quality checks.

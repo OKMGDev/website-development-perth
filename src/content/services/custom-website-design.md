@@ -48,7 +48,7 @@ relatedServices:
   - seo-services
 seo:
   title: "Custom Website Design in Perth"
-  description: "Custom website design in Perth — built around your offers, proof and enquiry paths, not a theme with a logo bolted on."
+  description: "Custom website design in Perth built around your offers, proof and enquiry paths — not a bought theme with a logo and stock photos bolted on."
 ---
 
 ## Custom website design for Perth businesses

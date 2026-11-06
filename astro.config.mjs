@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
+import { lastmodForUrl } from './scripts/sitemap-lastmod.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,6 +20,10 @@ export default defineConfig({
           !/\/work\/.+/.test(pathname) &&
           !isServiceLocation
         );
+      },
+      serialize(item) {
+        item.lastmod = lastmodForUrl(item.url);
+        return item;
       },
     }),
   ],

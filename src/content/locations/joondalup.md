@@ -16,7 +16,7 @@ faqs:
 areaServed: "Joondalup, Western Australia"
 seo:
   title: "Website Development in Joondalup | Perth Agency"
-  description: "Website design and development for Joondalup businesses — clear process, local servicing across Perth, quote-ready enquiries."
+  description: "Website design and development for Joondalup businesses — clear process, Perth-based servicing, and quote-ready enquiry paths for northern suburbs SMEs."
 ---
 
 We help Joondalup businesses plan, design and launch websites that explain their offer clearly and make enquiries easy. We service Joondalup as part of our Perth-wide coverage. Meetings can be online or on-site by appointment — we do not have a Joondalup office or showroom.

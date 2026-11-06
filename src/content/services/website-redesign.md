@@ -48,7 +48,7 @@ relatedServices:
   - ux-ui-design
 seo:
   title: "Website Redesign in Perth"
-  description: "Website redesign in Perth that fixes confusion and conversion — clearer structure, stronger CTAs, SEO-aware cutover."
+  description: "Website redesign in Perth that fixes confusion and weak conversion — clearer structure, stronger calls to action and an SEO-aware cutover plan."
 ---
 
 ## Website redesign for Perth businesses

@@ -1,7 +1,7 @@
 ---
 title: "Medical & Healthcare"
 primaryKeyword: "medical website Perth"
-excerpt: "Clear, accessible practice sites that help patients understand services and take the next step."
+excerpt: "Website development for Perth medical and healthcare practices — clear services, accessibility and patient next steps without marketing fluff."
 painPoints:
   - "Complex service menus"
   - "Accessibility and trust requirements"
@@ -24,7 +24,7 @@ faqs:
     answer: "The practice remains responsible for clinical content and advertising decisions. We help structure pages, draft plain-language service explainers from your material, and keep claims conservative for your review."
 seo:
   title: "Website Development for Medical & Healthcare | Perth"
-  description: "Clear, accessible practice sites that help patients understand services and take the next step."
+  description: "Website development for Perth medical and healthcare practices — clear services, accessibility and patient next steps without marketing fluff."
 ---
 
 ## How patients actually use a practice website

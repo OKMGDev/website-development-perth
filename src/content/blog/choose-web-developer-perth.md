@@ -15,7 +15,7 @@ relatedServices:
   - website-maintenance
 seo:
   title: "How to choose a web developer in Perth"
-  description: "A practical Perth guide to choosing a web developer: what to brief, which questions to ask, red flags, and how to compare quotes fairly."
+  description: "A practical Perth guide to choosing a web developer: what to brief, which questions to ask, red flags, and how to compare website quotes fairly."
 ---
 
 The right web developer for a Perth small or medium business is the one who can deliver a site your customers can understand and your team can run — not the one with the flashiest homepage or the cheapest number on a one-page PDF.

@@ -14,7 +14,7 @@ relatedServices:
   - website-redesign
 seo:
   title: "How long does a website project take?"
-  description: "A realistic timeline for discovery, design, build and launch — including where projects actually stall."
+  description: "How long a Perth website project takes — discovery, design, build and launch timelines, plus where projects usually stall and how to avoid it."
 ---
 
 Most brochure or service websites take several weeks once scope is clear. The silent timeline killer is content: photos, copy approvals and stakeholder feedback. Platforms get the blame; unfinished service lists usually move the date.

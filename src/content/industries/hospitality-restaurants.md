@@ -1,7 +1,7 @@
 ---
 title: "Hospitality & Restaurants"
 primaryKeyword: "restaurant website Perth"
-excerpt: "Menus, locations and booking paths that load quickly and look appetising on mobile."
+excerpt: "Website development for Perth restaurants and hospitality venues — menus, locations and booking paths that load quickly and look right on mobile."
 painPoints:
   - "Menu updates"
   - "Multi-location confusion"
@@ -24,7 +24,7 @@ faqs:
     answer: "We design the menu as something your team can edit, or as a well-presented file you replace, depending on how often dishes move. Maintenance retainers exist so service times and event pages do not lag behind the pass."
 seo:
   title: "Website Development for Hospitality & Restaurants | Perth"
-  description: "Menus, locations and booking paths that load quickly and look appetising on mobile."
+  description: "Website development for Perth restaurants and hospitality venues — menus, locations and booking paths that load quickly and look right on mobile."
 ---
 
 ## The “where should we eat” decision on a phone

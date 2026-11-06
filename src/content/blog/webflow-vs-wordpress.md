@@ -15,7 +15,7 @@ relatedServices:
   - wordpress-development
 seo:
   title: "Webflow vs WordPress for Perth marketing sites"
-  description: "When design control beats plugin flexibility — and when it does not."
+  description: "Webflow vs WordPress for Perth marketing sites — when design control beats plugin flexibility, and when a mixed editing team needs WordPress."
 ---
 
 Webflow and WordPress both power strong marketing sites. For most Perth service businesses the deciding factors are not “which is more popular”, but who will edit the site, how opinionated your design system is, and which integrations you actually need — not which ones a plugin directory could theoretically provide.

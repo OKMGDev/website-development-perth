@@ -16,7 +16,7 @@ faqs:
 areaServed: "Rockingham, Western Australia"
 seo:
   title: "Website Development in Rockingham | Perth Agency"
-  description: "Website design and development for Rockingham businesses — clear process, local servicing across Perth, quote-ready enquiries."
+  description: "Website design and development for Rockingham businesses — clear process, Perth-based servicing, and quote-ready enquiry paths for southern suburbs SMEs."
 ---
 
 We help Rockingham businesses plan, design and launch websites that explain their offer clearly and make enquiries easy. We service Rockingham as part of our Perth-wide coverage. Meetings can be online or on-site by appointment — we do not have a Rockingham office or showroom.

@@ -114,6 +114,76 @@ export function serviceSchema(opts: {
   };
 }
 
+/** Service + Offer (or AggregateOffer) for priced packages. Prices are AUD ex-GST. */
+export function serviceOfferSchema(opts: {
+  name: string;
+  description: string;
+  path: string;
+  priceFrom?: number;
+  priceTo?: number;
+  priceCurrency?: string;
+  billingPeriod?: 'month' | 'hour' | 'one-time';
+  areaServed?: string;
+}): Record<string, unknown> {
+  const currency = opts.priceCurrency ?? 'AUD';
+  const unitText =
+    opts.billingPeriod === 'month'
+      ? 'MONTH'
+      : opts.billingPeriod === 'hour'
+        ? 'HOUR'
+        : undefined;
+
+  const offer =
+    opts.priceFrom != null && opts.priceTo != null && opts.priceTo !== opts.priceFrom
+      ? {
+          '@type': 'AggregateOffer',
+          priceCurrency: currency,
+          lowPrice: String(opts.priceFrom),
+          highPrice: String(opts.priceTo),
+          offerCount: 1,
+          availability: 'https://schema.org/InStock',
+          url: absoluteUrl(opts.path),
+          ...(unitText
+            ? {
+                priceSpecification: {
+                  '@type': 'UnitPriceSpecification',
+                  priceCurrency: currency,
+                  minPrice: String(opts.priceFrom),
+                  maxPrice: String(opts.priceTo),
+                  valueAddedTaxIncluded: false,
+                  unitText,
+                },
+              }
+            : { valueAddedTaxIncluded: false }),
+        }
+      : opts.priceFrom != null
+        ? {
+            '@type': 'Offer',
+            priceCurrency: currency,
+            price: String(opts.priceFrom),
+            availability: 'https://schema.org/InStock',
+            url: absoluteUrl(opts.path),
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              price: String(opts.priceFrom),
+              priceCurrency: currency,
+              valueAddedTaxIncluded: false,
+              ...(unitText ? { unitText } : {}),
+            },
+          }
+        : undefined;
+
+  return {
+    ...serviceSchema({
+      name: opts.name,
+      description: opts.description,
+      path: opts.path,
+      areaServed: opts.areaServed,
+    }),
+    ...(offer ? { offers: offer } : {}),
+  };
+}
+
 export function faqSchema(
   faqs: { question: string; answer: string }[]
 ): Record<string, unknown> | null {

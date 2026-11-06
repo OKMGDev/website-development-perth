@@ -17,7 +17,7 @@ faqs:
 areaServed: "Fremantle, Western Australia"
 seo:
   title: "Website Development in Fremantle | Perth Agency"
-  description: "Website design and development for Fremantle businesses — clear process, local servicing across Perth, quote-ready enquiries."
+  description: "Website design and development for Fremantle businesses — clear process, Perth-based servicing, and quote-ready enquiry paths for local SMEs."
 ---
 
 We help Fremantle businesses plan, design and launch websites that explain their offer clearly and make enquiries easy. We service Fremantle as part of our Perth-wide coverage. Meetings can be online or on-site by appointment — we do not have a Fremantle office or showroom.
