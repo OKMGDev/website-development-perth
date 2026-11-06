@@ -1,0 +1,333 @@
+---
+import { ArrowRight } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { breadcrumbList, faqSchema, serviceOfferSchema } from '../lib/seo';
+import {
+  buildPackages,
+  formatAud,
+  ongoingPackages,
+  priceFactors,
+  pricingFaqs,
+} from '../data/pricing';
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Pricing', path: '/pricing/' },
+];
+
+const packageSchemas = buildPackages.map((pkg) =>
+  serviceOfferSchema({
+    name: pkg.name,
+    description: pkg.summary,
+    path: '/pricing/',
+    priceFrom: pkg.priceFrom,
+    priceTo: pkg.priceTo,
+  })
+);
+
+const ongoingSchemas = ongoingPackages.map((item) =>
+  serviceOfferSchema({
+    name: item.name,
+    description: item.summary,
+    path: '/pricing/',
+    priceFrom: item.priceFrom,
+    billingPeriod: item.billingPeriod,
+  })
+);
+
+const jsonLd = [
+  breadcrumbList(crumbs),
+  ...packageSchemas,
+  ...ongoingSchemas,
+  faqSchema(pricingFaqs),
+].filter(Boolean);
+---
+
+<BaseLayout
+  title="Website Development Pricing Perth"
+  description="Website development pricing in Perth from $3,000 + GST — starter sites, custom builds, ecommerce, redesigns and care plans with clear from-prices."
+  jsonLd={jsonLd}
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Pricing' }]} />
+      <h1>Website development pricing in Perth</h1>
+      <p class="lead">
+        Straight “from” prices for website cost in Perth — starter sites through ecommerce and multi-location builds.
+        Figures are exclusive of GST. Your quote spells out scope, assumptions and what sits outside the number.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/contact/" data-track="cta">
+          Get a Quote
+          <ArrowRight size={16} stroke-width={1.75} />
+        </a>
+        <a class="btn btn--ghost" href="/blog/website-cost-perth/">What drives website cost</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section packages" style="padding-top: 0">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">Build packages</p>
+        <h2 class="section__title">From-prices for common Perth website jobs</h2>
+        <p class="section__lead">
+          Covering tradies, retail, hospitality, professional services, ecommerce and larger multi-location operators.
+          Pick the band that matches the job, then we scope the rest.
+        </p>
+      </div>
+
+      <div class="price-grid">
+        {
+          buildPackages.map((pkg) => (
+            <article class="price-card" id={pkg.id}>
+              <p class="price-card__audience">{pkg.audience}</p>
+              <h3>{pkg.name}</h3>
+              <p class="price-card__summary">{pkg.summary}</p>
+              <p class="price-card__price">
+                {pkg.priceTo != null ? (
+                  <>
+                    <span class="price-card__from">From</span>{' '}
+                    <strong>
+                      {formatAud(pkg.priceFrom)}–{formatAud(pkg.priceTo)}
+                    </strong>
+                  </>
+                ) : (
+                  <>
+                    <span class="price-card__from">From</span> <strong>{formatAud(pkg.priceFrom)}</strong>
+                  </>
+                )}
+                <span class="price-card__gst">+ GST</span>
+              </p>
+              <ul>
+                {pkg.includes.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+              {pkg.relatedService && (
+                <p class="price-card__link">
+                  <a href={`/services/${pkg.relatedService}/`}>Related service →</a>
+                </p>
+              )}
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section ongoing">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">Ongoing</p>
+        <h2 class="section__title">Hosting, care and SEO after launch</h2>
+        <p class="section__lead">
+          Keep the site patched and useful without turning every tweak into a surprise invoice.
+        </p>
+      </div>
+      <div class="ongoing-grid">
+        {
+          ongoingPackages.map((item) => (
+            <article class="ongoing-card" id={item.id}>
+              <h3>{item.name}</h3>
+              <p>{item.summary}</p>
+              <p class="price-card__price">
+                <span class="price-card__from">From</span>{' '}
+                <strong>
+                  {formatAud(item.priceFrom)}
+                  {item.billingPeriod === 'month' ? '/month' : '/hr'}
+                </strong>
+                <span class="price-card__gst">+ GST</span>
+              </p>
+              {item.relatedService && (
+                <p class="price-card__link">
+                  <a href={`/services/${item.relatedService}/`}>Related service →</a>
+                </p>
+              )}
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section factors">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">Scope</p>
+        <h2 class="section__title">What affects the price</h2>
+        <p class="section__lead">
+          These drivers show up on almost every Perth website quote — whether or not the line items use the same names.
+        </p>
+      </div>
+      <div class="factor-list">
+        {
+          priceFactors.map((factor) => (
+            <article>
+              <h3>{factor.title}</h3>
+              <p>{factor.text}</p>
+            </article>
+          ))
+        }
+      </div>
+      <div class="prose related-links">
+        <h2>Related reading and services</h2>
+        <p>
+          Read the buying guide on
+          <a href="/blog/website-cost-perth/">how much a website costs in Perth</a>,
+          then compare delivery paths for
+          <a href="/services/custom-website-design/">custom website design</a>,
+          <a href="/services/website-redesign/">website redesign</a>,
+          <a href="/services/shopify-development/">Shopify development</a>
+          and
+          <a href="/services/web-application-development/">web application development</a>.
+          For how projects run week to week, see our <a href="/process/">process</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FaqAccordion faqs={pricingFaqs} title="Pricing FAQs" />
+  <CtaBand
+    title="Need a number for your scope?"
+    text="Tell us the job, the current site and any must-have integrations — we will reply with a clear quote."
+  />
+</BaseLayout>
+
+<style>
+  .section__head {
+    max-width: 42rem;
+    margin-bottom: 2rem;
+  }
+
+  .price-grid {
+    display: grid;
+    gap: 1.15rem;
+  }
+
+  .price-card,
+  .ongoing-card {
+    border: 1px solid var(--line);
+    background: var(--bg-elevated);
+    padding: 1.35rem 1.25rem 1.25rem;
+    border-top: 3px solid var(--accent);
+  }
+
+  .price-card__audience {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 0.65rem;
+  }
+
+  .price-card h3,
+  .ongoing-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .price-card__summary,
+  .ongoing-card > p {
+    color: var(--ink-muted);
+    margin: 0 0 1rem;
+  }
+
+  .price-card__price {
+    margin: 0 0 1rem;
+    font-size: 1.05rem;
+  }
+
+  .price-card__from {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .price-card__price strong {
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    letter-spacing: -0.03em;
+  }
+
+  .price-card__gst {
+    margin-left: 0.35rem;
+    color: var(--ink-faint);
+    font-size: 0.9rem;
+  }
+
+  .price-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--ink-muted);
+  }
+
+  .price-card li + li {
+    margin-top: 0.35rem;
+  }
+
+  .price-card__link {
+    margin: 1rem 0 0;
+  }
+
+  .price-card__link a {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--accent);
+  }
+
+  .ongoing {
+    background: var(--mist);
+  }
+
+  .ongoing-grid,
+  .factor-list {
+    display: grid;
+    gap: 1.15rem;
+  }
+
+  .factor-list article {
+    padding-bottom: 1.15rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .factor-list h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .factor-list p {
+    margin: 0;
+    color: var(--ink-muted);
+    max-width: 62ch;
+  }
+
+  .related-links {
+    margin-top: 2.5rem;
+  }
+
+  @media (min-width: 720px) {
+    .price-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ongoing-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .price-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

@@ -48,7 +48,7 @@ relatedServices:
   - shopify-development
 seo:
   title: "Website Migration in Perth"
-  description: "Website migration in Perth with URL maps, redirects and staged cutover — platform moves without a hope-and-pray launch."
+  description: "Website migration in Perth with careful URL maps, redirects and staged cutover — platform moves planned so search and email keep working at launch."
 ---
 
 ## Website migration in Perth

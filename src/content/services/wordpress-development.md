@@ -48,7 +48,7 @@ relatedServices:
   - seo-services
 seo:
   title: "WordPress Website Development in Perth"
-  description: "WordPress development in Perth for editors, SEO and long-term maintainability — lean plugins, clear content models, practical handover."
+  description: "WordPress development in Perth for editors, SEO and long-term maintainability — lean plugins, clear content models and a practical handover."
 ---
 
 ## WordPress website development in Perth

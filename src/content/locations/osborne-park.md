@@ -17,7 +17,7 @@ faqs:
 areaServed: "Osborne Park, Western Australia"
 seo:
   title: "Website Development in Osborne Park | Perth Agency"
-  description: "Website design and development for Osborne Park businesses — clear process, local servicing across Perth, quote-ready enquiries."
+  description: "Website design and development for Osborne Park businesses — clear process, Perth-based servicing, and quote-ready enquiry paths for local SMEs."
 ---
 
 We help Osborne Park businesses plan, design and launch websites that explain their offer clearly and make enquiries easy. We service Osborne Park as part of our Perth-wide coverage. Meetings can be online or on-site by appointment — we do not have an Osborne Park office or showroom.

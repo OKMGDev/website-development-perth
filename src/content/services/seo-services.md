@@ -48,7 +48,7 @@ relatedServices:
   - landing-page-design
 seo:
   title: "SEO & Website Optimisation in Perth"
-  description: "SEO and website optimisation in Perth — technical health, intent-led pages and reporting tied to real enquiries."
+  description: "SEO and website optimisation services in Perth — technical health, intent-led pages and reporting tied to real enquiries, not vanity traffic."
 ---
 
 ## SEO and website optimisation in Perth

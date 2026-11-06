@@ -16,7 +16,7 @@ relatedServices:
   - seo-services
 seo:
   title: "Website redesign checklist for Perth"
-  description: "A practical website redesign checklist: audit, content, conversion, SEO, stakeholders and launch — so the project fixes the real problems."
+  description: "Website redesign checklist for Perth businesses — audit, content, conversion, SEO, stakeholders and launch so the project fixes the real problems."
 ---
 
 A website redesign is worth doing when the current site fails as a sales conversation: people cannot tell what you do, cannot find proof, or cannot enquire on a phone. It is not automatically the right job because the colours feel dated.

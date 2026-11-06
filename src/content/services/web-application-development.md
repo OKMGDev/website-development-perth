@@ -48,7 +48,7 @@ relatedServices:
   - website-maintenance
 seo:
   title: "Web Application Development in Perth"
-  description: "Web application development in Perth for portals, booking workflows and tools — scoped before build, owned by you at handover."
+  description: "Web application development in Perth for client portals, booking workflows and internal tools — scoped before build and owned by you at handover."
 ---
 
 ## Web application development in Perth

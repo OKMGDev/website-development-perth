@@ -14,7 +14,7 @@ relatedServices:
   - landing-page-design
 seo:
   title: "What makes a good website for Perth tradies?"
-  description: "Practical structure for trade businesses: services, proof, suburbs and quote friction."
+  description: "What makes a good website for Perth tradies — service pages, photo proof, suburb coverage and quote forms that work on a phone at the job site."
 ---
 
 Tradie websites work when a busy customer can see what you do, where you work and how to ask for a quote in under a minute. Stock photos of hard hats and a paragraph about “quality workmanship” do not substitute for services, proof and a form that survives a thumb on a dusty phone.

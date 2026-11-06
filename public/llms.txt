@@ -41,6 +41,9 @@ Suburb pages exist only where there is genuine local context. Other Perth areas 
 - Rockingham: https://www.websitedevelopmentperth.com.au/locations/rockingham/
 - Mandurah: https://www.websitedevelopmentperth.com.au/locations/mandurah/
 
+## Pricing
+- Website development pricing: https://www.websitedevelopmentperth.com.au/pricing/
+
 ## Guides
 - Website cost in Perth: https://www.websitedevelopmentperth.com.au/blog/website-cost-perth/
 - How to choose a web developer: https://www.websitedevelopmentperth.com.au/blog/choose-web-developer-perth/
@@ -54,6 +57,7 @@ Suburb pages exist only where there is genuine local context. Other Perth areas 
 ## Company
 - About: https://www.websitedevelopmentperth.com.au/about/
 - Process: https://www.websitedevelopmentperth.com.au/process/
+- Pricing: https://www.websitedevelopmentperth.com.au/pricing/
 - FAQ: https://www.websitedevelopmentperth.com.au/faq/
 - Work: https://www.websitedevelopmentperth.com.au/work/
 - Contact: https://www.websitedevelopmentperth.com.au/contact/

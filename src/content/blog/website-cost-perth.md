@@ -1,6 +1,6 @@
 ---
 title: "How much does a website cost in Perth?"
-excerpt: "A practical pricing guide for Perth businesses — what drives cost, and what “cheap” usually skips."
+excerpt: "A practical pricing guide for Perth businesses — what drives website cost in Perth, and what “cheap” quotes usually skip."
 category: "Cost and pricing"
 author: "Website Development Perth"
 published: 2026-07-01
@@ -14,7 +14,7 @@ relatedServices:
   - website-redesign
 seo:
   title: "How much does a website cost in Perth?"
-  description: "A practical pricing guide for Perth businesses — what drives cost, and what “cheap” usually skips."
+  description: "What drives website cost in Perth — templates, content labour, integrations and risk — plus how to read a quote without buying a thin build."
 ---
 
 Website cost in Perth varies because projects vary. A focused brochure site is a different job from a multi-location service platform or a commerce catalogue. There is no honest single figure, and published “average prices” are usually marketing, not research. What you can do is learn the drivers, read a quote’s assumptions, and tell a cheap offer from a thin one.
@@ -126,6 +126,6 @@ Suburb context helps when it is operational. Businesses around [Osborne Park](/l
 
 ## Next step
 
-If you want a tailored figure, [contact Website Development Perth](/contact/) with that brief. We will price assumptions you can read, not a bait number that relies on you not asking what “SEO included” meant.
+For published from-prices across common build types, see [website development pricing in Perth](/pricing/). If you want a tailored figure, [contact Website Development Perth](/contact/) with that brief. We will price assumptions you can read, not a bait number that relies on you not asking what “SEO included” meant.
 
 Browse [locations we service](/locations/) if you want local context, then come back to scope. Price follows the work. The work follows a clear brief.

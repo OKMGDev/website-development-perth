@@ -59,6 +59,7 @@ export const site = {
 export const navPrimary = [
   { label: 'Services', href: '/services/' },
   { label: 'Industries', href: '/industries/' },
+  { label: 'Pricing', href: '/pricing/' },
   { label: 'Work', href: '/work/' },
   { label: 'About', href: '/about/' },
   { label: 'Blog', href: '/blog/' },
@@ -70,6 +71,7 @@ export const footerNav = {
     { label: 'About', href: '/about/' },
     { label: 'Our Process', href: '/process/' },
     { label: 'Why Us', href: '/why-us/' },
+    { label: 'Pricing', href: '/pricing/' },
     { label: 'Work', href: '/work/' },
     { label: 'Locations', href: '/locations/' },
     { label: 'FAQ', href: '/faq/' },
@@ -78,6 +80,7 @@ export const footerNav = {
   ],
   resources: [
     { label: 'Blog', href: '/blog/' },
+    { label: 'Website pricing', href: '/pricing/' },
     { label: 'How much does a website cost?', href: '/blog/website-cost-perth/' },
     { label: 'How to choose a web developer', href: '/blog/choose-web-developer-perth/' },
     { label: 'Website redesign checklist', href: '/blog/website-redesign-checklist/' },

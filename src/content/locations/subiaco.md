@@ -17,7 +17,7 @@ faqs:
 areaServed: "Subiaco, Western Australia"
 seo:
   title: "Website Development in Subiaco | Perth Agency"
-  description: "Website design and development for Subiaco businesses — clear process, local servicing across Perth, quote-ready enquiries."
+  description: "Website design and development for Subiaco businesses — clear process, Perth-based servicing, and quote-ready enquiry paths for inner-west SMEs."
 ---
 
 We help Subiaco businesses plan, design and launch websites that explain their offer clearly and make enquiries easy. We service Subiaco as part of our Perth-wide coverage. Meetings can be online or on-site by appointment — we do not have a Subiaco office or showroom.

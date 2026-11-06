@@ -1,7 +1,7 @@
 ---
 title: "Education & Childcare"
 primaryKeyword: "childcare website Perth"
-excerpt: "Centres and educators that need clear enrolment paths, trust and parent-friendly information."
+excerpt: "Website development for Perth education and childcare providers — enrolment paths, trust signals and parent-friendly information architecture."
 painPoints:
   - "Tour and enrolment enquiries"
   - "Multiple programs and fees"
@@ -24,7 +24,7 @@ faqs:
     answer: "We only use images you supply with appropriate consent. Where photos of children are not available, we design around spaces, routines and staff portraits you are comfortable publishing — we do not scrape social feeds or invent gallery content."
 seo:
   title: "Website Development for Education & Childcare | Perth"
-  description: "Centres and educators that need clear enrolment paths, trust and parent-friendly information."
+  description: "Website development for Perth education and childcare providers — enrolment paths, trust signals and parent-friendly information architecture."
 ---
 
 ## How parents shortlist a centre or school

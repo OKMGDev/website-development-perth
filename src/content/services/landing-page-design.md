@@ -48,7 +48,7 @@ relatedServices:
   - webflow-development
 seo:
   title: "Landing Page Design in Perth"
-  description: "Landing page design for Perth campaigns — one offer, one CTA, real proof and tracking that matches your ads."
+  description: "Landing page design for Perth ad campaigns — one offer, one call to action, real proof and tracking set up to match your paid traffic properly."
 ---
 
 ## Landing page design for campaigns

@@ -48,7 +48,7 @@ relatedServices:
   - website-redesign
 seo:
   title: "UX/UI Design in Perth"
-  description: "UX/UI design in Perth for websites and products — flows, Figma UI and implementation notes developers can build from."
+  description: "UX and UI design in Perth for websites and digital products — user flows, Figma interfaces and implementation notes developers can build from."
 ---
 
 ## UX/UI design for websites and products

@@ -17,7 +17,7 @@ faqs:
 areaServed: "Victoria Park, Western Australia"
 seo:
   title: "Website Development in Victoria Park | Perth Agency"
-  description: "Website design and development for Victoria Park businesses — clear process, local servicing across Perth, quote-ready enquiries."
+  description: "Website design and development for Victoria Park businesses — clear process, Perth-based servicing, and quote-ready enquiry paths for inner-east SMEs."
 ---
 
 We help Victoria Park businesses plan, design and launch websites that explain their offer clearly and make enquiries easy. We service Victoria Park as part of our Perth-wide coverage. Meetings can be online or on-site by appointment — we do not have a Victoria Park office or showroom.

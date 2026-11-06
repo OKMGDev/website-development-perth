@@ -16,7 +16,7 @@ faqs:
 areaServed: "Mandurah, Western Australia"
 seo:
   title: "Website Development in Mandurah | Perth Agency"
-  description: "Website design and development for Mandurah businesses — clear process, local servicing across Perth, quote-ready enquiries."
+  description: "Website design and development for Mandurah businesses — clear process, Perth-based servicing, and quote-ready enquiry paths for Peel region SMEs."
 ---
 
 We help Mandurah businesses plan, design and launch websites that explain their offer clearly and make enquiries easy. We service Mandurah as part of our Perth-wide coverage. Meetings can be online or on-site by appointment — we do not have a Mandurah office or showroom.
